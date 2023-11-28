@@ -1,0 +1,333 @@
+
+
+[Sat Aug 26 12:10:08 2023]  Set size 100
+[Sat Aug 26 12:10:08 2023]  Red-black tree insert time 150.000000
+[Sat Aug 26 12:10:08 2023]  Red-black tree search time 40.000000
+[Sat Aug 26 12:14:41 2023]  Set size 100
+[Sat Aug 26 12:14:41 2023]  Red-black tree insert time 190.000000
+[Sat Aug 26 12:14:41 2023]  Red-black tree recursive search time 40.000000
+[Sat Aug 26 12:14:41 2023]  Red-black tree iterative search time 40.000000
+[Sat Aug 26 12:14:41 2023]  Red-black tree remove time 90.000000
+[Sat Aug 26 12:15:30 2023]  Set size 10000000
+[Sat Aug 26 12:15:41 2023]  Red-black tree insert time 1065.000000
+[Sat Aug 26 12:15:51 2023]  Red-black tree recursive search time 1034.000000
+[Sat Aug 26 12:16:01 2023]  Red-black tree iterative search time 940.000000
+[Sat Aug 26 12:16:12 2023]  Red-black tree remove time 1150.000000
+[Sat Nov 25 10:50:48 2023]  Set size: 1000000
+[Sat Nov 25 10:50:49 2023]  Red-black tree insert time 471.773000
+[Sat Nov 25 10:50:49 2023]  Red-black tree recursive search time 665.916000
+[Sat Nov 25 10:50:50 2023]  Red-black tree iterative search time 553.404000
+[Sat Nov 25 10:50:51 2023]  Red-black tree remove time 573.290000
+[Tue Nov 28 14:23:34 2023]  Set size: 1000
+[Tue Nov 28 14:23:34 2023]  Red-black tree average insert time 111.000000
+[Tue Nov 28 14:23:34 2023]  Red-black tree average recursive search time 54.000000
+[Tue Nov 28 14:23:34 2023]  Red-black tree average iterative search time 51.000000
+[Tue Nov 28 14:23:34 2023]  Red-black tree average remove time 77.000000
+[Tue Nov 28 14:30:43 2023]  Set size: 100
+[Tue Nov 28 14:30:43 2023]  Red-black tree average insert time 190.000000
+[Tue Nov 28 14:30:43 2023]  Red-black tree average recursive search time 40.000000
+[Tue Nov 28 14:30:43 2023]  Red-black tree average iterative search time 30.000000
+[Tue Nov 28 14:30:43 2023]  Red-black tree average remove time 80.000000
+[Tue Nov 28 14:30:43 2023]  Remainder Skip List average insert time: 114120.000000
+[Tue Nov 28 14:30:43 2023]  Remainder Skip List average search time: 2980.000000
+[Tue Nov 28 14:37:51 2023]  Set size: 100
+[Tue Nov 28 14:37:51 2023]  Red-black tree average insert time 150.000000
+[Tue Nov 28 14:37:51 2023]  Red-black tree average recursive search time 40.000000
+[Tue Nov 28 14:37:51 2023]  Red-black tree average iterative search time 40.000000
+[Tue Nov 28 14:37:51 2023]  Red-black tree average remove time 90.000000
+[Tue Nov 28 14:37:51 2023]  Remainder Skip List average insert time: 198120.000000
+[Tue Nov 28 14:37:51 2023]  Remainder Skip List average search time: 175420.000000
+[Tue Nov 28 14:38:06 2023]  Set size: 100
+[Tue Nov 28 14:38:07 2023]  Red-black tree average insert time 130.000000
+[Tue Nov 28 14:38:07 2023]  Red-black tree average recursive search time 40.000000
+[Tue Nov 28 14:38:07 2023]  Red-black tree average iterative search time 40.000000
+[Tue Nov 28 14:38:07 2023]  Red-black tree average remove time 90.000000
+[Tue Nov 28 14:38:07 2023]  Remainder Skip List average insert time: 207320.000000
+[Tue Nov 28 14:38:07 2023]  Remainder Skip List average search time: 178010.000000
+[Tue Nov 28 14:49:03 2023]  Set size: 10
+[Tue Nov 28 14:49:03 2023]  Red-black tree average insert time 600.000000
+[Tue Nov 28 14:49:03 2023]  Red-black tree average recursive search time 100.000000
+[Tue Nov 28 14:49:03 2023]  Red-black tree average iterative search time 100.000000
+[Tue Nov 28 14:49:03 2023]  Red-black tree average remove time 100.000000
+[Tue Nov 28 14:49:03 2023]  Remainder Skip List average insert time: 180400.000000
+[Tue Nov 28 14:49:03 2023]  Remainder Skip List average search time: 800.000000
+[Tue Nov 28 14:49:59 2023]  Set size: 50
+[Tue Nov 28 14:49:59 2023]  Red-black tree average insert time 160.000000
+[Tue Nov 28 14:49:59 2023]  Red-black tree average recursive search time 40.000000
+[Tue Nov 28 14:49:59 2023]  Red-black tree average iterative search time 40.000000
+[Tue Nov 28 14:49:59 2023]  Red-black tree average remove time 80.000000
+[Tue Nov 28 14:49:59 2023]  Remainder Skip List average insert time: 239680.000000
+[Tue Nov 28 14:49:59 2023]  Remainder Skip List average search time: 360.000000
+[Tue Nov 28 14:50:31 2023]  Set size: 150
+[Tue Nov 28 14:50:31 2023]  Red-black tree average insert time 246.666667
+[Tue Nov 28 14:50:31 2023]  Red-black tree average recursive search time 80.000000
+[Tue Nov 28 14:50:31 2023]  Red-black tree average iterative search time 73.333333
+[Tue Nov 28 14:50:31 2023]  Red-black tree average remove time 146.666667
+[Tue Nov 28 14:50:31 2023]  Remainder Skip List average insert time: 993.333333
+[Tue Nov 28 14:50:31 2023]  Remainder Skip List average search time: 786.666667
+[Tue Nov 28 15:07:25 2023]  Set size: 150
+[Tue Nov 28 15:07:25 2023]  Red-black tree average insert time 140.000000
+[Tue Nov 28 15:07:25 2023]  Red-black tree average recursive search time 46.666667
+[Tue Nov 28 15:07:25 2023]  Red-black tree average iterative search time 40.000000
+[Tue Nov 28 15:07:25 2023]  Red-black tree average remove time 86.666667
+[Tue Nov 28 15:07:25 2023]  Remainder Skip List average insert time: 1080.000000
+[Tue Nov 28 15:07:25 2023]  Remainder Skip List average search time: 866.666667
+[Tue Nov 28 15:08:23 2023]  Set size: 1000000
+[Tue Nov 28 15:08:24 2023]  Red-black tree average insert time 572.173000
+[Tue Nov 28 15:08:24 2023]  Red-black tree average recursive search time 527.651000
+[Tue Nov 28 15:08:25 2023]  Red-black tree average iterative search time 440.016000
+[Tue Nov 28 15:08:25 2023]  Red-black tree average remove time 576.080000
+[Tue Nov 28 15:08:28 2023]  Remainder Skip List average insert time: 2434.907000
+[Tue Nov 28 15:08:33 2023]  Remainder Skip List average search time: 5015.661000
+[Tue Nov 28 15:10:38 2023]  Set size: 1000000
+[Tue Nov 28 15:10:39 2023]  Red-black tree average insert time 473.488000
+[Tue Nov 28 15:10:40 2023]  Red-black tree average recursive search time 493.596000
+[Tue Nov 28 15:10:40 2023]  Red-black tree average iterative search time 434.558000
+[Tue Nov 28 15:10:41 2023]  Red-black tree average remove time 561.935000
+[Tue Nov 28 15:10:43 2023]  Remainder Skip List average insert time: 1929.092000
+[Tue Nov 28 15:10:47 2023]  Remainder Skip List average search time: 3919.806000
+[Tue Nov 28 15:25:35 2023]  Set size: 1000000
+[Tue Nov 28 15:25:36 2023]  Red-black tree average insert time 505.070000
+[Tue Nov 28 15:25:36 2023]  Red-black tree average recursive search time 478.345000
+[Tue Nov 28 15:25:37 2023]  Red-black tree average iterative search time 461.275000
+[Tue Nov 28 15:25:38 2023]  Red-black tree average remove time 709.747000
+[Tue Nov 28 15:25:40 2023]  Remainder Skip List average insert time: 2252.824000
+[Tue Nov 28 15:25:44 2023]  Remainder Skip List average search time: 3953.240000
+[Tue Nov 28 15:37:08 2023]  Set size: 100
+[Tue Nov 28 15:37:08 2023]  Red-black tree insert time 27000
+[Tue Nov 28 15:37:08 2023]  Red-black tree recursive search time 7000
+[Tue Nov 28 15:37:08 2023]  Red-black treeiterative search time 8000
+[Tue Nov 28 15:37:08 2023]  Red-black tree remove time 16000
+[Tue Nov 28 15:37:08 2023]  Remainder Tree insert time: 75000
+[Tue Nov 28 15:37:08 2023]  Remainder Tree search time: 46000
+[Tue Nov 28 15:38:32 2023]  Set size: 100000
+[Tue Nov 28 15:38:32 2023]  Red-black tree insert time 20259000
+[Tue Nov 28 15:38:32 2023]  Red-black tree recursive search time 18015000
+[Tue Nov 28 15:38:32 2023]  Red-black treeiterative search time 14965000
+[Tue Nov 28 15:38:32 2023]  Red-black tree remove time 19332000
+[Tue Nov 28 15:38:32 2023]  Remainder Tree insert time: 60952000
+[Tue Nov 28 15:38:32 2023]  Remainder Tree search time: 56881000
+[Tue Nov 28 15:39:41 2023]  Set size: 1000000
+[Tue Nov 28 15:39:42 2023]  Red-black tree insert time 589909000
+[Tue Nov 28 15:39:42 2023]  Red-black tree recursive search time 537793000
+[Tue Nov 28 15:39:43 2023]  Red-black treeiterative search time 506460000
+[Tue Nov 28 15:39:43 2023]  Red-black tree remove time 619608000
+[Tue Nov 28 15:39:45 2023]  Remainder Tree insert time: 1899701000
+[Tue Nov 28 15:39:49 2023]  Remainder Tree search time: 3969753000
+[Tue Nov 28 15:43:58 2023]  Set size: 1000000
+[Tue Nov 28 15:43:58 2023]  Red-black tree insert time 490336000
+[Tue Nov 28 15:43:59 2023]  Red-black tree recursive search time 507953000
+[Tue Nov 28 15:43:59 2023]  Red-black treeiterative search time 454345000
+[Tue Nov 28 15:44:00 2023]  Red-black tree remove time 606667000
+[Tue Nov 28 15:44:02 2023]  Remainder Tree insert time: 1863139000
+[Tue Nov 28 15:44:06 2023]  Remainder Tree search time: 3912594000
+[Tue Nov 28 15:44:31 2023]  Set size: 1000000
+[Tue Nov 28 15:44:32 2023]  Red-black tree insert time 533526000
+[Tue Nov 28 15:44:32 2023]  Red-black tree recursive search time 526900000
+[Tue Nov 28 15:44:33 2023]  Red-black treeiterative search time 480991000
+[Tue Nov 28 15:44:33 2023]  Red-black tree remove time 590356000
+[Tue Nov 28 15:44:35 2023]  Remainder Tree insert time: 1885916000
+[Tue Nov 28 15:44:39 2023]  Remainder Tree search time: 4017575000
+[Tue Nov 28 15:45:27 2023]  Set size: 1000000
+[Tue Nov 28 15:45:28 2023]  Red-black tree insert time 524248000
+[Tue Nov 28 15:45:29 2023]  Red-black tree recursive search time 537769000
+[Tue Nov 28 15:45:29 2023]  Red-black treeiterative search time 446124000
+[Tue Nov 28 15:45:30 2023]  Red-black tree remove time 649835000
+[Tue Nov 28 15:45:33 2023]  Remainder Tree insert time: 2708722000
+[Tue Nov 28 15:45:39 2023]  Remainder Tree search time: 6194458000
+[Tue Nov 28 16:12:37 2023]  Set size: 100000
+[Tue Nov 28 16:12:37 2023]  Remainder Tree insert time: 54909000
+[Tue Nov 28 16:12:37 2023]  Remainder Tree search time: 46392000
+[Tue Nov 28 16:12:37 2023]  Red-black tree insert time 19497000
+[Tue Nov 28 16:12:37 2023]  Red-black tree recursive search time 17298000
+[Tue Nov 28 16:12:37 2023]  Red-black treeiterative search time 15168000
+[Tue Nov 28 16:12:37 2023]  Red-black tree remove time 19805000
+[Tue Nov 28 16:14:13 2023]  Set size: 1000000
+[Tue Nov 28 16:14:15 2023]  Remainder Tree insert time: 1910042000
+[Tue Nov 28 16:14:19 2023]  Remainder Tree search time: 3918462000
+[Tue Nov 28 16:14:20 2023]  Red-black tree insert time 497661000
+[Tue Nov 28 16:14:20 2023]  Red-black tree recursive search time 508123000
+[Tue Nov 28 16:14:21 2023]  Red-black treeiterative search time 430443000
+[Tue Nov 28 16:14:21 2023]  Red-black tree remove time 562175000
+[Tue Nov 28 16:16:24 2023]  Set size: 1000000
+[Tue Nov 28 16:16:26 2023]  Remainder Tree insert time: 1499357000
+[Tue Nov 28 16:16:28 2023]  Remainder Tree search time: 2189922000
+[Tue Nov 28 16:16:29 2023]  Red-black tree insert time 516663000
+[Tue Nov 28 16:16:29 2023]  Red-black tree recursive search time 492195000
+[Tue Nov 28 16:16:30 2023]  Red-black treeiterative search time 442934000
+[Tue Nov 28 16:16:30 2023]  Red-black tree remove time 546756000
+[Tue Nov 28 16:27:46 2023]  Set size: 1000000
+[Tue Nov 28 16:27:48 2023]  Remainder Tree insert time: 1896663000
+[Tue Nov 28 16:27:52 2023]  Remainder Tree search time: 3979247000
+[Tue Nov 28 16:27:53 2023]  Red-black tree insert time 571378000
+[Tue Nov 28 16:27:53 2023]  Red-black tree recursive search time 547832000
+[Tue Nov 28 16:27:54 2023]  Red-black treeiterative search time 512111000
+[Tue Nov 28 16:27:54 2023]  Red-black tree remove time 695943000
+[Tue Nov 28 16:48:32 2023]  Set size: 100
+[Tue Nov 28 16:48:32 2023]  Remainder Tree insert time: 84000
+[Tue Nov 28 16:48:32 2023]  Remainder Tree search time: 72000
+[Tue Nov 28 16:48:32 2023]  Red-black tree insert time 20000
+[Tue Nov 28 16:48:32 2023]  Red-black tree recursive search time 8000
+[Tue Nov 28 16:48:32 2023]  Red-black treeiterative search time 7000
+[Tue Nov 28 16:48:32 2023]  Red-black tree remove time 14000
+[Tue Nov 28 17:32:49 2023]  Set size: 1000000
+[Tue Nov 28 17:32:51 2023]  Remainder Tree insert time: 1838510000
+[Tue Nov 28 17:32:55 2023]  Remainder Tree search time: 3771356000
+[Tue Nov 28 17:32:56 2023]  Red-black tree insert time 576057000
+[Tue Nov 28 17:32:56 2023]  Red-black tree recursive search time 477960000
+[Tue Nov 28 17:32:57 2023]  Red-black treeiterative search time 462234000
+[Tue Nov 28 17:32:57 2023]  Red-black tree remove time 529945000
+[Tue Nov 28 17:38:29 2023]  Set size: 1000000
+[Tue Nov 28 17:38:32 2023]  Remainder Tree insert time: 1947824000
+[Tue Nov 28 17:38:36 2023]  Remainder Tree search time: 4105721000
+[Tue Nov 28 17:38:36 2023]  Red-black tree insert time 555360000
+[Tue Nov 28 17:38:37 2023]  Red-black tree recursive search time 506056000
+[Tue Nov 28 17:38:37 2023]  Red-black treeiterative search time 430974000
+[Tue Nov 28 17:38:38 2023]  Red-black tree remove time 680263000
+[Tue Nov 28 17:43:03 2023]  Set size: 10000000
+[Tue Nov 28 17:43:19 2023]  Remainder Tree insert time: 15311710000
+[Tue Nov 28 17:44:01 2023]  Remainder Tree search time: 41380370000
+[Tue Nov 28 17:44:04 2023]  Red-black tree insert time 1385191000
+[Tue Nov 28 17:44:05 2023]  Red-black tree recursive search time 1057184000
+[Tue Nov 28 17:44:06 2023]  Red-black treeiterative search time 773684000
+[Tue Nov 28 17:44:06 2023]  Red-black tree remove time 891397000
+[Tue Nov 28 18:11:05 2023]  Set size: 10000000
+[Tue Nov 28 18:11:11 2023]  Remainder Tree insert time: 5078134000
+[Tue Nov 28 18:11:15 2023]  Remainder Tree search time: 4552648000
+[Tue Nov 28 18:11:18 2023]  Red-black tree insert time 1302062000
+[Tue Nov 28 18:11:19 2023]  Red-black tree recursive search time 1070151000
+[Tue Nov 28 18:11:20 2023]  Red-black treeiterative search time 786031000
+[Tue Nov 28 18:11:21 2023]  Red-black tree remove time 902496000
+[Tue Nov 28 18:13:17 2023]  Set size: 100000000
+[Tue Nov 28 18:13:41 2023]  Red-black tree insert time 14835731000
+[Tue Nov 28 18:13:53 2023]  Red-black tree recursive search time 12287819000
+[Tue Nov 28 18:14:02 2023]  Red-black treeiterative search time 8784503000
+[Tue Nov 28 18:14:14 2023]  Red-black tree remove time 11950341000
+[Tue Nov 28 18:15:22 2023]  Remainder Tree insert time: 52766956000
+[Tue Nov 28 18:16:06 2023]  Remainder Tree search time: 44074233000
+[Tue Nov 28 18:18:50 2023]  Set size: 10000000
+[Tue Nov 28 18:18:52 2023]  Red-black tree insert time 1239612000
+[Tue Nov 28 18:18:53 2023]  Red-black tree recursive search time 1027193000
+[Tue Nov 28 18:18:54 2023]  Red-black treeiterative search time 797746000
+[Tue Nov 28 18:18:55 2023]  Red-black tree remove time 903812000
+[Tue Nov 28 18:19:01 2023]  Remainder Tree insert time: 4908068000
+[Tue Nov 28 18:19:06 2023]  Remainder Tree search time: 5145320000
+[Tue Nov 28 18:19:35 2023]  Set size: 10000000
+[Tue Nov 28 18:19:37 2023]  Red-black tree insert time 1242860000
+[Tue Nov 28 18:19:38 2023]  Red-black tree recursive search time 1023486000
+[Tue Nov 28 18:19:38 2023]  Red-black treeiterative search time 782230000
+[Tue Nov 28 18:19:39 2023]  Red-black tree remove time 885751000
+[Tue Nov 28 18:19:44 2023]  Remainder Tree insert time: 3590533000
+[Tue Nov 28 18:19:48 2023]  Remainder Tree search time: 3936547000
+[Tue Nov 28 18:20:08 2023]  Set size: 10000000
+[Tue Nov 28 18:20:10 2023]  Red-black tree insert time 1246397000
+[Tue Nov 28 18:20:11 2023]  Red-black tree recursive search time 1018088000
+[Tue Nov 28 18:20:12 2023]  Red-black treeiterative search time 793075000
+[Tue Nov 28 18:20:13 2023]  Red-black tree remove time 883080000
+[Tue Nov 28 18:20:18 2023]  Remainder Tree insert time: 3904595000
+[Tue Nov 28 18:20:22 2023]  Remainder Tree search time: 4015970000
+[Tue Nov 28 18:21:05 2023]  Set size: 10000000
+[Tue Nov 28 18:21:07 2023]  Red-black tree insert time 1229974000
+[Tue Nov 28 18:21:08 2023]  Red-black tree recursive search time 1020746000
+[Tue Nov 28 18:21:09 2023]  Red-black treeiterative search time 783826000
+[Tue Nov 28 18:21:10 2023]  Red-black tree remove time 880388000
+[Tue Nov 28 18:21:15 2023]  Remainder Tree insert time: 3873258000
+[Tue Nov 28 18:21:19 2023]  Remainder Tree search time: 4057402000
+[Tue Nov 28 18:21:56 2023]  Set size: 10000000
+[Tue Nov 28 18:21:58 2023]  Red-black tree insert time 1247008000
+[Tue Nov 28 18:22:00 2023]  Red-black tree recursive search time 1044596000
+[Tue Nov 28 18:22:00 2023]  Red-black treeiterative search time 772245000
+[Tue Nov 28 18:22:01 2023]  Red-black tree remove time 900380000
+[Tue Nov 28 18:22:07 2023]  Remainder Tree insert time: 4437396000
+[Tue Nov 28 18:22:11 2023]  Remainder Tree search time: 4185897000
+[Tue Nov 28 19:56:18 2023]  Set size: 1000000
+[Tue Nov 28 19:56:18 2023]  Red-black tree insert time 113620000
+[Tue Nov 28 19:56:18 2023]  Red-black tree recursive search time 96248000
+[Tue Nov 28 19:56:18 2023]  Red-black treeiterative search time 74208000
+[Tue Nov 28 19:56:18 2023]  Red-black tree remove time 85534000
+[Tue Nov 28 19:56:19 2023]  Remainder Tree insert time: 458967000
+[Tue Nov 28 19:56:19 2023]  Remainder Tree search time: 435721000
+[Tue Nov 28 19:57:37 2023]  Set size: 1000000
+[Tue Nov 28 19:57:37 2023]  Red-black tree insert time 115384000
+[Tue Nov 28 19:57:37 2023]  Red-black tree recursive search time 4000
+[Tue Nov 28 19:57:37 2023]  Red-black treeiterative search time 77910000
+[Tue Nov 28 19:57:37 2023]  Red-black tree remove time 83364000
+[Tue Nov 28 19:57:38 2023]  Remainder Tree insert time: 465591000
+[Tue Nov 28 19:57:38 2023]  Remainder Tree search time: 2000
+[Tue Nov 28 19:57:47 2023]  Set size: 1000000
+[Tue Nov 28 19:57:48 2023]  Red-black tree insert time 119563000
+[Tue Nov 28 19:57:48 2023]  Red-black tree recursive search time 4000
+[Tue Nov 28 19:57:48 2023]  Red-black treeiterative search time 77760000
+[Tue Nov 28 19:57:48 2023]  Red-black tree remove time 80878000
+[Tue Nov 28 19:57:48 2023]  Remainder Tree insert time: 457771000
+[Tue Nov 28 19:57:48 2023]  Remainder Tree search time: 3000
+[Tue Nov 28 19:57:56 2023]  Set size: 1000000
+[Tue Nov 28 19:57:56 2023]  Red-black tree insert time 119120000
+[Tue Nov 28 19:57:56 2023]  Red-black tree recursive search time 4000
+[Tue Nov 28 19:57:56 2023]  Red-black treeiterative search time 74139000
+[Tue Nov 28 19:57:56 2023]  Red-black tree remove time 80367000
+[Tue Nov 28 19:57:57 2023]  Remainder Tree insert time: 442829000
+[Tue Nov 28 19:57:57 2023]  Remainder Tree search time: 2000
+[Tue Nov 28 19:58:46 2023]  Set size: 1000000
+[Tue Nov 28 19:58:46 2023]  Red-black tree insert time 111422000
+[Tue Nov 28 19:58:46 2023]  Red-black tree recursive search time 3000
+[Tue Nov 28 19:58:46 2023]  Red-black treeiterative search time 73283000
+[Tue Nov 28 19:58:46 2023]  Red-black tree remove time 85214000
+[Tue Nov 28 19:58:47 2023]  Remainder Tree insert time: 453463000
+[Tue Nov 28 19:58:47 2023]  Remainder Tree search time: 2000
+[Tue Nov 28 20:00:18 2023]  Set size: 100000
+[Tue Nov 28 20:00:18 2023]  Red-black tree insert time 19145000
+[Tue Nov 28 20:00:18 2023]  Red-black tree recursive search time 1000
+[Tue Nov 28 20:00:18 2023]  Red-black treeiterative search time 0
+[Tue Nov 28 20:00:18 2023]  Red-black tree remove time 18022000
+[Tue Nov 28 20:00:19 2023]  Remainder Tree insert time: 76071000
+[Tue Nov 28 20:00:19 2023]  Remainder Tree search time: 1000
+[Tue Nov 28 20:00:30 2023]  Set size: 1000000
+[Tue Nov 28 20:00:31 2023]  Red-black tree insert time 528579000
+[Tue Nov 28 20:00:31 2023]  Red-black tree recursive search time 1000
+[Tue Nov 28 20:00:31 2023]  Red-black treeiterative search time 0
+[Tue Nov 28 20:00:32 2023]  Red-black tree remove time 620894000
+[Tue Nov 28 20:00:32 2023]  Remainder Tree insert time: 714894000
+[Tue Nov 28 20:00:32 2023]  Remainder Tree search time: 2000
+[Tue Nov 28 20:00:40 2023]  Set size: 1000000
+[Tue Nov 28 20:00:41 2023]  Red-black tree insert time 482952000
+[Tue Nov 28 20:00:41 2023]  Red-black tree recursive search time 1000
+[Tue Nov 28 20:00:41 2023]  Red-black treeiterative search time 0
+[Tue Nov 28 20:00:41 2023]  Red-black tree remove time 544849000
+[Tue Nov 28 20:00:42 2023]  Remainder Tree insert time: 730126000
+[Tue Nov 28 20:00:42 2023]  Remainder Tree search time: 1000
+[Tue Nov 28 20:04:23 2023]  Set size: 1000000
+[Tue Nov 28 20:04:24 2023]  Red-black tree insert time 540410000
+[Tue Nov 28 20:04:24 2023]  Red-black tree recursive search time 1000
+[Tue Nov 28 20:04:24 2023]  Red-black treeiterative search time 0
+[Tue Nov 28 20:04:25 2023]  Red-black tree remove time 589047000
+[Tue Nov 28 20:04:26 2023]  Remainder Tree insert time: 713754000
+[Tue Nov 28 20:04:26 2023]  Remainder Tree search time: 2000
+[Tue Nov 28 20:05:15 2023]  Set size: 1000000
+[Tue Nov 28 20:05:15 2023]  Red-black tree insert time 473893000
+[Tue Nov 28 20:05:15 2023]  Red-black tree recursive search time 1000
+[Tue Nov 28 20:05:15 2023]  Red-black treeiterative search time 0
+[Tue Nov 28 20:05:16 2023]  Red-black tree remove time 563517000
+[Tue Nov 28 20:05:17 2023]  Remainder Tree insert time: 713500000
+[Tue Nov 28 20:05:17 2023]  Remainder Tree search time: 1000
+[Tue Nov 28 20:05:48 2023]  Set size: 1000000
+[Tue Nov 28 20:05:48 2023]  Red-black tree insert time 483034000
+[Tue Nov 28 20:05:49 2023]  Red-black tree recursive search time 484297000
+[Tue Nov 28 20:05:49 2023]  Red-black treeiterative search time 434846000
+[Tue Nov 28 20:05:50 2023]  Red-black tree remove time 546988000
+[Tue Nov 28 20:05:51 2023]  Remainder Tree insert time: 747552000
+[Tue Nov 28 20:05:52 2023]  Remainder Tree search time: 718202000
+[Tue Nov 28 20:06:42 2023]  Set size: 10000000
+[Tue Nov 28 20:06:55 2023]  Red-black tree insert time 10603959000
+[Tue Nov 28 20:07:05 2023]  Red-black tree recursive search time 10201639000
+[Tue Nov 28 20:07:15 2023]  Red-black treeiterative search time 10269760000
+[Tue Nov 28 20:07:28 2023]  Red-black tree remove time 12251613000
+[Tue Nov 28 20:07:39 2023]  Remainder Tree insert time: 8680928000
+[Tue Nov 28 20:07:47 2023]  Remainder Tree search time: 8263258000
+[Tue Nov 28 20:09:10 2023]  Set size: 10000000
+[Tue Nov 28 20:09:23 2023]  Red-black tree insert time 10159522000
+[Tue Nov 28 20:09:32 2023]  Red-black tree recursive search time 9728326000
+[Tue Nov 28 20:09:42 2023]  Red-black treeiterative search time 9065203000
+[Tue Nov 28 20:09:54 2023]  Red-black tree remove time 12432898000
+[Tue Nov 28 20:10:05 2023]  Remainder Tree insert time: 8406060000
+[Tue Nov 28 20:10:13 2023]  Remainder Tree search time: 8501130000
