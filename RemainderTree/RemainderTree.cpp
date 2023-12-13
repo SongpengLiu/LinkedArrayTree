@@ -32,18 +32,20 @@ public:
     RemainderTree();
     RemainderTree(unsigned int);
     RemainderTree(unsigned int, unsigned short);
-    // ~RemainderTree();
-    void printInfo();
+    ~RemainderTree();
+    string printInfo();
     void printPath(unsigned int);
-    void add(unsigned int, T);
+    void insert(unsigned int, T);
     void remove(unsigned int);
     T get(unsigned int);
+    void destroy();
 
 
-protected:
+private:
     unsigned short findBestRadix(unsigned int);
     unsigned short findLevel(unsigned int, unsigned short);
-    void printBuffer(void *, unsigned int);
+    void printMemory(void *, unsigned int);
+    void destroy(void *, unsigned short);
 };
 
 template <class T>
@@ -89,6 +91,41 @@ RemainderTree<T>::RemainderTree(unsigned int maxValue, unsigned short inputRadix
 }
 
 template <class T>
+RemainderTree<T>::~RemainderTree(){
+    destroy();
+}
+
+template <class T>
+void RemainderTree<T>::destroy(){
+    destroy(root,0);
+    root=nullptr;
+}
+
+template <class T>
+void RemainderTree<T>::destroy(void* pointer, unsigned short currentLevel){
+    //index level
+    if(currentLevel<level-1){
+        for(int i =0;i<radix;i++){
+            if(*(long*)(pointer+ i * sizeof(void *)) != 0){
+                destroy(*(void**)(pointer+ i * sizeof(void *)),currentLevel+1);
+            }
+        }
+        free(pointer);
+    }
+
+    //date level
+    if(currentLevel>=level-1){
+        if(((TreeNode<T> *)pointer)->next!= nullptr){
+            destroy(((TreeNode<T> *)pointer)->next,currentLevel);
+        }
+        free (pointer);
+    }
+
+
+
+}
+
+template <class T>
 unsigned short RemainderTree<T>::findBestRadix(unsigned int maxValue)
 {
     unsigned short radix=0;
@@ -122,54 +159,33 @@ unsigned short RemainderTree<T>::findLevel(unsigned int inputMax, unsigned short
 }
 
 template <class T>
-void RemainderTree<T>::printInfo()
+string RemainderTree<T>::printInfo()
 {
-    cout << "max value: " + to_string(max)
-         << " radix: " + to_string(radix)
-         << " level: " + to_string(level)
-         << endl;
+    string s = "max value: " + to_string(max)+" radix: " + to_string(radix)+" level: " + to_string(level);
+    cout << s<< endl;
+    return s;
 }
 
 
 template <class T>
-void RemainderTree<T>::printBuffer(void *pBuff, unsigned int nLen)
+void RemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
 {
     if (NULL == pBuff || 0 == nLen)
     {
         return;
     }
 
-    const int nBytePerLine = 16;
-    unsigned char *p = (unsigned char *)pBuff;
-    char szHex[3 * nBytePerLine + 1] = {0};
-
     for (unsigned int i = 0; i < nLen; ++i)
     {
-        int idx = 3 * (i % nBytePerLine);
-        if (0 == idx)
-        {
-            memset(szHex, 0, sizeof(szHex));
-        }
-#ifdef WIN32
-        sprintf_s(&szHex[idx], 4, "%02x ", p[i]);
-#else
-        snprintf(&szHex[idx], 4, "%02x ", p[i]);
-#endif
-
-        if (0 == ((i + 1) % nBytePerLine))
-        {
-            printf("%s\n", szHex);
-        }
+        cout<<hex<<"0x"<<(*(long long*)(pBuff+i*8))<<" ";
     }
 
-    if (0 != (nLen % nBytePerLine))
-    {
-        printf("%s\n", szHex);
-    }
+    cout<<dec<<endl;
+
 }
 
 template <class T>
-void RemainderTree<T>::add(unsigned int index, T element)
+void RemainderTree<T>::insert(unsigned int index, T element)
 {
     if (index < 0 || index > max)
     {
@@ -192,6 +208,7 @@ void RemainderTree<T>::add(unsigned int index, T element)
         if (*(long *)pointer == 0)
         {
             allocatePointer = malloc(radix * (sizeof(void *)));
+            // allocatePointer= new void**[radix];
             memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *));
             memset(allocatePointer, 0, radix * (sizeof(void *)));
             pointer = allocatePointer + (unsigned int)ramainderStack.top() * sizeof(void *);
@@ -231,6 +248,7 @@ void RemainderTree<T>::add(unsigned int index, T element)
     }
 
     TreeNode<T> *newPointer = (TreeNode<T> *)malloc(sizeof(TreeNode<T>));
+    // TreeNode<T> *newPointer = new TreeNode<T>;
     memset(newPointer, 0, sizeof(TreeNode<T>));
     newPointer->index = index;
     newPointer->element = element;
@@ -265,7 +283,6 @@ T RemainderTree<T>::get(unsigned int index){
         }
     }
 
-
     if(*(long *)pointer == 0){
         return 0;
     }
@@ -286,6 +303,53 @@ T RemainderTree<T>::get(unsigned int index){
 }
 
 template <class T>
+void RemainderTree<T>::remove(unsigned int index){
+    if(index<0 ||index >max){
+        throw std::invalid_argument("invalid index");
+    }
+
+    stack<unsigned short> remainderStack;
+    unsigned int index2 = index;
+    for (int i = 0; i < level; i++)
+    {
+        remainderStack.push(index2 % radix);
+        index2 = index2 / radix;
+    }
+
+    void* pointer =&root;
+    for(int i=0;i<level-1;i++){
+        if (*(long *)pointer == 0){
+            return;
+        }else{
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
+        }
+    }
+
+    if(*(long *)pointer == 0){
+        return;
+    }
+    TreeNode<T> *nodePointer = (*(TreeNode<T>**)pointer);
+
+    while(nodePointer!= nullptr ){
+        if(nodePointer->index == index){
+            memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+            free(nodePointer);
+            // delete nodePointer;
+            return;
+        }
+        else if(nodePointer->index>index){
+            return;
+        }
+        else{
+            pointer=&(nodePointer->next);
+            nodePointer=nodePointer->next;
+        }
+    }
+    return;
+}
+
+template <class T>
 void RemainderTree<T>::printPath(unsigned int index)
 {
     if (index < 0 || index > max)
@@ -302,9 +366,8 @@ void RemainderTree<T>::printPath(unsigned int index)
     }
 
     cout<<"---------trace start---------"<<endl;
-    cout << "print path of index: " << index << endl;
+    cout << "print path of index: " << index << "; remainder stack: ";
     stack s2 = s;
-    cout << "remainder stack: ";
     while (!s2.empty())
     {
         cout << s2.top() << " ";
@@ -312,9 +375,10 @@ void RemainderTree<T>::printPath(unsigned int index)
     }
     cout << endl;
 
+
     void *pointer = &root;
-    cout<<"root: "<<endl;
-    printBuffer(pointer,sizeof(void *));
+    cout<<"root: ";
+    printMemory(pointer,1);
     for (int i = 0; i < level - 1; i++)
     {
         if (*(long *)pointer == 0)
@@ -325,7 +389,7 @@ void RemainderTree<T>::printPath(unsigned int index)
         else
         {
             cout << "level: " << i << " index: " << s.top() <<" address: "<<*(void **)pointer<< endl;
-            printBuffer(*(void **)pointer, sizeof(void *) * radix);
+            printMemory(*(void **)pointer, radix);
             pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
             s.pop();
         }
@@ -336,13 +400,7 @@ void RemainderTree<T>::printPath(unsigned int index)
         return;
     }
     TreeNode<T> *nodePointer =(*(TreeNode<T>**)pointer);
-    if(*(long *)nodePointer == 0){
-        cout << "---------end----------" << endl;
-        return;
-    }
-    else{
-        cout<<"node index: " <<nodePointer->index<<" element: "<<nodePointer->element<<" next: "<<nodePointer->next <<endl;
-    }
+    cout<<"node index: " <<nodePointer->index<<" element: "<<nodePointer->element<<" next: "<<nodePointer->next <<endl;
     while (nodePointer->next != nullptr)
     {
             nodePointer = nodePointer->next;

@@ -1,14 +1,19 @@
-erStart = clock::now();
-    for (auto i : dataSet)
+template <class T>
+unordered_set<T> getRandom(T number, T maxValue)
+{
+    std::unordered_set<T> randomSet;
+    std::random_device rd;
+    if (number > maxValue)
     {
-        tree->add(i, i + 1);
+        throw std::invalid_argument("invalid index");
+        return randomSet;
     }
-    for (auto i : dataSet)
-    {
-        tree->printPath(i);
-        cout<<"iiii:" <<i<<" "<<tree->get(i)<<endl;
-        break;
+    if(number*11>maxValue*10){
+        throw std::invalid_argument("maxValue too small, hard to generate so many random number");
+        return randomSet;
     }
-    auto timerEnd = clock::now();
-    auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
-    cout<< "time 1: "<<spentTime;
+    while(randomSet.size()<number){
+            randomSet.insert(rd() % maxValue);
+    }
+    return randomSet;
+}

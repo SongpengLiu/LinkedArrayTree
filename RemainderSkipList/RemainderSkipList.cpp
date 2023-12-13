@@ -146,7 +146,7 @@ void RemainderSkipList<T>::printBuffer(void *pBuff, unsigned int nLen)
         return;
     }
 
-    const int nBytePerLine = 16;
+    const int nBytePerLine = 8;
     unsigned char *p = (unsigned char *)pBuff;
     char szHex[3 * nBytePerLine + 1] = {0};
 
@@ -158,20 +158,20 @@ void RemainderSkipList<T>::printBuffer(void *pBuff, unsigned int nLen)
             memset(szHex, 0, sizeof(szHex));
         }
 #ifdef WIN32
-        sprintf_s(&szHex[idx], 4, "%02x ", p[i]);
+        sprintf_s(&szHex[idx], 4, "%02x", p[i]);
 #else
-        snprintf(&szHex[idx], 4, "%02x ", p[i]);
+        snprintf(&szHex[idx], 4, "%02x", p[i]);
 #endif
 
         if (0 == ((i + 1) % nBytePerLine))
         {
-            printf("%s\n", szHex);
+            printf("%s ", szHex);
         }
     }
 
     if (0 != (nLen % nBytePerLine))
     {
-        printf("%s\n", szHex);
+        printf("%s ", szHex);
     }
 }
 

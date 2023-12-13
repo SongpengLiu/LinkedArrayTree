@@ -6,7 +6,6 @@
 #include <fstream>
 using namespace std;
 
-
 class TestLog{
     private:
     static string log;
@@ -25,7 +24,7 @@ void TestLog::appendLog (string message){
     string outputMessage(date);
     outputMessage = "\n["+outputMessage+"]  "+message+"";
     // cout<<outputMessage;
-    TestLog::log.append(outputMessage); 
+    TestLog::log.append(outputMessage);
 }
 
 void TestLog::clearLog(){

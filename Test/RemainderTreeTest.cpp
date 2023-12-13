@@ -3,26 +3,27 @@
 #include <set>
 #include <random>
 #include <unordered_set>
+#include <windows.h>
+#include <psapi.h>
 #include "../RemainderTree/RemainderTree.cpp"
 using namespace std;
 
 template <class T>
-unordered_set<T> getRandom(T number, T maxValue){
-        std::unordered_set<T> randomSet;
-    if(number>maxValue){
-        return randomSet;
-    }
-
-    if(number == maxValue){
-        for(int i=0;i<number;i++){
-            randomSet.insert(i);
-        }
-        return randomSet;
-    }
+unordered_set<T> getRandom(T number, T maxValue)
+{
+    std::unordered_set<T> randomSet;
     std::random_device rd;
-
-    while(number > randomSet.size()){
-        randomSet.insert(rd()%maxValue);
+    if (number > maxValue)
+    {
+        throw std::invalid_argument("invalid index");
+        return randomSet;
+    }
+    if(number*11>maxValue*10){
+        throw std::invalid_argument("maxValue too small, hard to generate so many random number");
+        return randomSet;
+    }
+    while(randomSet.size()<number){
+            randomSet.insert(rd() % maxValue);
     }
     return randomSet;
 }
@@ -35,37 +36,68 @@ void testConstructor(){
 template <class T>
 void testAdd(unordered_set<T> dataSet, unsigned int max)
 {
-    typedef std::chrono::high_resolution_clock clock;
+    RemainderTree<string> *tree = new RemainderTree<string>(max);
+    tree->printInfo();
+    for (auto i : dataSet)
+    {
+        tree->insert(i, "value="+to_string(i));
+    }
+    cout<<"element:" <<*dataSet.begin()<<" "<<tree->get(*dataSet.begin())<<endl;
+    tree->printPath(*dataSet.begin());
+    tree->printPath(0);
+    delete tree;
+}
 
+template <class T>
+void testRemove(unordered_set<T> dataSet, unsigned int max)
+{
+    RemainderTree<string> *tree = new RemainderTree<string>(max);
+    tree->printInfo();
+    for (auto i : dataSet)
+    {
+        tree->insert(i, "value="+to_string(i));
+    }
+    tree->printPath(*dataSet.begin());
+    tree->remove(*dataSet.begin());
+    tree->printPath(*dataSet.begin());
 
+    delete tree;
+}
+
+template <class T>
+void testDestroy(unordered_set<T> dataSet, unsigned int max)
+{
+    PROCESS_MEMORY_COUNTERS pmc;
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        cout << "memory take(initial): " << pmc.WorkingSetSize / 1024 << "KB" << endl;
+    }
     RemainderTree<unsigned int> *tree = new RemainderTree<unsigned int>(max);
     tree->printInfo();
-    auto timerStart = clock::now();
     for (auto i : dataSet)
     {
-        tree->add(i, i + 1);
+        tree->insert(i, i + 1);
     }
-    for (auto i : dataSet)
+    cout<<"element: "<<tree->get(0)<<endl;
+    tree->printPath(0);
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
     {
-        tree->printPath(i);
-        cout<<"iiii:" <<i<<" "<<tree->get(i)<<endl;
-        break;
+        cout << "memory take(inserted): " << pmc.WorkingSetSize / 1024 << "KB" << endl;
     }
-    auto timerEnd = clock::now();
-    auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
-    cout<< "time 1: "<<spentTime;
-    // tree->add(38764,38764);
-    // tree->add(38761,38764);
-    // tree->add(38762,38764);
-    // tree->add(38765,38764);
-    // tree->printPath(38764);
-
+    delete tree;
+    tree->printPath(0);
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        cout << "memory take(destroied): " << pmc.WorkingSetSize / 1024 << "KB" << endl;
+    }
 }
 
 int main(){
-    unsigned int maxValue = 200000;
-    unordered_set<unsigned int> randomSet = getRandom<unsigned int>(100000, maxValue);
+    unsigned int maxValue = 11000;
+    unordered_set<unsigned int> randomSet = getRandom<unsigned int>(10000, maxValue);
     string message = "Set size: "+std::to_string(randomSet.size());
     cout<<message<<endl;
-    testAdd(randomSet,maxValue);
+    // testAdd(randomSet,maxValue);
+    testRemove(randomSet,maxValue);
+    // testDestroy(randomSet,maxValue);
 }
