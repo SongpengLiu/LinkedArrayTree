@@ -5,8 +5,10 @@
 #include <windows.h>
 #include <psapi.h>
 #include "../RedBlackTree/RBTree.cpp"
-#include "../RemainderSkipList/RemainderSkipList.cpp"
+#include "../BTree/BTree.cpp"
+// #include "../RemainderSkipList/RemainderSkipList.cpp"
 #include "../RemainderTree/RemainderTree.cpp"
+#include "../ArrayRemainderTree/ArrayRemainderTree.cpp"
 #include "./TestLog.cpp"
 using namespace std;
 using namespace chrono;
@@ -165,10 +167,149 @@ void RemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue){
     delete tree;
 }
 
+template <class T>
+void BTreeTest(unordered_set<T> dataSet){
+    string message = "--------------B tree--------------";
+    TestLog::appendLog(message);
+
+    PROCESS_MEMORY_COUNTERS pmc;
+    int memoryBefore;
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        memoryBefore = pmc.WorkingSetSize / 1024;
+        message = "memory take(before): "+to_string(memoryBefore) +"KB";
+        TestLog::appendLog(message);
+    }
+
+    BTree *tree = new BTree(0);
+
+    typedef std::chrono::high_resolution_clock clock;
+    auto timerStart = clock::now();
+    for(auto i: dataSet){
+    }
+    auto timerEnd = clock::now();
+    auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    auto getTime=spentTime;
+    message = "get from set time:"+to_string(getTime)+" average:"+to_string((double)getTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+        for(auto i: dataSet){
+        tree->insert(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime=spentTime-getTime;
+    message = "insert time: "+to_string(spentTime)+" average:"+to_string((double)spentTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        message = "memory take(after): "+to_string(pmc.WorkingSetSize / 1024) +"KB; increace memory: "
+        + to_string((pmc.WorkingSetSize / 1024)-memoryBefore)+"KB";
+        TestLog::appendLog(message);
+    }
+
+    timerStart = clock::now();
+    for(auto i: dataSet){
+        tree->search(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime=spentTime-getTime;
+    message = "search time: "+std::to_string(spentTime)+" average:"+to_string((double)spentTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for(auto i: dataSet){
+        tree->remove(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime=spentTime-getTime;
+    message = "remove time: "+std::to_string(spentTime)+" average:"+to_string((double)spentTime/dataSet.size());
+    TestLog::appendLog(message);
+    delete tree;
+}
+
+template <class T>
+void ArrayRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue, unsigned short radix){
+    string message = "--------------array remainder tree--------------";
+    TestLog::appendLog(message);
+
+    PROCESS_MEMORY_COUNTERS pmc;
+    int memoryBefore;
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        memoryBefore = pmc.WorkingSetSize / 1024;
+        message = "memory take(before): "+to_string(memoryBefore) +"KB";
+        TestLog::appendLog(message);
+    }
+
+    ArrayRemainderTree<unsigned int>* tree;
+    if(radix>1){
+        tree = new ArrayRemainderTree<unsigned int>(maxValue,radix);
+    }
+    else{
+        tree = new ArrayRemainderTree<unsigned int>(maxValue);
+    }
+    message = tree->printInfo();
+    TestLog::appendLog(message);
+
+    typedef std::chrono::high_resolution_clock clock;
+    auto timerStart = clock::now();
+    for(auto i: dataSet){
+    }
+    auto timerEnd = clock::now();
+    auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    auto getTime=spentTime;
+    message = "get from set time:"+to_string(getTime)+" average:"+to_string((double)getTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+        for(auto i: dataSet){
+        tree->insert(i,i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime=spentTime-getTime;
+    message = "insert time: "+to_string(spentTime)+" average:"+to_string((double)spentTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        message = "memory take(after): "+to_string(pmc.WorkingSetSize / 1024) +"KB; increace memory: "
+        + to_string((pmc.WorkingSetSize / 1024)-memoryBefore)+"KB";
+        TestLog::appendLog(message);
+    }
+
+    timerStart = clock::now();
+    for(auto i: dataSet){
+        tree->get(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime=spentTime-getTime;
+    message = "search time: "+std::to_string(spentTime)+" average:"+to_string((double)spentTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for(auto i: dataSet){
+        tree->remove(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime=spentTime-getTime;
+    message = "remove time: "+std::to_string(spentTime)+" average:"+to_string((double)spentTime/dataSet.size());
+    TestLog::appendLog(message);
+
+    delete tree;
+}
+
 int main(){
-    unsigned int number = 50000000;
-    unsigned int maxValue=55000000;
-    unordered_set<unsigned int> randomSet = getRandom<unsigned int>(number,maxValue);
+    unsigned int size = 1000000;
+    unsigned int maxValue=1100000;
+    unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size,maxValue);
 
     TestLog::appendLog("--------------------------------------------------");
     TestLog::appendLog("-----------------new statistic--------------------");
@@ -178,6 +319,10 @@ int main(){
 
     BRTreeTest(randomSet);
     RemainderTreeTest(randomSet,maxValue);
+    ArrayRemainderTreeTest(randomSet,maxValue,0);
+    ArrayRemainderTreeTest(randomSet,maxValue,100);
+    BTreeTest(randomSet);
+
 
     TestLog::printLog();
     TestLog::writeLogToFile();

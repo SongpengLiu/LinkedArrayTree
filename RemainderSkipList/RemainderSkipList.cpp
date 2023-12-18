@@ -335,7 +335,7 @@ void RemainderSkipList<T>::add(unsigned int index, T element)
     {
         Node<T> *leftNode = findLeftNode(index);
         Node<T> *rightNode;
-        if (leftNode == nullptr || *(long *)leftNode == NULL)
+        if (leftNode == nullptr || *(long *)leftNode == 0)
         {
             if (newPointer->next == nullptr)
             {
