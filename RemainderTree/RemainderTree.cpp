@@ -120,9 +120,6 @@ void RemainderTree<T>::destroy(void* pointer, unsigned short currentLevel){
         }
         free (pointer);
     }
-
-
-
 }
 
 template <class T>
@@ -225,18 +222,10 @@ void RemainderTree<T>::insert(unsigned int index, T element)
     if (*(long *)pointer != 0)
     {
         nodePointer = (*(TreeNode<T> **)pointer);
-        if(nodePointer->index<index){
-            pointer= &(nodePointer->next);
-        }
-        while (nodePointer->next != nullptr)
+        while (nodePointer->next != nullptr && nodePointer->index<index)
         {
-            if(nodePointer->index<index){
             pointer= &(nodePointer->next);
             nodePointer = nodePointer->next;
-            }
-            else{
-                break;
-            }
         }
         if(nodePointer->index==index){
         nodePointer->element=element;

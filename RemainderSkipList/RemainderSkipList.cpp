@@ -11,12 +11,12 @@ using namespace std;
 #define DEBUG true
 
 template <class T>
-struct Node
+struct RSLNode
 {
 public:
     unsigned int index;
     T element;
-    Node *next;
+    RSLNode *next;
 };
 
 template <class T>
@@ -27,27 +27,29 @@ private:
     unsigned int max;     // max value
     unsigned short level;
     void *root; // root array
-    Node<T> *head;
+    RSLNode<T> *head;
 
 
 public:
     RemainderSkipList();
     RemainderSkipList(unsigned int);
     RemainderSkipList(unsigned int, unsigned short);
-    // ~RemainderSkipList();
-    void printInfo();
+    ~RemainderSkipList();
+    string printInfo();
     void printPath(unsigned int);
-    void add(unsigned int, T);
+    void insert(unsigned int, T);
     void remove(unsigned int);
     T get(unsigned int);
     void printAllNodes();
+    void destroy();
 
-protected:
+private:
     unsigned short findBestRadix(unsigned int);
     unsigned short findLevel(unsigned int, unsigned short);
-    void printBuffer(void *, unsigned int);
-    Node<T>* findLeftNode(unsigned int);
-    void* findLeftNodeHelper(unsigned short,void*,unsigned int,unsigned short[], unsigned short);
+    void printMemory(void *, unsigned int);
+    RSLNode<T>* findLeftNode(unsigned int);
+    void* findLeftNode(unsigned short,void*,unsigned int,unsigned short[], unsigned int);
+    void destroy(void *, unsigned short);
 
 };
 
@@ -96,6 +98,44 @@ RemainderSkipList<T>::RemainderSkipList(unsigned int maxValue, unsigned short in
 }
 
 template <class T>
+RemainderSkipList<T>::~RemainderSkipList(){
+    destroy();
+}
+
+template <class T>
+void RemainderSkipList<T>::destroy(){
+
+    //iterately remove data node;
+    RSLNode<T>* nodePointer = head;
+    RSLNode<T>* nodePointer2 = nullptr;
+    while(nodePointer != nullptr){
+        nodePointer2 = nodePointer->next;
+        free(nodePointer);
+        nodePointer=nodePointer2;
+    }
+    destroy(root,0);
+    root=nullptr;
+    head = nullptr;
+}
+
+template <class T>
+void RemainderSkipList<T>::destroy(void* pointer, unsigned short currentLevel){
+    //clear index level
+    if(currentLevel<level-2){
+        for(int i =0;i<radix;i++){
+            if(*(long*)(pointer+ i * sizeof(void *)) != 0){
+                destroy(*(void**)(pointer+ i * sizeof(void *)),currentLevel+1);
+            }
+        }
+        free(pointer);
+    }
+    if(currentLevel>= level-1){
+        free(pointer);
+    }
+}
+
+
+template <class T>
 unsigned short RemainderSkipList<T>::findBestRadix(unsigned int maxValue)
 {
     unsigned short radix=0;
@@ -129,71 +169,50 @@ unsigned short RemainderSkipList<T>::findLevel(unsigned int inputMax, unsigned s
 }
 
 template <class T>
-void RemainderSkipList<T>::printInfo()
+string RemainderSkipList<T>::printInfo()
 {
-    cout << "max value: " + to_string(max)
-         << " radix: " + to_string(radix)
-         << " level: " + to_string(level)
-         << endl;
+    string s = "max value: " + to_string(max)+" radix: " + to_string(radix)+" level: " + to_string(level);
+    cout << s<< endl;
+    return s;
 }
 
 
 template <class T>
-void RemainderSkipList<T>::printBuffer(void *pBuff, unsigned int nLen)
+void RemainderSkipList<T>::printMemory(void *pBuff, unsigned int nLen)
 {
     if (NULL == pBuff || 0 == nLen)
     {
         return;
     }
 
-    const int nBytePerLine = 8;
-    unsigned char *p = (unsigned char *)pBuff;
-    char szHex[3 * nBytePerLine + 1] = {0};
-
     for (unsigned int i = 0; i < nLen; ++i)
     {
-        int idx = 3 * (i % nBytePerLine);
-        if (0 == idx)
-        {
-            memset(szHex, 0, sizeof(szHex));
-        }
-#ifdef WIN32
-        sprintf_s(&szHex[idx], 4, "%02x", p[i]);
-#else
-        snprintf(&szHex[idx], 4, "%02x", p[i]);
-#endif
-
-        if (0 == ((i + 1) % nBytePerLine))
-        {
-            printf("%s ", szHex);
-        }
+        cout<<hex<<"0x"<<(*(long long*)(pBuff+i*8))<<" ";
     }
 
-    if (0 != (nLen % nBytePerLine))
-    {
-        printf("%s ", szHex);
-    }
+    cout<<dec<<endl;
+
 }
 
 template <class T>
-void *RemainderSkipList<T>::findLeftNodeHelper(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short indexArray[], unsigned short index)
+void *RemainderSkipList<T>::findLeftNode(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short indexArray[], unsigned int index)
 {
-    if (arrayPointer == nullptr || *(long *)arrayPointer == 0)
+    if (arrayPointer == nullptr)
     {
         return nullptr;
     }
     // reached the last index level
     if (currentLevel >= level-1)
     {
-        Node<T> *nodePointer = (Node<T> *)arrayPointer;
+        RSLNode<T> *RSLNodePointer = (RSLNode<T> *)arrayPointer;
         //travel to left biggest
-        while (nodePointer->next != nullptr && nodePointer->next->index<index)
+        while (RSLNodePointer->next != nullptr && RSLNodePointer->next->index<index)
         {
-            nodePointer = nodePointer->next;
+            RSLNodePointer = RSLNodePointer->next;
         }
-        if (nodePointer->index < index)
+        if (RSLNodePointer->index < index)
         {
-            return nodePointer;
+            return RSLNodePointer;
         }
         else
         {
@@ -210,8 +229,11 @@ void *RemainderSkipList<T>::findLeftNodeHelper(unsigned short currentLevel, void
     {
         for (int i = indexArray[currentLevel]; i >= 0; i--)
         {
-            void *returnPointer = findLeftNodeHelper(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
-            if (returnPointer != nullptr && *(long *)returnPointer != 0)
+            void *returnPointer =nullptr;
+            if((arrayPointer + i * sizeof(void *))!=nullptr){
+                returnPointer =findLeftNode(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+            }
+            if (returnPointer != nullptr)
             {
                 return returnPointer;
             }
@@ -221,8 +243,11 @@ void *RemainderSkipList<T>::findLeftNodeHelper(unsigned short currentLevel, void
     {
         for (int i = radix-1; i >= 0; i--)
         {
-            void *returnPointer = findLeftNodeHelper(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
-            if (returnPointer != nullptr && *(long *)returnPointer != 0)
+            void *returnPointer =nullptr;
+            if((arrayPointer + i * sizeof(void *))!=nullptr){
+                returnPointer =findLeftNode(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+            }
+            if (returnPointer != nullptr)
             {
                 return returnPointer;
             }
@@ -236,11 +261,11 @@ void *RemainderSkipList<T>::findLeftNodeHelper(unsigned short currentLevel, void
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-11-27
- * @brief find an index's left existing node
- * @return the pointer of left node, return nullptr if not found
+ * @brief find an index's closest left Node
+ * @return the pointer of left Node, return nullptr if not found
  ********************************************************/
 template <class T>
-Node<T>* RemainderSkipList<T>::findLeftNode(unsigned int index){
+RSLNode<T>* RemainderSkipList<T>::findLeftNode(unsigned int index){
     if(index<0 ||index >max){
         throw std::invalid_argument("invalid index");
     }
@@ -253,12 +278,12 @@ Node<T>* RemainderSkipList<T>::findLeftNode(unsigned int index){
         index2 = index2 / radix;
     }
 
-    return (Node<T>*)findLeftNodeHelper(0,root,0,indexArray,index);
+    return (RSLNode<T>*)findLeftNode(0,root,0,indexArray,index);
 
 }
 
 template <class T>
-void RemainderSkipList<T>::add(unsigned int index, T element)
+void RemainderSkipList<T>::insert(unsigned int index, T element)
 {
     if (index < 0 || index > max)
     {
@@ -266,14 +291,14 @@ void RemainderSkipList<T>::add(unsigned int index, T element)
     }
 
     stack<unsigned short> s;
-    unsigned short index2 = index;
+    unsigned int index2 = index;
     for (int i = 0; i < level; i++)
     {
         s.push(index2 % radix);
         index2 = index2 / radix;
     }
 
-    // Node<T>* node;
+    // travel to the data level
     void *pointer = &root;
     void *allocatePointer;
     for (int i = 0; i < level - 1; i++)
@@ -293,49 +318,46 @@ void RemainderSkipList<T>::add(unsigned int index, T element)
         }
     }
 
+    //travel to the node position
     bool needFindLeft = true;
-    Node<T> *nodePointer = nullptr;
+    RSLNode<T> *nodePointer = nullptr;
     if (*(long *)pointer != 0)
     {
-        nodePointer = (*(Node<T> **)pointer);
+        nodePointer = (*(RSLNode<T> **)pointer);
+
+        while (nodePointer->next != nullptr && nodePointer->index < index)
+        {
+            pointer = &(nodePointer->next);
+            nodePointer = nodePointer->next;
+            needFindLeft = false;
+        }
+        if (nodePointer->index == index)
+        {
+            nodePointer->element = element;
+            return;
+        }
         if(nodePointer->index<index){
             pointer= &(nodePointer->next);
+            needFindLeft = false;
         }
-        while (nodePointer->next != NULL && nodePointer->next->index <= index)
-        {
-            nodePointer = nodePointer->next;
-            pointer= &(nodePointer->next);
-        }
-    }
-    if(nodePointer!= nullptr && nodePointer->index == index ){
-        nodePointer->element = element;
-        return;
     }
 
-    Node<T> *newPointer = (Node<T> *)malloc(sizeof(Node<T>));
-    memset(newPointer, 0, sizeof(Node<T>));
+    //alloc and insert the node
+    RSLNode<T> *newPointer = (RSLNode<T> *)malloc(sizeof(RSLNode<T>));
+    memset(newPointer, 0, sizeof(RSLNode<T>));
     newPointer->index = index;
     newPointer->element = element;
-    if(nodePointer==nullptr){
-        memcpy_s(pointer, sizeof(void *), &newPointer, sizeof(void *));
-    }
-    else{
-        if (pointer== &(nodePointer->next)){
-            newPointer->next=nodePointer->next;
-            memcpy_s(pointer, sizeof(void *), &newPointer, sizeof(void *));
-        }
-        else{
-            newPointer->next=nodePointer;
-            memcpy_s(pointer, sizeof(void *), &newPointer, sizeof(void *));
-        }
-    }
 
+    if(nodePointer!=nullptr && nodePointer->index>index){
+        newPointer->next = nodePointer;
+    }
+    memcpy_s(pointer, sizeof(void *), &newPointer, sizeof(void *));
 
-    if (nodePointer==nullptr || pointer!= &(nodePointer->next))
+    if (needFindLeft)
     {
-        Node<T> *leftNode = findLeftNode(index);
-        Node<T> *rightNode;
-        if (leftNode == nullptr || *(long *)leftNode == 0)
+        RSLNode<T> *leftRSLNode = findLeftNode(index);
+        RSLNode<T> *rightRSLNode;
+        if (leftRSLNode == nullptr)
         {
             if (newPointer->next == nullptr)
             {
@@ -347,9 +369,9 @@ void RemainderSkipList<T>::add(unsigned int index, T element)
         {
             if (newPointer->next == nullptr)
             {
-                newPointer->next = leftNode->next;
+                newPointer->next = leftRSLNode->next;
             }
-            leftNode->next = newPointer;
+            leftRSLNode->next = newPointer;
         }
     }
 }
@@ -360,11 +382,11 @@ T RemainderSkipList<T>::get(unsigned int index){
         throw std::invalid_argument("invalid index");
     }
 
-    stack<unsigned short> s;
-    unsigned short index2 = index;
+    stack<unsigned short> remainderStack;
+    unsigned int index2 = index;
     for (int i = 0; i < level; i++)
     {
-        s.push(index2 % radix);
+        remainderStack.push(index2 % radix);
         index2 = index2 / radix;
     }
 
@@ -373,31 +395,94 @@ T RemainderSkipList<T>::get(unsigned int index){
         if (*(long *)pointer == 0){
             return 0;
         }else{
-            pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
-            s.pop();
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 
-    Node<T> *nodePointer = (*(Node<T>**)pointer);
-    if(*(long *)nodePointer == 0){
+    if(*(long *)pointer == 0){
         return 0;
+    }
+    RSLNode<T> *nodePointer = (*(RSLNode<T>**)pointer);
+
+    while(nodePointer!= nullptr ){
+        if(nodePointer->index == index){
+            return nodePointer->element;
+        }
+        else if(nodePointer->index>index){
+            return NULL;
+        }
+        else{
+            nodePointer=nodePointer->next;
+        }
+    }
+    return NULL;
+}
+
+template <class T>
+void RemainderSkipList<T>::remove(unsigned int index){
+    if(index<0 ||index >max){
+        throw std::invalid_argument("invalid index");
     }
 
-    while (nodePointer->index < index)
+    stack<unsigned short> remainderStack;
+    unsigned int index2 = index;
+    for (int i = 0; i < level; i++)
     {
-        if (nodePointer->next != nullptr)
-            nodePointer = nodePointer->next;
-        else
-            break;
+        remainderStack.push(index2 % radix);
+        index2 = index2 / radix;
     }
-    if (nodePointer->index == index)
-    {
-        return nodePointer->element;
+
+    void* pointer =&root;
+    for(int i=0;i<level-1;i++){
+        if (*(long *)pointer == 0){
+            return;
+        }else{
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
+        }
     }
-    else
-    {
-        return 0;
+
+    if(*(long *)pointer == 0){
+        return;
     }
+    RSLNode<T> *nodePointer = (*(RSLNode<T>**)pointer);
+
+    //need find left
+    if(nodePointer->index == index){
+        RSLNode<T> *leftPointer = findLeftNode(index);
+        if(leftPointer == nullptr){
+            head = nodePointer->next;
+        }
+        else{
+            leftPointer->next=nodePointer->next;
+        }
+        if(nodePointer->next!= nullptr && nodePointer->next->index <(index/radix*radix +radix)){
+        memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+        }
+        else{
+            memcpy_s(pointer, sizeof(void *), 0, sizeof(void *));
+        }
+        free(nodePointer);
+        return;
+    }
+
+    while(nodePointer!= nullptr ){
+        if(nodePointer->index == index){
+            memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+            free(nodePointer);
+            // delete nodePointer;
+            return;
+        }
+        else if(nodePointer->index>index){
+            return;
+        }
+        else{
+            pointer=&(nodePointer->next);
+            nodePointer=nodePointer->next;
+        }
+    }
+    return;
 }
 
 template <class T>
@@ -409,7 +494,7 @@ void RemainderSkipList<T>::printPath(unsigned int index)
     }
 
     stack<unsigned short> s;
-    unsigned short index2 = index;
+    unsigned int index2 = index;
     for (int i = 0; i < level; i++)
     {
         s.push(index2 % radix);
@@ -417,9 +502,8 @@ void RemainderSkipList<T>::printPath(unsigned int index)
     }
 
     cout<<"---------trace start---------"<<endl;
-    cout << "print path of index: " << index << endl;
+    cout << "print path of index: " << index << "; remainder stack: ";
     stack s2 = s;
-    cout << "remainder stack: ";
     while (!s2.empty())
     {
         cout << s2.top() << " ";
@@ -427,9 +511,10 @@ void RemainderSkipList<T>::printPath(unsigned int index)
     }
     cout << endl;
 
+
     void *pointer = &root;
-    cout<<"root: "<<endl;
-    printBuffer(pointer,sizeof(void *));
+    cout<<"root: ";
+    printMemory(pointer,1);
     for (int i = 0; i < level - 1; i++)
     {
         if (*(long *)pointer == 0)
@@ -440,27 +525,24 @@ void RemainderSkipList<T>::printPath(unsigned int index)
         else
         {
             cout << "level: " << i << " index: " << s.top() <<" address: "<<*(void **)pointer<< endl;
-            printBuffer(*(void **)pointer, sizeof(void *) * radix);
+            printMemory(*(void **)pointer, radix);
             pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
             s.pop();
         }
     }
-    Node<T> *nodePointer =(*(Node<T>**)pointer);
-    if(*(long *)nodePointer == 0){
+
+    if(*(long *)pointer == 0){
         cout << "---------end----------" << endl;
         return;
     }
-    else{
-        cout<<"node index: " <<nodePointer->index<<" element: "<<nodePointer->element<<" next: "<<nodePointer->next <<endl;
-    }
-    while (nodePointer->index < index)
+    RSLNode<T> *nodePointer =(*(RSLNode<T>**)pointer);
+    while (nodePointer != nullptr && nodePointer ->index <= index)
     {
-        if (nodePointer->next != nullptr){
-            nodePointer = nodePointer->next;
             cout<<"node index: " <<nodePointer->index<<" element: "<<nodePointer->element<<" next: "<<nodePointer->next <<endl;
-        }
-        else
-            break;
+            nodePointer = nodePointer->next;
+    }
+    if(nodePointer != nullptr){
+        cout<<"node index: " <<nodePointer->index<<" element: "<<nodePointer->element<<" next: "<<nodePointer->next <<endl;
     }
     cout << "---------end----------" << endl;
 }
@@ -468,14 +550,14 @@ void RemainderSkipList<T>::printPath(unsigned int index)
 template <class T>
 void RemainderSkipList<T>::printAllNodes(){
     if(head ==nullptr){
-        cout<<"----------no node-----------"<<endl;
+        cout<<"----------no RSLNode-----------"<<endl;
         return;
     }
-    Node<T>* node=(Node<T>*)head;
+    RSLNode<T>* RSLNode= head;
     cout<<"------iterate start-------"<<endl;
-    while(node!=nullptr){
-        cout<<"node index: "<<node->index<<" element: "<<node->element<<endl;
-        node=node->next;
+    while(RSLNode!=nullptr){
+        cout<<"RSLNode index: "<<RSLNode->index<<" element: "<<RSLNode->element<<endl;
+        RSLNode=RSLNode->next;
     }
     cout<<"--------iterate end-------"<<endl;
 }

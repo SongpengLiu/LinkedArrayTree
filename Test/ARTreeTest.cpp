@@ -30,7 +30,7 @@ unordered_set<T> getRandom(T number, T maxValue)
 
 int main(){
     int size =1000000;
-    int max =1100000;
+    int max = 1100000;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
     ArrayRemainderTree<unsigned int> *tree = new ArrayRemainderTree<unsigned int>(max);

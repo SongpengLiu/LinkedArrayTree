@@ -2,42 +2,49 @@
 #include <chrono>
 #include <set>
 #include <random>
+#include <unordered_set>
+#include <windows.h>
+#include <psapi.h>
 #include "../RemainderSkipList/RemainderSkipList.cpp"
 using namespace std;
 
-void testConstructor(){
-    RemainderSkipList<int>* rsl = new RemainderSkipList<int>(3,2);
-    rsl->printInfo();
-
-    RemainderSkipList<int>* rsl2 = new RemainderSkipList<int>(7,2);
-    rsl2->printInfo();
-
-    RemainderSkipList<int>* rsl3 = new RemainderSkipList<int>(8,2);
-    rsl3->printInfo();
-
-    RemainderSkipList<int>* rsl4 = new RemainderSkipList<int>(4,2);
-    rsl4->printInfo();
+template <class T>
+unordered_set<T> getRandom(T number, T maxValue)
+{
+    std::unordered_set<T> randomSet;
+    std::random_device rd;
+    if (number > maxValue)
+    {
+        throw std::invalid_argument("invalid index");
+        return randomSet;
+    }
+    if(number*11>maxValue*10){
+        throw std::invalid_argument("maxValue too small, hard to generate so many random number");
+        return randomSet;
+    }
+    while(randomSet.size()<number){
+            randomSet.insert(rd() % maxValue);
+    }
+    return randomSet;
 }
-
-void testAdd(){
-    RemainderSkipList<int>* rsl = new RemainderSkipList<int>(100);
-    rsl->printInfo();
-    rsl->add(1,999);
-    // rsl->printPath(1);
-    rsl->add(5,3555);
-    rsl->add(3,449);
-    rsl->add(4,45569);
-    rsl->add(7,778);
-    rsl->add(2,88549);
-    rsl->add(10,777);
-    rsl->add(8,645654);
-
-    rsl->printAllNodes();
-    cout<<"ddff: "<<rsl->get(10);
-}
-
 
 int main(){
-    // testConstructor();
-    testAdd();
+    int size =1000000;
+    int max = 1100000;
+
+    unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
+    RemainderSkipList<unsigned int> *skipList = new RemainderSkipList<unsigned int>(max);
+    for(auto i: randomSet){
+        skipList -> insert(i,i);
+    }
+
+    skipList->printInfo();
+    // skipList -> printAllNodes();
+        for(auto i: randomSet){
+        skipList -> remove(i);
+    }
+    skipList -> printAllNodes();
+
+    delete skipList;
+    return 0;
 }

@@ -143,3 +143,145 @@ Set size: 10000000
 [Mon Dec 18 17:24:53 2023]  memory take(after): 151568KB; increace memory: 61880KB
 [Mon Dec 18 17:24:55 2023]  search time: 1549356000 average:1549.356000
 [Mon Dec 18 17:24:57 2023]  remove time: 2459744000 average:2459.744000
+[Tue Dec 19 16:45:58 2023]  --------------------------------------------------
+[Tue Dec 19 16:45:58 2023]  -----------------new statistic--------------------
+[Tue Dec 19 16:45:58 2023]  --------------------------------------------------
+[Tue Dec 19 16:45:58 2023]  Data size: 1000000
+[Tue Dec 19 16:45:58 2023]  --------------red black tree--------------
+[Tue Dec 19 16:45:58 2023]  memory take(before): 89100KB
+[Tue Dec 19 16:45:58 2023]  get from set time:14301000 average:14.301000
+[Tue Dec 19 16:45:59 2023]  insert time 529475000 average:529.475000
+[Tue Dec 19 16:45:59 2023]  memory take(after): 136288KB; increace memory: 47188KB
+[Tue Dec 19 16:45:59 2023]  search time 416324000 average:416.324000
+[Tue Dec 19 16:46:00 2023]  remove time 502216000 average:502.216000
+[Tue Dec 19 16:46:00 2023]  --------------remainder tree--------------
+[Tue Dec 19 16:46:00 2023]  memory take(before): 89344KB
+[Tue Dec 19 16:46:00 2023]  max value: 1100000 radix: 6 level: 8
+[Tue Dec 19 16:46:00 2023]  get from set time:13645000 average:13.645000
+[Tue Dec 19 16:46:00 2023]  insert time: 625315000 average:625.315000
+[Tue Dec 19 16:46:00 2023]  memory take(after): 123220KB; increace memory: 33876KB
+[Tue Dec 19 16:46:01 2023]  search time: 779244000 average:779.244000
+[Tue Dec 19 16:46:02 2023]  remove time: 615031000 average:615.031000
+[Tue Dec 19 16:46:02 2023]  --------------array remainder tree--------------
+[Tue Dec 19 16:46:02 2023]  memory take(before): 89440KB
+[Tue Dec 19 16:46:02 2023]  max value: 1100000 radix: 6 level: 8
+[Tue Dec 19 16:46:02 2023]  get from set time:16759000 average:16.759000
+[Tue Dec 19 16:46:02 2023]  insert time: 447021000 average:447.021000
+[Tue Dec 19 16:46:02 2023]  memory take(after): 97540KB; increace memory: 8100KB
+[Tue Dec 19 16:46:03 2023]  search time: 443411000 average:443.411000
+[Tue Dec 19 16:46:04 2023]  remove time: 543031000 average:543.031000
+[Tue Dec 19 16:46:04 2023]  --------------array remainder tree--------------
+[Tue Dec 19 16:46:04 2023]  memory take(before): 89464KB
+[Tue Dec 19 16:46:04 2023]  max value: 1100000 radix: 100 level: 4
+[Tue Dec 19 16:46:04 2023]  get from set time:12488000 average:12.488000
+[Tue Dec 19 16:46:04 2023]  insert time: 326411000 average:326.411000
+[Tue Dec 19 16:46:04 2023]  memory take(after): 94200KB; increace memory: 4736KB
+[Tue Dec 19 16:46:04 2023]  search time: 324482000 average:324.482000
+[Tue Dec 19 16:46:05 2023]  remove time: 335757000 average:335.757000
+[Tue Dec 19 16:46:05 2023]  --------------B tree--------------
+[Tue Dec 19 16:46:05 2023]  memory take(before): 89496KB
+[Tue Dec 19 16:46:05 2023]  get from set time:13959000 average:13.959000
+[Tue Dec 19 16:46:07 2023]  insert time: 1667995000 average:1667.995000
+[Tue Dec 19 16:46:07 2023]  memory take(after): 151600KB; increace memory: 62104KB
+[Tue Dec 19 16:46:08 2023]  search time: 1329847000 average:1329.847000
+[Tue Dec 19 16:46:10 2023]  remove time: 2228024000 average:2228.024000
+[Tue Dec 19 17:43:54 2023]  --------------------------------------------------
+[Tue Dec 19 17:43:54 2023]  -----------------new statistic--------------------
+[Tue Dec 19 17:43:54 2023]  --------------------------------------------------
+[Tue Dec 19 17:43:54 2023]  Data size: 1000000
+[Tue Dec 19 17:43:54 2023]  --------------red black tree--------------
+[Tue Dec 19 17:43:54 2023]  memory take(before): 89040KB
+[Tue Dec 19 17:43:54 2023]  get from set time:13252000 average:13.252000
+[Tue Dec 19 17:43:54 2023]  insert time 487951000 average:487.951000
+[Tue Dec 19 17:43:54 2023]  memory take(after): 136232KB; increace memory: 47192KB
+[Tue Dec 19 17:43:55 2023]  search time 448176000 average:448.176000
+[Tue Dec 19 17:43:55 2023]  remove time 521390000 average:521.390000
+[Tue Dec 19 17:43:55 2023]  --------------remainder tree--------------
+[Tue Dec 19 17:43:55 2023]  memory take(before): 89288KB
+[Tue Dec 19 17:43:55 2023]  max value: 1100000 radix: 6 level: 8
+[Tue Dec 19 17:43:55 2023]  get from set time:13520000 average:13.520000
+[Tue Dec 19 17:43:56 2023]  insert time: 646276000 average:646.276000
+[Tue Dec 19 17:43:56 2023]  memory take(after): 123168KB; increace memory: 33880KB
+[Tue Dec 19 17:43:57 2023]  search time: 687758000 average:687.758000
+[Tue Dec 19 17:43:57 2023]  remove time: 561352000 average:561.352000
+[Tue Dec 19 17:43:58 2023]  --------------array remainder tree--------------
+[Tue Dec 19 17:43:58 2023]  memory take(before): 89380KB
+[Tue Dec 19 17:43:58 2023]  max value: 1100000 radix: 6 level: 8
+[Tue Dec 19 17:43:58 2023]  get from set time:12712000 average:12.712000
+[Tue Dec 19 17:43:58 2023]  insert time: 478808000 average:478.808000
+[Tue Dec 19 17:43:58 2023]  memory take(after): 97484KB; increace memory: 8104KB
+[Tue Dec 19 17:43:59 2023]  search time: 487007000 average:487.007000
+[Tue Dec 19 17:43:59 2023]  remove time: 492418000 average:492.418000
+[Tue Dec 19 17:43:59 2023]  --------------array remainder tree--------------
+[Tue Dec 19 17:43:59 2023]  memory take(before): 89408KB
+[Tue Dec 19 17:43:59 2023]  max value: 1100000 radix: 100 level: 4
+[Tue Dec 19 17:43:59 2023]  get from set time:15686000 average:15.686000
+[Tue Dec 19 17:44:00 2023]  insert time: 323418000 average:323.418000
+[Tue Dec 19 17:44:00 2023]  memory take(after): 94144KB; increace memory: 4736KB
+[Tue Dec 19 17:44:00 2023]  search time: 335525000 average:335.525000
+[Tue Dec 19 17:44:00 2023]  remove time: 348535000 average:348.535000
+[Tue Dec 19 17:44:01 2023]  --------------remainder skip list--------------
+[Tue Dec 19 17:44:01 2023]  memory take(before): 89984KB
+[Tue Dec 19 17:44:01 2023]  max value: 1100000 radix: 6 level: 8
+[Tue Dec 19 17:44:01 2023]  get from set time:15824000 average:15.824000
+[Tue Dec 19 17:44:01 2023]  insert time: 729795000 average:729.795000
+[Tue Dec 19 17:44:01 2023]  memory take(after): 123780KB; increace memory: 33796KB
+[Tue Dec 19 17:44:02 2023]  search time: 654041000 average:654.041000
+[Tue Dec 19 17:44:03 2023]  remove time: 1160263000 average:1160.263000
+[Tue Dec 19 17:44:03 2023]  --------------B tree--------------
+[Tue Dec 19 17:44:03 2023]  memory take(before): 92544KB
+[Tue Dec 19 17:44:03 2023]  get from set time:13523000 average:13.523000
+[Tue Dec 19 17:44:05 2023]  insert time: 1698918000 average:1698.918000
+[Tue Dec 19 17:44:05 2023]  memory take(after): 153976KB; increace memory: 61432KB
+[Tue Dec 19 17:44:06 2023]  search time: 1421491000 average:1421.491000
+[Tue Dec 19 17:44:09 2023]  remove time: 2275078000 average:2275.078000
+[Tue Dec 19 17:45:39 2023]  --------------------------------------------------
+[Tue Dec 19 17:45:39 2023]  -----------------new statistic--------------------
+[Tue Dec 19 17:45:39 2023]  --------------------------------------------------
+[Tue Dec 19 17:45:39 2023]  Data size: 10000000
+[Tue Dec 19 17:45:42 2023]  --------------red black tree--------------
+[Tue Dec 19 17:45:42 2023]  memory take(before): 822240KB
+[Tue Dec 19 17:45:42 2023]  get from set time:125758000 average:12.575800
+[Tue Dec 19 17:45:52 2023]  insert time 9832721000 average:983.272100
+[Tue Dec 19 17:45:52 2023]  memory take(after): 1293696KB; increace memory: 471456KB
+[Tue Dec 19 17:46:01 2023]  search time 9196918000 average:919.691800
+[Tue Dec 19 17:46:13 2023]  remove time 11632028000 average:1163.202800
+[Tue Dec 19 17:46:15 2023]  --------------remainder tree--------------
+[Tue Dec 19 17:46:15 2023]  memory take(before): 825552KB
+[Tue Dec 19 17:46:15 2023]  max value: 11000000 radix: 8 level: 8
+[Tue Dec 19 17:46:15 2023]  get from set time:134988000 average:13.498800
+[Tue Dec 19 17:46:24 2023]  insert time: 8486213000 average:848.621300
+[Tue Dec 19 17:46:24 2023]  memory take(after): 1155856KB; increace memory: 330304KB
+[Tue Dec 19 17:46:34 2023]  search time: 9432872000 average:943.287200
+[Tue Dec 19 17:46:41 2023]  remove time: 7547937000 average:754.793700
+[Tue Dec 19 17:46:44 2023]  --------------array remainder tree--------------
+[Tue Dec 19 17:46:44 2023]  memory take(before): 826168KB
+[Tue Dec 19 17:46:44 2023]  max value: 11000000 radix: 8 level: 8
+[Tue Dec 19 17:46:44 2023]  get from set time:137279000 average:13.727900
+[Tue Dec 19 17:46:50 2023]  insert time: 6055869000 average:605.586900
+[Tue Dec 19 17:46:50 2023]  memory take(after): 906252KB; increace memory: 80084KB
+[Tue Dec 19 17:46:57 2023]  search time: 6332819000 average:633.281900
+[Tue Dec 19 17:47:03 2023]  remove time: 6348392000 average:634.839200
+[Tue Dec 19 17:47:06 2023]  --------------array remainder tree--------------
+[Tue Dec 19 17:47:06 2023]  memory take(before): 826244KB
+[Tue Dec 19 17:47:06 2023]  max value: 11000000 radix: 100 level: 4
+[Tue Dec 19 17:47:06 2023]  get from set time:129859000 average:12.985900
+[Tue Dec 19 17:47:10 2023]  insert time: 3707418000 average:370.741800
+[Tue Dec 19 17:47:10 2023]  memory take(after): 871944KB; increace memory: 45700KB
+[Tue Dec 19 17:47:14 2023]  search time: 3915588000 average:391.558800
+[Tue Dec 19 17:47:18 2023]  remove time: 4109788000 average:410.978800
+[Tue Dec 19 17:47:20 2023]  --------------remainder skip list--------------
+[Tue Dec 19 17:47:20 2023]  memory take(before): 826500KB
+[Tue Dec 19 17:47:20 2023]  max value: 11000000 radix: 8 level: 8
+[Tue Dec 19 17:47:21 2023]  get from set time:131096000 average:13.109600
+[Tue Dec 19 17:47:31 2023]  insert time: 10002014000 average:1000.201400
+[Tue Dec 19 17:47:31 2023]  memory take(after): 1156536KB; increace memory: 330036KB
+[Tue Dec 19 17:47:40 2023]  search time: 9548415000 average:954.841500
+[Tue Dec 19 17:47:54 2023]  remove time: 13106323000 average:1310.632300
+[Tue Dec 19 17:47:56 2023]  --------------B tree--------------
+[Tue Dec 19 17:47:56 2023]  memory take(before): 842260KB
+[Tue Dec 19 17:47:56 2023]  get from set time:127532000 average:12.753200
+[Tue Dec 19 17:48:28 2023]  insert time: 31625782000 average:3162.578200
+[Tue Dec 19 17:48:28 2023]  memory take(after): 1467420KB; increace memory: 625160KB
+[Tue Dec 19 17:48:57 2023]  search time: 28664227000 average:2866.422700
+[Tue Dec 19 17:49:42 2023]  remove time: 45448842000 average:4544.884200
