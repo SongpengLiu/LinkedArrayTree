@@ -5,7 +5,7 @@
 #include <unordered_set>
 #include <windows.h>
 #include <psapi.h>
-#include "../RemainderSkipList/RemainderSkipList.cpp"
+#include "../LinkedRemainderList/LinkedRemainderList.cpp"
 using namespace std;
 
 template <class T>
@@ -33,7 +33,7 @@ int main(){
     int max = 1100000;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
-    RemainderSkipList<unsigned int> *skipList = new RemainderSkipList<unsigned int>(max);
+    LinkedRemainderList<unsigned int> *skipList = new LinkedRemainderList<unsigned int>(max);
     for(auto i: randomSet){
         skipList -> insert(i,i);
     }

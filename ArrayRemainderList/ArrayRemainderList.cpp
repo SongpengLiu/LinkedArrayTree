@@ -11,45 +11,49 @@ using namespace std;
 #define DEBUG true
 
 template <class T>
-class ArrayRemainderTree
+class ArrayRemainderList
 {
 private:
     unsigned short radix; // array size
     unsigned int max;     // max value
     unsigned short level;
     void *root; // root array
+    void *head;
 
 public:
-    ArrayRemainderTree();
-    ArrayRemainderTree(unsigned int);
-    ArrayRemainderTree(unsigned int, unsigned short);
-    ~ArrayRemainderTree();
+    ArrayRemainderList();
+    ArrayRemainderList(unsigned int);
+    ArrayRemainderList(unsigned int, unsigned short);
+    ~ArrayRemainderList();
     string printInfo();
     void printPath(unsigned int);
     void insert(unsigned int, T);
     void remove(unsigned int);
     T get(unsigned int);
     void destroy();
+    void printAllData();
 
 private:
     unsigned short findBestRadix(unsigned int);
     unsigned short findLevel(unsigned int, unsigned short);
     void printMemory(void *, unsigned int);
     void destroy(void *, unsigned short);
+    void *findLeftOrEqualArray(unsigned int);
+    void *findLeftOrEqualArray(unsigned short, void *, unsigned int, unsigned short[], unsigned int);
 };
 
 template <class T>
-ArrayRemainderTree<T>::ArrayRemainderTree()
+ArrayRemainderList<T>::ArrayRemainderList()
 {
     max = MAX;
     radix = findBestRadix(max);
     level = findLevel(max, radix);
-
     root = NULL;
+    head = nullptr;
 }
 
 template <class T>
-ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue)
+ArrayRemainderList<T>::ArrayRemainderList(unsigned int maxValue)
 {
     if (maxValue <= 1)
     {
@@ -61,10 +65,11 @@ ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue)
     radix = findBestRadix(maxValue);
     level = findLevel(max, radix);
     root = NULL;
+    head = nullptr;
 }
 
 template <class T>
-ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue, unsigned short inputRadix)
+ArrayRemainderList<T>::ArrayRemainderList(unsigned int maxValue, unsigned short inputRadix)
 {
     if (maxValue <= 1 || inputRadix < 2 || inputRadix >= maxValue)
     {
@@ -77,24 +82,26 @@ ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue, unsigned short 
         radix = inputRadix;
         level = findLevel(max, radix);
         root = NULL;
+        head = nullptr;
     }
 }
 
 template <class T>
-ArrayRemainderTree<T>::~ArrayRemainderTree()
+ArrayRemainderList<T>::~ArrayRemainderList()
 {
     destroy();
 }
 
 template <class T>
-void ArrayRemainderTree<T>::destroy()
+void ArrayRemainderList<T>::destroy()
 {
     destroy(root, 0);
     root = nullptr;
+    head == nullptr;
 }
 
 template <class T>
-void ArrayRemainderTree<T>::destroy(void *pointer, unsigned short currentLevel)
+void ArrayRemainderList<T>::destroy(void *pointer, unsigned short currentLevel)
 {
     // index level
     if (currentLevel < level - 1)
@@ -119,11 +126,11 @@ void ArrayRemainderTree<T>::destroy(void *pointer, unsigned short currentLevel)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief find a radix for the tree
+ * @brief find a radix for the array ramiander list
  * @return radix
  ********************************************************/
 template <class T>
-unsigned short ArrayRemainderTree<T>::findBestRadix(unsigned int maxValue)
+unsigned short ArrayRemainderList<T>::findBestRadix(unsigned int maxValue)
 {
     if (maxValue > 100)
     {
@@ -136,13 +143,19 @@ unsigned short ArrayRemainderTree<T>::findBestRadix(unsigned int maxValue)
 }
 
 template <class T>
-unsigned short ArrayRemainderTree<T>::findLevel(unsigned int inputMax, unsigned short inputRadix)
+unsigned short ArrayRemainderList<T>::findLevel(unsigned int inputMax, unsigned short inputRadix)
 {
     return (unsigned short)(ceil(log(inputMax + 1) / log(inputRadix)));
 }
 
+/********************************************************
+ * @author Songpeng Liu
+ * @date 2023-12-22
+ * @brief print the info of the list
+ * @return info
+ ********************************************************/
 template <class T>
-string ArrayRemainderTree<T>::printInfo()
+string ArrayRemainderList<T>::printInfo()
 {
     string s = "max value: " + to_string(max) + " radix: " + to_string(radix) + " level: " + to_string(level);
     cout << s << endl;
@@ -150,7 +163,7 @@ string ArrayRemainderTree<T>::printInfo()
 }
 
 template <class T>
-void ArrayRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
+void ArrayRemainderList<T>::printMemory(void *pBuff, unsigned int nLen)
 {
     if (NULL == pBuff || 0 == nLen)
     {
@@ -168,11 +181,91 @@ void ArrayRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief insert an element to the tree
+ * @brief find the array that contains or left than the input index
+ * @return array pointer
+ ********************************************************/
+template <class T>
+void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned int index)
+{
+    if (index < 0 || index > max)
+    {
+        throw std::invalid_argument("invalid index");
+    }
+
+    unsigned short indexArray[level];
+    unsigned int index2 = index;
+    for (int i = 0; i < level; i++)
+    {
+        indexArray[level - i - 1] = index2 % radix;
+        index2 = index2 / radix;
+    }
+
+    return findLeftOrEqualArray(0, root, 0, indexArray, index);
+}
+
+template <class T>
+void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short indexArray[], unsigned int index)
+{
+    if (arrayPointer == nullptr)
+    {
+        return nullptr;
+    }
+
+    // reached the last index level
+    if (currentLevel >= level - 1)
+    {
+        return arrayPointer;
+    }
+
+    // if not reached the last index level, will recursively search
+    unsigned int indexSequence = index;
+    for (int i = currentLevel; i < level; i++)
+    {
+        indexSequence = indexSequence / radix;
+    }
+    if (currentLevel == 0 || arraySequence >= indexSequence)
+    {
+        for (int i = indexArray[currentLevel]; i >= 0; i--)
+        {
+            void *returnPointer = nullptr;
+            if ((arrayPointer + i * sizeof(void *)) != nullptr)
+            {
+                returnPointer = findLeftOrEqualArray(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+            }
+            if (returnPointer != nullptr)
+            {
+                return returnPointer;
+            }
+        }
+    }
+    else
+    {
+        for (int i = radix - 1; i >= 0; i--)
+        {
+            void *returnPointer = nullptr;
+            if ((arrayPointer + i * sizeof(void *)) != nullptr)
+            {
+                returnPointer = findLeftOrEqualArray(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+            }
+            if (returnPointer != nullptr)
+            {
+                return returnPointer;
+            }
+        }
+    }
+
+    // not find, return null
+    return nullptr;
+}
+
+/********************************************************
+ * @author Songpeng Liu
+ * @date 2023-12-22
+ * @brief insert an element to the list
  * @return void
  ********************************************************/
 template <class T>
-void ArrayRemainderTree<T>::insert(unsigned int index, T element)
+void ArrayRemainderList<T>::insert(unsigned int index, T element)
 {
     if (index < 0 || index > max)
     {
@@ -210,10 +303,28 @@ void ArrayRemainderTree<T>::insert(unsigned int index, T element)
     void *indexPointer = nullptr;
     if (*(long *)pointer == 0)
     {
-        allocatePointer = malloc(sizeof(T) * radix);
+        allocatePointer = malloc(sizeof(T) * radix + sizeof(void *));
         memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *));
-        memset(allocatePointer, 0, sizeof(T) * radix);
+        memset(allocatePointer, 0, sizeof(T) * radix + sizeof(void *));
         pointer = allocatePointer + (unsigned int)ramainderStack.top() * sizeof(T);
+
+        // new allocated array needs to find left
+        void *leftPointer = nullptr;
+        if (index >= radix)
+        {
+            leftPointer = findLeftOrEqualArray(index / radix * radix - 1); // make sure start find from the left array
+        }
+
+        if (leftPointer == nullptr)
+        {
+            leftPointer = &head;
+        }
+        else
+        {
+            leftPointer = leftPointer + radix * sizeof(T);
+        }
+        memcpy_s(allocatePointer + radix * sizeof(T), sizeof(void *), leftPointer, sizeof(void *));
+        memcpy_s(leftPointer, sizeof(void *), &allocatePointer, sizeof(void *));
     }
     else
     {
@@ -226,11 +337,11 @@ void ArrayRemainderTree<T>::insert(unsigned int index, T element)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief search an element in the tree based on the index
+ * @brief search an element from the list by index
  * @return element
  ********************************************************/
 template <class T>
-T ArrayRemainderTree<T>::get(unsigned int index)
+T ArrayRemainderList<T>::get(unsigned int index)
 {
     if (index < 0 || index > max)
     {
@@ -271,11 +382,11 @@ T ArrayRemainderTree<T>::get(unsigned int index)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief remove an element from the tree based on the index
+ * @brief remove the element from the list based on the index
  * @return void
  ********************************************************/
 template <class T>
-void ArrayRemainderTree<T>::remove(unsigned int index)
+void ArrayRemainderList<T>::remove(unsigned int index)
 {
     if (index < 0 || index > max)
     {
@@ -323,6 +434,25 @@ void ArrayRemainderTree<T>::remove(unsigned int index)
         }
         pointer = pointer + sizeof(T);
     }
+
+    // find left array
+    void *leftPointer = nullptr;
+    if (index >= radix)
+    {
+        leftPointer = findLeftOrEqualArray(index / radix * radix - 1); // make sure start find from the left array
+    }
+
+    if (leftPointer == nullptr)
+    {
+        leftPointer = &head;
+    }
+    else
+    {
+        leftPointer = leftPointer + radix * sizeof(T);
+    }
+
+    memcpy_s(leftPointer, sizeof(void *), *(void **)clearPointer + radix * sizeof(T), sizeof(void *));
+
     free(*(void **)clearPointer); // no other value, free the data array.
     memset(clearPointer, 0, sizeof(void *));
 }
@@ -330,15 +460,16 @@ void ArrayRemainderTree<T>::remove(unsigned int index)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief print search path of an index
+ * @brief print search path or an index
  * @return void
  ********************************************************/
 template <class T>
-void ArrayRemainderTree<T>::printPath(unsigned int index)
+void ArrayRemainderList<T>::printPath(unsigned int index)
 {
     if (index < 0 || index > max)
     {
         throw std::invalid_argument("invalid index");
+        return;
     }
 
     stack<unsigned short> s;
@@ -392,4 +523,43 @@ void ArrayRemainderTree<T>::printPath(unsigned int index)
     }
     cout << endl;
     cout << "---------end----------" << endl;
+}
+
+/********************************************************
+ * @author Songpeng Liu
+ * @date 2023-12-22
+ * @brief iterately print all data
+ * @return void
+ ********************************************************/
+template <class T>
+void ArrayRemainderList<T>::printAllData()
+{
+    if (head == nullptr)
+    {
+        cout << "----------no data-----------" << endl;
+        return;
+    }
+    void *arrayPointer = head;
+    cout << "------iterate start-------" << endl;
+    while (arrayPointer != nullptr)
+    {
+        // cout<<"node index: "<<node->index<<" element: "<<node->element<<endl;
+        // node=node->next;
+        cout << "->";
+        for (int i = 0; i < radix; i++)
+        {
+            if (*(T *)arrayPointer == 0 && arrayPointer != head)
+            {
+                cout << " N";
+            }
+            else
+            {
+                cout << " " << *(T *)arrayPointer;
+            }
+            arrayPointer = arrayPointer + sizeof(T);
+        }
+        arrayPointer = *(void **)arrayPointer;
+        cout << endl;
+    }
+    cout << "--------iterate end-------" << endl;
 }

@@ -5,7 +5,7 @@
 #include <unordered_set>
 #include <windows.h>
 #include <psapi.h>
-#include "../RemainderTree/RemainderTree.cpp"
+#include "../LinkedRemainderTree/LinkedRemainderTree.cpp"
 using namespace std;
 
 template <class T>
@@ -29,14 +29,14 @@ unordered_set<T> getRandom(T number, T maxValue)
 }
 
 void testConstructor(){
-    RemainderTree<int>* tree = new RemainderTree<int>(7,2);
+    LinkedRemainderTree<int>* tree = new LinkedRemainderTree<int>(7,2);
     tree->printInfo();
 }
 
 template <class T>
 void testAdd(unordered_set<T> dataSet, unsigned int max)
 {
-    RemainderTree<string> *tree = new RemainderTree<string>(max);
+    LinkedRemainderTree<string> *tree = new LinkedRemainderTree<string>(max);
     tree->printInfo();
     for (auto i : dataSet)
     {
@@ -51,7 +51,7 @@ void testAdd(unordered_set<T> dataSet, unsigned int max)
 template <class T>
 void testRemove(unordered_set<T> dataSet, unsigned int max)
 {
-    RemainderTree<string> *tree = new RemainderTree<string>(max);
+    LinkedRemainderTree<string> *tree = new LinkedRemainderTree<string>(max);
     tree->printInfo();
     for (auto i : dataSet)
     {
@@ -72,7 +72,7 @@ void testDestroy(unordered_set<T> dataSet, unsigned int max)
     {
         cout << "memory take(initial): " << pmc.WorkingSetSize / 1024 << "KB" << endl;
     }
-    RemainderTree<unsigned int> *tree = new RemainderTree<unsigned int>(max);
+    LinkedRemainderTree<unsigned int> *tree = new LinkedRemainderTree<unsigned int>(max);
     tree->printInfo();
     for (auto i : dataSet)
     {
