@@ -38,8 +38,8 @@ private:
     unsigned short findLevel(unsigned int, unsigned short);
     void printMemory(void *, unsigned int);
     void destroy(void *, unsigned short);
-    void *findLeftOrEqualArray(unsigned int);
-    void *findLeftOrEqualArray(unsigned short, void *, unsigned int, unsigned short[], unsigned int);
+    void *findLeft(unsigned int);
+    void *findLeft(unsigned short, void *, unsigned int, unsigned short[], unsigned int);
 };
 
 template <class T>
@@ -132,20 +132,24 @@ void ArrayRemainderList<T>::destroy(void *pointer, unsigned short currentLevel)
 template <class T>
 unsigned short ArrayRemainderList<T>::findBestRadix(unsigned int maxValue)
 {
-    if (maxValue > 100)
+    if (maxValue <= 100)
+    {
+        return 10;
+    }
+    else if(maxValue <=10000)
     {
         return 100;
     }
     else
     {
-        return 10;
+        return 1000;
     }
 }
 
 template <class T>
 unsigned short ArrayRemainderList<T>::findLevel(unsigned int inputMax, unsigned short inputRadix)
 {
-    return (unsigned short)(ceil(log(inputMax + 1) / log(inputRadix)));
+    return (unsigned short)(ceil(log(inputMax) / log(inputRadix)));
 }
 
 /********************************************************
@@ -181,15 +185,24 @@ void ArrayRemainderList<T>::printMemory(void *pBuff, unsigned int nLen)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief find the array that contains or left than the input index
+ * @brief find the left array of the input index
  * @return array pointer
  ********************************************************/
 template <class T>
-void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned int index)
+void *ArrayRemainderList<T>::findLeft(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
+    }
+
+    if (index >= radix)
+    {
+        index = index / radix*radix - 1; // make sure start find from the left array
+    }
+    else
+    {
+        return nullptr;
     }
 
     unsigned short indexArray[level];
@@ -200,11 +213,11 @@ void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned int index)
         index2 = index2 / radix;
     }
 
-    return findLeftOrEqualArray(0, root, 0, indexArray, index);
+    return findLeft(0, root, 0, indexArray, index);
 }
 
 template <class T>
-void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short indexArray[], unsigned int index)
+void *ArrayRemainderList<T>::findLeft(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short indexArray[], unsigned int index)
 {
     if (arrayPointer == nullptr)
     {
@@ -230,7 +243,7 @@ void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned short currentLevel, v
             void *returnPointer = nullptr;
             if ((arrayPointer + i * sizeof(void *)) != nullptr)
             {
-                returnPointer = findLeftOrEqualArray(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+                returnPointer = findLeft(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
             }
             if (returnPointer != nullptr)
             {
@@ -245,7 +258,7 @@ void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned short currentLevel, v
             void *returnPointer = nullptr;
             if ((arrayPointer + i * sizeof(void *)) != nullptr)
             {
-                returnPointer = findLeftOrEqualArray(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+                returnPointer = findLeft(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
             }
             if (returnPointer != nullptr)
             {
@@ -267,7 +280,7 @@ void *ArrayRemainderList<T>::findLeftOrEqualArray(unsigned short currentLevel, v
 template <class T>
 void ArrayRemainderList<T>::insert(unsigned int index, T element)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -309,11 +322,8 @@ void ArrayRemainderList<T>::insert(unsigned int index, T element)
         pointer = allocatePointer + (unsigned int)ramainderStack.top() * sizeof(T);
 
         // new allocated array needs to find left
-        void *leftPointer = nullptr;
-        if (index >= radix)
-        {
-            leftPointer = findLeftOrEqualArray(index / radix * radix - 1); // make sure start find from the left array
-        }
+        void *leftPointer = findLeft(index);
+
 
         if (leftPointer == nullptr)
         {
@@ -343,7 +353,7 @@ void ArrayRemainderList<T>::insert(unsigned int index, T element)
 template <class T>
 T ArrayRemainderList<T>::get(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -388,7 +398,7 @@ T ArrayRemainderList<T>::get(unsigned int index)
 template <class T>
 void ArrayRemainderList<T>::remove(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -436,11 +446,7 @@ void ArrayRemainderList<T>::remove(unsigned int index)
     }
 
     // find left array
-    void *leftPointer = nullptr;
-    if (index >= radix)
-    {
-        leftPointer = findLeftOrEqualArray(index / radix * radix - 1); // make sure start find from the left array
-    }
+    void *leftPointer = findLeft(index);
 
     if (leftPointer == nullptr)
     {
@@ -466,7 +472,7 @@ void ArrayRemainderList<T>::remove(unsigned int index)
 template <class T>
 void ArrayRemainderList<T>::printPath(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
         return;
@@ -548,14 +554,7 @@ void ArrayRemainderList<T>::printAllData()
         cout << "->";
         for (int i = 0; i < radix; i++)
         {
-            if (*(T *)arrayPointer == 0 && arrayPointer != head)
-            {
-                cout << " N";
-            }
-            else
-            {
-                cout << " " << *(T *)arrayPointer;
-            }
+            cout << " " << *(T *)arrayPointer;
             arrayPointer = arrayPointer + sizeof(T);
         }
         arrayPointer = *(void **)arrayPointer;

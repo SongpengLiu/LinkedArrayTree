@@ -29,8 +29,8 @@ unordered_set<T> getRandom(T number, T maxValue)
 }
 
 int main(){
-    int size =1000000;
-    int max = 1100000;
+    int size =10000;
+    int max = 20000;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
     LinkedRemainderList<unsigned int> *skipList = new LinkedRemainderList<unsigned int>(max);
@@ -40,7 +40,8 @@ int main(){
 
     skipList->printInfo();
     // skipList -> printAllNodes();
-        for(auto i: randomSet){
+    for(auto i: randomSet){
+        // skipList->printPath(i);
         skipList -> remove(i);
     }
     skipList -> printAllNodes();

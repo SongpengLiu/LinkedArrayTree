@@ -18,34 +18,37 @@ unordered_set<T> getRandom(T number, T maxValue)
         throw std::invalid_argument("invalid index");
         return randomSet;
     }
-    if(number*11>maxValue*10){
+    if (number * 11 > maxValue * 10)
+    {
         throw std::invalid_argument("maxValue too small, hard to generate so many random number");
         return randomSet;
     }
-    while(randomSet.size()<number){
-            randomSet.insert(rd() % maxValue);
+    while (randomSet.size() < number)
+    {
+        randomSet.insert(rd() % maxValue);
     }
     return randomSet;
 }
 
-int main(){
-    int size =20;
+int main()
+{
+    int size = 20;
     int max = 22;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
-    ArrayRemainderList<unsigned int> *list = new ArrayRemainderList<unsigned int>(max,5);
-    for(auto i: randomSet){
-        list -> insert(i,i);
+    ArrayRemainderList<char *> *list = new ArrayRemainderList<char *>(max, 5);
 
-    }
+    string s = "EEEE:" + to_string(*randomSet.begin());
+    char c[10];
+    strcpy(c, s.c_str());
+
+    list->insert(*randomSet.begin(), c);
+
     list->printInfo();
-    list->printPath(1);
-    list->printAllData();
-    list->remove(0);
-    list->remove(1);
-    list->remove(2);
-    list->remove(3);
-    list->remove(4);
+    // list->printPath(*randomSet.begin());
+    string cc = list->get(*randomSet.begin());
+    cout << "eeeee: " << cc << endl;
+
     list->printAllData();
     return 0;
 }

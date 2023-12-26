@@ -125,20 +125,24 @@ void ArrayRemainderTree<T>::destroy(void *pointer, unsigned short currentLevel)
 template <class T>
 unsigned short ArrayRemainderTree<T>::findBestRadix(unsigned int maxValue)
 {
-    if (maxValue > 100)
+    if (maxValue <= 100)
+    {
+        return 10;
+    }
+    else if(maxValue <=10000)
     {
         return 100;
     }
     else
     {
-        return 10;
+        return 1000;
     }
 }
 
 template <class T>
 unsigned short ArrayRemainderTree<T>::findLevel(unsigned int inputMax, unsigned short inputRadix)
 {
-    return (unsigned short)(ceil(log(inputMax + 1) / log(inputRadix)));
+    return (unsigned short)(ceil(log(inputMax) / log(inputRadix)));
 }
 
 template <class T>
@@ -174,7 +178,7 @@ void ArrayRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
 template <class T>
 void ArrayRemainderTree<T>::insert(unsigned int index, T element)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -232,7 +236,7 @@ void ArrayRemainderTree<T>::insert(unsigned int index, T element)
 template <class T>
 T ArrayRemainderTree<T>::get(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -277,7 +281,7 @@ T ArrayRemainderTree<T>::get(unsigned int index)
 template <class T>
 void ArrayRemainderTree<T>::remove(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -336,7 +340,7 @@ void ArrayRemainderTree<T>::remove(unsigned int index)
 template <class T>
 void ArrayRemainderTree<T>::printPath(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }

@@ -165,7 +165,7 @@ unsigned short LinkedRemainderTree<T>::findBestRadix(unsigned int maxValue)
 template <class T>
 unsigned short LinkedRemainderTree<T>::findLevel(unsigned int inputMax, unsigned short inputRadix)
 {
-    return (unsigned short)(ceil(log(inputMax + 1) / log(inputRadix)));
+    return (unsigned short)(ceil(log(inputMax) / log(inputRadix)));
 }
 
 template <class T>
@@ -195,7 +195,7 @@ void LinkedRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
 template <class T>
 void LinkedRemainderTree<T>::insert(unsigned int index, T element)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -265,7 +265,7 @@ void LinkedRemainderTree<T>::insert(unsigned int index, T element)
 template <class T>
 T LinkedRemainderTree<T>::get(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -319,7 +319,7 @@ T LinkedRemainderTree<T>::get(unsigned int index)
 template <class T>
 void LinkedRemainderTree<T>::remove(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -383,7 +383,7 @@ void LinkedRemainderTree<T>::remove(unsigned int index)
 template <class T>
 void LinkedRemainderTree<T>::printPath(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }

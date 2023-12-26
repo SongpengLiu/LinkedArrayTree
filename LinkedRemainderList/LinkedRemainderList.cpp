@@ -176,7 +176,7 @@ unsigned short LinkedRemainderList<T>::findBestRadix(unsigned int maxValue)
 template <class T>
 unsigned short LinkedRemainderList<T>::findLevel(unsigned int inputMax, unsigned short inputRadix)
 {
-    return (unsigned short)(ceil(log(inputMax + 1) / log(inputRadix)));
+    return (unsigned short)(ceil(log(inputMax) / log(inputRadix)));
 }
 
 template <class T>
@@ -215,11 +215,11 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
     {
         ListNode<T> *nodePointer = (ListNode<T> *)arrayPointer;
         // travel to left biggest
-        while (nodePointer->next != nullptr && nodePointer->next->index < index)
+        while (nodePointer->next != nullptr && nodePointer->next->index <= index)
         {
             nodePointer = nodePointer->next;
         }
-        if (nodePointer->index < index)
+        if (nodePointer->index <= index)
         {
             return nodePointer;
         }
@@ -279,9 +279,18 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
 template <class T>
 ListNode<T> *LinkedRemainderList<T>::findLeftNode(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
+    }
+
+    if (index >= radix)
+    {
+        index = index / radix*radix - 1; // make sure start find from the left array
+    }
+    else
+    {
+        return nullptr;
     }
 
     unsigned short indexArray[level];
@@ -298,7 +307,7 @@ ListNode<T> *LinkedRemainderList<T>::findLeftNode(unsigned int index)
 template <class T>
 void LinkedRemainderList<T>::insert(unsigned int index, T element)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -394,7 +403,7 @@ void LinkedRemainderList<T>::insert(unsigned int index, T element)
 template <class T>
 T LinkedRemainderList<T>::get(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -448,7 +457,7 @@ T LinkedRemainderList<T>::get(unsigned int index)
 template <class T>
 void LinkedRemainderList<T>::remove(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -530,7 +539,7 @@ void LinkedRemainderList<T>::remove(unsigned int index)
 template <class T>
 void LinkedRemainderList<T>::printPath(unsigned int index)
 {
-    if (index < 0 || index > max)
+    if (index < 0 || index >= max)
     {
         throw std::invalid_argument("invalid index");
     }
@@ -578,14 +587,10 @@ void LinkedRemainderList<T>::printPath(unsigned int index)
         return;
     }
     ListNode<T> *nodePointer = (*(ListNode<T> **)pointer);
-    while (nodePointer != nullptr && nodePointer->index <= index)
+    while (nodePointer != nullptr && nodePointer->index < index/radix* radix+ radix)
     {
         cout << "node index: " << nodePointer->index << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
         nodePointer = nodePointer->next;
-    }
-    if (nodePointer != nullptr)
-    {
-        cout << "node index: " << nodePointer->index << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
     }
     cout << "---------end----------" << endl;
 }

@@ -29,21 +29,24 @@ unordered_set<T> getRandom(T number, T maxValue)
 }
 
 int main(){
-    int size =1000000;
-    int max = 1100000;
+    int size =100;
+    int max = 110;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
-    ArrayRemainderTree<unsigned int> *tree = new ArrayRemainderTree<unsigned int>(max);
-    for(auto i: randomSet){
-        tree -> insert(i,i);
+    ArrayRemainderTree<unsigned int> *tree = new ArrayRemainderTree<unsigned int>(max,5);
+    // for(auto i: randomSet){
+    //     tree -> insert(i,i);
 
-    }
+    // }
+    tree->insert(20,20);
     tree->printInfo();
 
     cout<<"search: "<<tree->get(*randomSet.begin())<<endl;
-    tree->printPath(*randomSet.begin());
-    tree->remove(*randomSet.begin());
-    // tree->destroy();
-    tree->printPath(*randomSet.begin());
+    tree->printPath(20);
+    tree->printPath(53);
+    tree->printPath(74);
+    // tree->remove(*randomSet.begin());
+    // // tree->destroy();
+    // tree->printPath(*randomSet.begin());
     return 0;
 }

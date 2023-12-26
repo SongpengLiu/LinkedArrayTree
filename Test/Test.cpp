@@ -14,44 +14,101 @@
 using namespace std;
 using namespace chrono;
 
+template <class T>
+class Test{
+    private:
+    std::unordered_set<T> set;
+    T size;
+    T max;
+    public:
+    Test(T size, T max);
+    void setRandomSet();
+    void blackRedTreeTest();
+    void linkedRemainderTreeTest(unsigned short radix);
+    void BTreeTest();
+    void arrayRemainderTreeTest(unsigned short radix);
+    void linkedRemainderListTest(unsigned short radix);
+    void arrayRemainderListTest(unsigned short radix);
+    T getSetSize();
+};
 
 template <class T>
-unordered_set<T> getRandom(T number, T maxValue)
-{
-    std::unordered_set<T> randomSet;
-    std::random_device rd;
-    if (number > maxValue)
-    {
-        throw std::invalid_argument("invalid index");
-        return randomSet;
-    }
-    if (number * 11 > maxValue * 10)
-    {
-        throw std::invalid_argument("maxValue too small, hard to generate so many random number");
-        return randomSet;
-    }
-    while (randomSet.size() < number)
-    {
-        randomSet.insert(rd() % maxValue);
-    }
-    return randomSet;
+Test<T>::Test(T inputSize, T inputMax){
+    size =inputSize;
+    max = inputMax;
 }
 
 template <class T>
-void BRTreeTest(unordered_set<T> dataSet)
+void Test<T>::setRandomSet()
+{
+    std::random_device rd;
+    if (size > max)
+    {
+        throw std::invalid_argument("invalid index");
+        return;
+    }
+
+    // size is small, generate directly
+    if (size < 1000)
+    {
+        while (set.size() < size)
+        {
+            set.insert(rd() % max);
+        }
+        return;
+    }
+
+    // size is mall compared with max, generate directly
+    if (max -size > max / 100)
+    {
+        while (set.size() < size)
+        {
+            set.insert(rd() % max);
+        }
+        return;
+    }
+
+    // size is big compared with max
+    while (set.size() < size - max/100)
+    {
+        set.insert(rd() % max);
+    }
+
+    for (int i = 0; i < max; i++)
+    {
+        if (set.find(i) == set.end())
+        {
+            set.insert(i);
+        }
+        if (set.size() >= size)
+        {
+            break;
+        }
+    }
+    return;
+}
+
+
+template <class T>
+T Test<T>::getSetSize(){
+    return set.size();
+}
+
+template <class T>
+void Test<T>::blackRedTreeTest()
 {
     string message = "--------------Red Black Tree--------------";
     TestLog::appendLog(message);
 
     typedef std::chrono::high_resolution_clock clock;
     auto timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
     }
     auto timerEnd = clock::now();
     auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     auto getTime = spentTime;
-    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / dataSet.size());
+    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / set.size());
     TestLog::appendLog(message);
 
     PROCESS_MEMORY_COUNTERS pmc;
@@ -65,14 +122,14 @@ void BRTreeTest(unordered_set<T> dataSet)
 
     RBTree<T> *redBlackTree = new RBTree<T>();
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         redBlackTree->insert(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "insert time " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "insert time " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
@@ -82,45 +139,45 @@ void BRTreeTest(unordered_set<T> dataSet)
     }
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         redBlackTree->search(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "search time " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         redBlackTree->remove(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "remove time " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "remove time " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     delete redBlackTree;
 }
 
 template <class T>
-void LinkedRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue)
+void Test<T>::linkedRemainderTreeTest(unsigned short radix)
 {
     string message = "--------------Linked Remainder Tree--------------";
     TestLog::appendLog(message);
 
     typedef std::chrono::high_resolution_clock clock;
     auto timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
     }
     auto timerEnd = clock::now();
     auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     auto getTime = spentTime;
-    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / dataSet.size());
+    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / set.size());
     TestLog::appendLog(message);
 
     PROCESS_MEMORY_COUNTERS pmc;
@@ -132,19 +189,25 @@ void LinkedRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue)
         TestLog::appendLog(message);
     }
 
-    LinkedRemainderTree<unsigned int> *tree = new LinkedRemainderTree<unsigned int>(maxValue);
+    LinkedRemainderTree<unsigned int> *tree;
+    if(radix>1){
+        tree = new LinkedRemainderTree<unsigned int>(max,radix);
+    }
+    else{
+     tree = new LinkedRemainderTree<unsigned int>(max);
+    }
     message = tree->printInfo();
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->insert(i, i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
@@ -154,45 +217,45 @@ void LinkedRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue)
     }
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->get(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->remove(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     delete tree;
 }
 
 template <class T>
-void BTreeTest(unordered_set<T> dataSet)
+void Test<T>::BTreeTest()
 {
     string message = "--------------B Tree--------------";
     TestLog::appendLog(message);
 
         typedef std::chrono::high_resolution_clock clock;
     auto timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
     }
     auto timerEnd = clock::now();
     auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     auto getTime = spentTime;
-    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / dataSet.size());
+    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / set.size());
     TestLog::appendLog(message);
 
     PROCESS_MEMORY_COUNTERS pmc;
@@ -207,14 +270,14 @@ void BTreeTest(unordered_set<T> dataSet)
     BTree *tree = new BTree(0);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->insert(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
@@ -224,44 +287,44 @@ void BTreeTest(unordered_set<T> dataSet)
     }
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->search(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->remove(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
     delete tree;
 }
 
 template <class T>
-void ArrayRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue, unsigned short radix)
+void Test<T>::arrayRemainderTreeTest(unsigned short radix)
 {
     string message = "--------------Array Remainder Tree--------------";
     TestLog::appendLog(message);
 
         typedef std::chrono::high_resolution_clock clock;
     auto timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
     }
     auto timerEnd = clock::now();
     auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     auto getTime = spentTime;
-    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / dataSet.size());
+    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / set.size());
     TestLog::appendLog(message);
 
     PROCESS_MEMORY_COUNTERS pmc;
@@ -276,24 +339,24 @@ void ArrayRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue, unsi
     ArrayRemainderTree<unsigned int> *tree;
     if (radix > 1)
     {
-        tree = new ArrayRemainderTree<unsigned int>(maxValue, radix);
+        tree = new ArrayRemainderTree<unsigned int>(max, radix);
     }
     else
     {
-        tree = new ArrayRemainderTree<unsigned int>(maxValue);
+        tree = new ArrayRemainderTree<unsigned int>(max);
     }
     message = tree->printInfo();
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->insert(i, i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
@@ -303,45 +366,45 @@ void ArrayRemainderTreeTest(unordered_set<T> dataSet,unsigned int maxValue, unsi
     }
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->get(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         tree->remove(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     delete tree;
 }
 
 template <class T>
-void LinkedRemainderListTest(unordered_set<T> dataSet,unsigned int maxValue)
+void Test<T>::linkedRemainderListTest(unsigned short radix)
 {
     string message = "--------------Linked Remainder List--------------";
     TestLog::appendLog(message);
 
         typedef std::chrono::high_resolution_clock clock;
     auto timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
     }
     auto timerEnd = clock::now();
     auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     auto getTime = spentTime;
-    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / dataSet.size());
+    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / set.size());
     TestLog::appendLog(message);
 
     PROCESS_MEMORY_COUNTERS pmc;
@@ -353,19 +416,25 @@ void LinkedRemainderListTest(unordered_set<T> dataSet,unsigned int maxValue)
         TestLog::appendLog(message);
     }
 
-    LinkedRemainderList<unsigned int> *skipList = new LinkedRemainderList<unsigned int>(maxValue);
-    message = skipList->printInfo();
+    LinkedRemainderList<unsigned int> *list;
+    if(radix>1){
+     list = new LinkedRemainderList<unsigned int>(max,radix);
+    }
+    else{
+        list = new LinkedRemainderList<unsigned int>(max);
+    }
+    message = list->printInfo();
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
-        skipList->insert(i, i);
+        list->insert(i, i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
@@ -375,45 +444,45 @@ void LinkedRemainderListTest(unordered_set<T> dataSet,unsigned int maxValue)
     }
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
-        skipList->get(i);
+        list->get(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
-        skipList->remove(i);
+        list->remove(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
-    delete skipList;
+    delete list;
 }
 
 template <class T>
-void ArrayRemainderListTest(unordered_set<T> dataSet,unsigned int maxValue, unsigned short radix)
+void Test<T>::arrayRemainderListTest(unsigned short radix)
 {
     string message = "--------------Array Remainder List--------------";
     TestLog::appendLog(message);
 
         typedef std::chrono::high_resolution_clock clock;
     auto timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
     }
     auto timerEnd = clock::now();
     auto spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     auto getTime = spentTime;
-    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / dataSet.size());
+    message = "get from set time:" + to_string(getTime) + " average:" + to_string((double)getTime / set.size());
     TestLog::appendLog(message);
 
     PROCESS_MEMORY_COUNTERS pmc;
@@ -428,24 +497,24 @@ void ArrayRemainderListTest(unordered_set<T> dataSet,unsigned int maxValue, unsi
     ArrayRemainderList<unsigned int> *list;
     if (radix > 1)
     {
-        list = new ArrayRemainderList<unsigned int>(maxValue, radix);
+        list = new ArrayRemainderList<unsigned int>(max, radix);
     }
     else
     {
-        list = new ArrayRemainderList<unsigned int>(maxValue);
+        list = new ArrayRemainderList<unsigned int>(max);
     }
     message = list->printInfo();
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         list->insert(i, i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "insert time: " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
@@ -455,108 +524,53 @@ void ArrayRemainderListTest(unordered_set<T> dataSet,unsigned int maxValue, unsi
     }
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         list->get(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
-    for (auto i : dataSet)
+    for (auto i : set)
     {
         list->remove(i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / dataSet.size());
+    message = "remove time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     delete list;
 }
 
+
+//Warning: because of the substance of process, in low data size, the memeory summary may not be accurate
+//Warning: because of the substance of process, in low data size, the memeory summary may not be accurate
+//Warning: because of the substance of process, in low data size, the memeory summary may not be accurate
 int main()
 {
     TestLog::appendLog("");
     TestLog::appendLog("--------------------------------------------------");
     TestLog::appendLog("-----------------new statistic--------------------");
     TestLog::appendLog("--------------------------------------------------");
-    unsigned int size =     10000;
-    unsigned int maxValue = 11000;
-    unordered_set<unsigned int> dataSet = getRandom(size, maxValue);
-    string message = "Data size: " + std::to_string(dataSet.size());
+    unsigned int size = 10000000;
+    unsigned int max =  10000000;
+    Test<unsigned int> test = Test<unsigned int>(size,max);
+    test.setRandomSet();
+    string message = "Data size: " + std::to_string(test.getSetSize());
     TestLog::appendLog(message);
 
-    BRTreeTest(dataSet);
-    ArrayRemainderListTest(dataSet, maxValue, 100);
-    ArrayRemainderTreeTest(dataSet, maxValue, 100);
-    LinkedRemainderTreeTest(dataSet, maxValue);
-    LinkedRemainderListTest(dataSet, maxValue);
-    BTreeTest(dataSet);
-
-    TestLog::printLog();
-    TestLog::writeLogToFile();
-
-    TestLog::appendLog("");
-    TestLog::appendLog("--------------------------------------------------");
-    TestLog::appendLog("-----------------new statistic--------------------");
-    TestLog::appendLog("--------------------------------------------------");
-    size =     1000000;
-    maxValue = 1100000;
-    dataSet = getRandom(size, maxValue);
-    message = "Data size: " + std::to_string(dataSet.size());
-    TestLog::appendLog(message);
-
-    BRTreeTest(dataSet);
-    ArrayRemainderListTest(dataSet, maxValue, 100);
-    ArrayRemainderTreeTest(dataSet, maxValue, 100);
-    LinkedRemainderTreeTest(dataSet, maxValue);
-    LinkedRemainderListTest(dataSet, maxValue);
-    BTreeTest(dataSet);
-
-    TestLog::printLog();
-    TestLog::writeLogToFile();
-
-    TestLog::appendLog("");
-    TestLog::appendLog("--------------------------------------------------");
-    TestLog::appendLog("-----------------new statistic--------------------");
-    TestLog::appendLog("--------------------------------------------------");
-    size =     10000000;
-    maxValue = 11000000;
-    dataSet = getRandom(size, maxValue);
-    message = "Data size: " + std::to_string(dataSet.size());
-    TestLog::appendLog(message);
-
-    BRTreeTest(dataSet);
-    ArrayRemainderListTest(dataSet, maxValue, 100);
-    ArrayRemainderTreeTest(dataSet, maxValue, 100);
-    LinkedRemainderTreeTest(dataSet, maxValue);
-    LinkedRemainderListTest(dataSet, maxValue);
-    BTreeTest(dataSet);
-
-    TestLog::printLog();
-    TestLog::writeLogToFile();
-
-    TestLog::appendLog("");
-    TestLog::appendLog("--------------------------------------------------");
-    TestLog::appendLog("-----------------new statistic--------------------");
-    TestLog::appendLog("--------------------------------------------------");
-    size =     100000000;
-    maxValue = 110000000;
-    dataSet = getRandom(size, maxValue);
-    message = "Data size: " + std::to_string(dataSet.size());
-    TestLog::appendLog(message);
-
-    BRTreeTest(dataSet);
-    ArrayRemainderListTest(dataSet, maxValue, 100);
-    ArrayRemainderTreeTest(dataSet, maxValue, 100);
-    LinkedRemainderTreeTest(dataSet, maxValue);
-    LinkedRemainderListTest(dataSet, maxValue);
-    BTreeTest(dataSet);
+    test.blackRedTreeTest();
+    test.arrayRemainderTreeTest(0);
+    test.arrayRemainderListTest(0);
+    test.linkedRemainderTreeTest(0);
+    test.linkedRemainderListTest(0);
+    test.BTreeTest();
 
     TestLog::printLog();
     TestLog::writeLogToFile();
