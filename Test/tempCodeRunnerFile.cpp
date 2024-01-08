@@ -1,1 +1,3 @@
-0000
+while(!remainderStack.empty()){
+        remainderStack.pop();
+    }

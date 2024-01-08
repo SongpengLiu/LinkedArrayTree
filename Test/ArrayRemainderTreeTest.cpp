@@ -9,44 +9,79 @@
 using namespace std;
 
 template <class T>
-unordered_set<T> getRandom(T number, T maxValue)
+unordered_set<T> getRandom(T size, T max)
 {
     std::unordered_set<T> randomSet;
     std::random_device rd;
-    if (number > maxValue)
+
+    if (size > max)
     {
         throw std::invalid_argument("invalid index");
         return randomSet;
     }
-    if(number*11>maxValue*10){
-        throw std::invalid_argument("maxValue too small, hard to generate so many random number");
+
+    // size is small, generate directly
+    if (size < 1000)
+    {
+        while (randomSet.size() < size)
+        {
+            randomSet.insert(rd() % max);
+        }
         return randomSet;
     }
-    while(randomSet.size()<number){
-            randomSet.insert(rd() % maxValue);
+
+    // size is mall compared with max, generate directly
+    if (max -size > max / 100)
+    {
+        while (randomSet.size() < size)
+        {
+            randomSet.insert(rd() % max);
+        }
+        return randomSet;
+    }
+
+    // size is big compared with max
+    while (randomSet.size() < size - max/100)
+    {
+        randomSet.insert(rd() % max);
+    }
+
+    for (int i = 0; i < max; i++)
+    {
+        if (randomSet.find(i) == randomSet.end())
+        {
+            randomSet.insert(i);
+        }
+        if (randomSet.size() >= size)
+        {
+            break;
+        }
     }
     return randomSet;
 }
 
+template <class T>
+set<T> getOrdered(T size, T max){
+    set<T> set;
+    for(int i=0;i<size;i++){
+        set.insert(i);
+    }
+    return set;
+}
+
 int main(){
-    int size =100;
-    int max = 110;
+    int size =1000000;
+    int max = 1000000;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
-    ArrayRemainderTree<unsigned int> *tree = new ArrayRemainderTree<unsigned int>(max,5);
-    // for(auto i: randomSet){
-    //     tree -> insert(i,i);
-
-    // }
-    tree->insert(20,20);
-    tree->printInfo();
-
-    cout<<"search: "<<tree->get(*randomSet.begin())<<endl;
+    ArrayRemainderTree<unsigned int> *tree = new ArrayRemainderTree<unsigned int>(max);
+    for(auto i: randomSet){
+        tree -> insert(i,i);
+    }
+    for(auto i: randomSet){
+        tree -> remove(i);
+    }
     tree->printPath(20);
-    tree->printPath(53);
-    tree->printPath(74);
-    // tree->remove(*randomSet.begin());
-    // // tree->destroy();
-    // tree->printPath(*randomSet.begin());
+    tree->destroy();
     return 0;
 }

@@ -14,7 +14,7 @@ template <class T>
 struct TreeNode
 {
 public:
-    unsigned int index;
+    unsigned int key;
     T element;
     TreeNode *next;
 };
@@ -27,6 +27,7 @@ private:
     unsigned int max;     // max value
     unsigned short level; // totle level
     void *root;           // root array
+    stack<unsigned short> remainderStack; //remainder stack
 
 public:
     LinkedRemainderTree();
@@ -44,7 +45,7 @@ private:
     unsigned short findBestRadix(unsigned int);
     unsigned short findLevel(unsigned int, unsigned short);
     void printMemory(void *, unsigned int);
-    void destroy(void *, unsigned short);
+    void remove(unsigned int, unsigned short, void*);
 };
 
 template <class T>
@@ -98,35 +99,10 @@ LinkedRemainderTree<T>::~LinkedRemainderTree()
 template <class T>
 void LinkedRemainderTree<T>::destroy()
 {
-    destroy(root, 0);
+    for(unsigned int i=0;i<max;i++){
+        remove(i);
+    }
     root = nullptr;
-}
-
-template <class T>
-void LinkedRemainderTree<T>::destroy(void *pointer, unsigned short currentLevel)
-{
-    // index level
-    if (currentLevel < level - 1)
-    {
-        for (int i = 0; i < radix; i++)
-        {
-            if (*(long *)(pointer + i * sizeof(void *)) != 0)
-            {
-                destroy(*(void **)(pointer + i * sizeof(void *)), currentLevel + 1);
-            }
-        }
-        free(pointer);
-    }
-
-    // date level
-    if (currentLevel >= level - 1)
-    {
-        if (((TreeNode<T> *)pointer)->next != nullptr)
-        {
-            destroy(((TreeNode<T> *)pointer)->next, currentLevel);
-        }
-        free(pointer);
-    }
 }
 
 /********************************************************
@@ -193,19 +169,21 @@ void LinkedRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
 }
 
 template <class T>
-void LinkedRemainderTree<T>::insert(unsigned int index, T element)
+void LinkedRemainderTree<T>::insert(unsigned int key, T element)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> ramainderStack;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        ramainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     // TreeNode<T>* node;
@@ -219,13 +197,13 @@ void LinkedRemainderTree<T>::insert(unsigned int index, T element)
             // allocatePointer= new void**[radix];
             memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *));
             memset(allocatePointer, 0, radix * (sizeof(void *)));
-            pointer = allocatePointer + (unsigned int)ramainderStack.top() * sizeof(void *);
-            ramainderStack.pop();
+            pointer = allocatePointer + (unsigned int)remainderStack.top() * sizeof(void *);
+            remainderStack.pop();
         }
         else
         {
-            pointer = (*(void **)pointer + (int)ramainderStack.top() * sizeof(void *));
-            ramainderStack.pop();
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 
@@ -233,17 +211,17 @@ void LinkedRemainderTree<T>::insert(unsigned int index, T element)
     if (*(long *)pointer != 0)
     {
         nodePointer = (*(TreeNode<T> **)pointer);
-        while (nodePointer->next != nullptr && nodePointer->index < index)
+        while (nodePointer->next != nullptr && nodePointer->key < key)
         {
             pointer = &(nodePointer->next);
             nodePointer = nodePointer->next;
         }
-        if (nodePointer->index == index)
+        if (nodePointer->key == key)
         {
             nodePointer->element = element;
             return;
         }
-        if (nodePointer->index < index)
+        if (nodePointer->key < key)
         {
             pointer = &(nodePointer->next);
         }
@@ -252,10 +230,10 @@ void LinkedRemainderTree<T>::insert(unsigned int index, T element)
     TreeNode<T> *newPointer = (TreeNode<T> *)malloc(sizeof(TreeNode<T>));
     // TreeNode<T> *newPointer = new TreeNode<T>;
     memset(newPointer, 0, sizeof(TreeNode<T>));
-    newPointer->index = index;
+    newPointer->key = key;
     newPointer->element = element;
 
-    if (nodePointer != nullptr && nodePointer->index > index)
+    if (nodePointer != nullptr && nodePointer->key > key)
     {
         newPointer->next = nodePointer;
     }
@@ -263,19 +241,21 @@ void LinkedRemainderTree<T>::insert(unsigned int index, T element)
 }
 
 template <class T>
-T LinkedRemainderTree<T>::get(unsigned int index)
+T LinkedRemainderTree<T>::get(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> remainderStack;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        remainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     void *pointer = &root;
@@ -300,11 +280,11 @@ T LinkedRemainderTree<T>::get(unsigned int index)
 
     while (nodePointer != nullptr)
     {
-        if (nodePointer->index == index)
+        if (nodePointer->key == key)
         {
             return nodePointer->element;
         }
-        else if (nodePointer->index > index)
+        else if (nodePointer->key > key)
         {
             return NULL;
         }
@@ -317,88 +297,170 @@ T LinkedRemainderTree<T>::get(unsigned int index)
 }
 
 template <class T>
-void LinkedRemainderTree<T>::remove(unsigned int index)
-{
-    if (index < 0 || index >= max)
+void LinkedRemainderTree<T>::remove(unsigned int key){
+        if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> remainderStack;
-    unsigned int index2 = index;
+    while (!remainderStack.empty())
+    {
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        remainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
-    void *pointer = &root;
-    for (int i = 0; i < level - 1; i++)
+    remove(key, 0, &root);
+}
+
+template <class T>
+void LinkedRemainderTree<T>::remove(unsigned int key, unsigned short currentLevel, void *pointer)
+{
+    if (pointer == nullptr || *(long *)pointer == 0)
     {
+        return;
+    }
+    if (currentLevel < level - 1) // index level
+    {
+        void *arrayPointer = pointer;
+        pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+        remainderStack.pop();
         if (*(long *)pointer == 0)
         {
             return;
         }
         else
         {
-            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
-            remainderStack.pop();
+            remove(key, currentLevel + 1, pointer); // has valid pointer, travel to next level
         }
+        pointer = *(void **)arrayPointer; // need to check if the index array could be freed
+        for (int i = 0; i < radix; i++)
+        {
+            if (*(long *)pointer != 0)
+            {
+                return; // return when there is other value;
+            }
+            pointer = pointer + sizeof(long *);
+        }
+        free(*(void **)arrayPointer);            // no valid pointer, free the index array
+        memset(arrayPointer, 0, sizeof(void *)); // set pointer in above index array to nullptr
     }
-
-    if (*(long *)pointer == 0)
+    else // data level
     {
-        return;
-    }
-    TreeNode<T> *nodePointer = (*(TreeNode<T> **)pointer);
-
-    while (nodePointer != nullptr)
-    {
-        if (nodePointer->index == index)
+        TreeNode<T> *nodePointer = (*(TreeNode<T> **)pointer);
+        while (nodePointer != nullptr)
         {
-            memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
-            free(nodePointer);
-            // delete nodePointer;
-            return;
-        }
-        else if (nodePointer->index > index)
-        {
-            return;
-        }
-        else
-        {
-            pointer = &(nodePointer->next);
-            nodePointer = nodePointer->next;
+            if (nodePointer->key == key)
+            {
+                memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+                free(nodePointer);
+                // delete nodePointer;
+                return;
+            }
+            else if (nodePointer->key > key)
+            {
+                return;
+            }
+            else
+            {
+                pointer = &(nodePointer->next);
+                nodePointer = nodePointer->next;
+            }
         }
     }
-    return;
 }
+
+// template <class T>
+// void LinkedRemainderTree<T>::remove(unsigned int key)
+// {
+//     if (key < 0 || key >= max)
+//     {
+//         throw std::invalid_argument("invalid key");
+//     }
+
+//     while(!remainderStack.empty()){
+//         remainderStack.pop();
+//     }
+//     unsigned int key2 = key;
+//     for (int i = 0; i < level; i++)
+//     {
+//         remainderStack.push(key2 % radix);
+//         key2 = key2 / radix;
+//     }
+
+//     void *pointer = &root;
+//     for (int i = 0; i < level - 1; i++)
+//     {
+//         if (*(long *)pointer == 0)
+//         {
+//             return;
+//         }
+//         else
+//         {
+//             pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+//             remainderStack.pop();
+//         }
+//     }
+
+//     if (*(long *)pointer == 0)
+//     {
+//         return;
+//     }
+//     TreeNode<T> *nodePointer = (*(TreeNode<T> **)pointer);
+
+//     while (nodePointer != nullptr)
+//     {
+//         if (nodePointer->key == key)
+//         {
+//             memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+//             free(nodePointer);
+//             // delete nodePointer;
+//             return;
+//         }
+//         else if (nodePointer->key > key)
+//         {
+//             return;
+//         }
+//         else
+//         {
+//             pointer = &(nodePointer->next);
+//             nodePointer = nodePointer->next;
+//         }
+//     }
+//     return;
+// }
 
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief print search path of an index
+ * @brief print search path of an key
  * @return void
  ********************************************************/
 template <class T>
-void LinkedRemainderTree<T>::printPath(unsigned int index)
+void LinkedRemainderTree<T>::printPath(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> s;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        s.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     cout << "---------trace start---------" << endl;
-    cout << "print path of index: " << index << "; remainder stack: ";
-    stack s2 = s;
+    cout << "print path of key: " << key << "; remainder stack: ";
+    stack s2 = remainderStack;
     while (!s2.empty())
     {
         cout << s2.top() << " ";
@@ -418,10 +480,10 @@ void LinkedRemainderTree<T>::printPath(unsigned int index)
         }
         else
         {
-            cout << "level: " << i << " index: " << s.top() << " address: " << *(void **)pointer << endl;
+            cout << "level: " << i << " remainder index: " << remainderStack.top() << " address: " << *(void **)pointer << endl;
             printMemory(*(void **)pointer, radix);
-            pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
-            s.pop();
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 
@@ -431,11 +493,11 @@ void LinkedRemainderTree<T>::printPath(unsigned int index)
         return;
     }
     TreeNode<T> *nodePointer = (*(TreeNode<T> **)pointer);
-    cout << "node index: " << nodePointer->index << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
+    cout << "node key: " << nodePointer->key << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
     while (nodePointer->next != nullptr)
     {
         nodePointer = nodePointer->next;
-        cout << "node index: " << nodePointer->index << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
+        cout << "node key: " << nodePointer->key << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
     }
     cout << "---------end----------" << endl;
 }

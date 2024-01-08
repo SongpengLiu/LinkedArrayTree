@@ -14,7 +14,7 @@ template <class T>
 struct ListNode
 {
 public:
-    unsigned int index;
+    unsigned int key;
     T element;
     ListNode *next;
 };
@@ -28,6 +28,7 @@ private:
     unsigned short level;
     void *root; // root array
     ListNode<T> *head;
+    stack<unsigned short> remainderStack;
 
 public:
     LinkedRemainderList();
@@ -48,7 +49,7 @@ private:
     void printMemory(void *, unsigned int);
     ListNode<T> *findLeftNode(unsigned int);
     void *findLeftNode(unsigned short, void *, unsigned int, unsigned short[], unsigned int);
-    void destroy(void *, unsigned short);
+    void remove(unsigned int, unsigned short, void*);
 };
 
 template <class T>
@@ -104,41 +105,13 @@ LinkedRemainderList<T>::~LinkedRemainderList()
 template <class T>
 void LinkedRemainderList<T>::destroy()
 {
-
-    // iterately remove data node;
-    ListNode<T> *nodePointer = head;
-    ListNode<T> *nodePointer2 = nullptr;
-    while (nodePointer != nullptr)
-    {
-        nodePointer2 = nodePointer->next;
-        free(nodePointer);
-        nodePointer = nodePointer2;
+    for(unsigned int i =0;i<max;i++){
+        remove(i);
     }
-    destroy(root, 0);
     root = nullptr;
     head = nullptr;
 }
 
-template <class T>
-void LinkedRemainderList<T>::destroy(void *pointer, unsigned short currentLevel)
-{
-    // clear index level
-    if (currentLevel < level - 2)
-    {
-        for (int i = 0; i < radix; i++)
-        {
-            if (*(long *)(pointer + i * sizeof(void *)) != 0)
-            {
-                destroy(*(void **)(pointer + i * sizeof(void *)), currentLevel + 1);
-            }
-        }
-        free(pointer);
-    }
-    if (currentLevel >= level - 1)
-    {
-        free(pointer);
-    }
-}
 
 /********************************************************
  * @author Songpeng Liu
@@ -204,22 +177,22 @@ void LinkedRemainderList<T>::printMemory(void *pBuff, unsigned int nLen)
 }
 
 template <class T>
-void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short indexArray[], unsigned int index)
+void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *arrayPointer, unsigned int arraySequence, unsigned short keyArray[], unsigned int key)
 {
     if (arrayPointer == nullptr)
     {
         return nullptr;
     }
-    // reached the last index level
+    // reached the last key level
     if (currentLevel >= level - 1)
     {
         ListNode<T> *nodePointer = (ListNode<T> *)arrayPointer;
         // travel to left biggest
-        while (nodePointer->next != nullptr && nodePointer->next->index <= index)
+        while (nodePointer->next != nullptr && nodePointer->next->key <= key)
         {
             nodePointer = nodePointer->next;
         }
-        if (nodePointer->index <= index)
+        if (nodePointer->key <= key)
         {
             return nodePointer;
         }
@@ -229,20 +202,20 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
         }
     }
 
-    // if not reached the last index level, will recursively search
-    unsigned int indexSequence = index;
+    // if not reached the last key level, will recursively search
+    unsigned int keySequence = key;
     for (int i = currentLevel; i < level; i++)
     {
-        indexSequence = indexSequence / radix;
+        keySequence = keySequence / radix;
     }
-    if (currentLevel == 0 || arraySequence >= indexSequence)
+    if (currentLevel == 0 || arraySequence >= keySequence)
     {
-        for (int i = indexArray[currentLevel]; i >= 0; i--)
+        for (int i = keyArray[currentLevel]; i >= 0; i--)
         {
             void *returnPointer = nullptr;
             if ((arrayPointer + i * sizeof(void *)) != nullptr)
             {
-                returnPointer = findLeftNode(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+                returnPointer = findLeftNode(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, keyArray, key);
             }
             if (returnPointer != nullptr)
             {
@@ -257,7 +230,7 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
             void *returnPointer = nullptr;
             if ((arrayPointer + i * sizeof(void *)) != nullptr)
             {
-                returnPointer = findLeftNode(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, indexArray, index);
+                returnPointer = findLeftNode(currentLevel + 1, *(void **)(arrayPointer + i * sizeof(void *)), arraySequence * radix + i, keyArray, key);
             }
             if (returnPointer != nullptr)
             {
@@ -273,51 +246,53 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief find the closest left node of an index
+ * @brief find the closest left node of an key
  * @return node pointer
  ********************************************************/
 template <class T>
-ListNode<T> *LinkedRemainderList<T>::findLeftNode(unsigned int index)
+ListNode<T> *LinkedRemainderList<T>::findLeftNode(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    if (index >= radix)
+    if (key >= radix)
     {
-        index = index / radix*radix - 1; // make sure start find from the left array
+        key = key / radix*radix - 1; // make sure start find from the left array
     }
     else
     {
         return nullptr;
     }
 
-    unsigned short indexArray[level];
-    unsigned int index2 = index;
+    unsigned short keyArray[level];
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        indexArray[level - i - 1] = index2 % radix;
-        index2 = index2 / radix;
+        keyArray[level - i - 1] = key2 % radix;
+        key2 = key2 / radix;
     }
 
-    return (ListNode<T> *)findLeftNode(0, root, 0, indexArray, index);
+    return (ListNode<T> *)findLeftNode(0, root, 0, keyArray, key);
 }
 
 template <class T>
-void LinkedRemainderList<T>::insert(unsigned int index, T element)
+void LinkedRemainderList<T>::insert(unsigned int key, T element)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> s;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        s.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     // travel to the data level
@@ -330,13 +305,13 @@ void LinkedRemainderList<T>::insert(unsigned int index, T element)
             allocatePointer = malloc(radix * (sizeof(void *)));
             memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *));
             memset(allocatePointer, 0, radix * (sizeof(void *)));
-            pointer = allocatePointer + (unsigned int)s.top() * sizeof(void *);
-            s.pop();
+            pointer = allocatePointer + (unsigned int)remainderStack.top() * sizeof(void *);
+            remainderStack.pop();
         }
         else
         {
-            pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
-            s.pop();
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 
@@ -347,18 +322,18 @@ void LinkedRemainderList<T>::insert(unsigned int index, T element)
     {
         nodePointer = (*(ListNode<T> **)pointer);
 
-        while (nodePointer->next != nullptr && nodePointer->index < index)
+        while (nodePointer->next != nullptr && nodePointer->key < key)
         {
             pointer = &(nodePointer->next);
             nodePointer = nodePointer->next;
             needFindLeft = false;
         }
-        if (nodePointer->index == index)
+        if (nodePointer->key == key)
         {
             nodePointer->element = element;
             return;
         }
-        if (nodePointer->index < index)
+        if (nodePointer->key < key)
         {
             pointer = &(nodePointer->next);
             needFindLeft = false;
@@ -368,10 +343,10 @@ void LinkedRemainderList<T>::insert(unsigned int index, T element)
     // alloc and insert the node
     ListNode<T> *newPointer = (ListNode<T> *)malloc(sizeof(ListNode<T>));
     memset(newPointer, 0, sizeof(ListNode<T>));
-    newPointer->index = index;
+    newPointer->key = key;
     newPointer->element = element;
 
-    if (nodePointer != nullptr && nodePointer->index > index)
+    if (nodePointer != nullptr && nodePointer->key > key)
     {
         newPointer->next = nodePointer;
     }
@@ -379,7 +354,7 @@ void LinkedRemainderList<T>::insert(unsigned int index, T element)
 
     if (needFindLeft)
     {
-        ListNode<T> *leftNode = findLeftNode(index);
+        ListNode<T> *leftNode = findLeftNode(key);
         ListNode<T> *rightNode;
         if (leftNode == nullptr)
         {
@@ -401,19 +376,21 @@ void LinkedRemainderList<T>::insert(unsigned int index, T element)
 }
 
 template <class T>
-T LinkedRemainderList<T>::get(unsigned int index)
+T LinkedRemainderList<T>::get(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> remainderStack;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        remainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     void *pointer = &root;
@@ -438,11 +415,11 @@ T LinkedRemainderList<T>::get(unsigned int index)
 
     while (nodePointer != nullptr)
     {
-        if (nodePointer->index == index)
+        if (nodePointer->key == key)
         {
             return nodePointer->element;
         }
-        else if (nodePointer->index > index)
+        else if (nodePointer->key > key)
         {
             return NULL;
         }
@@ -455,106 +432,129 @@ T LinkedRemainderList<T>::get(unsigned int index)
 }
 
 template <class T>
-void LinkedRemainderList<T>::remove(unsigned int index)
-{
-    if (index < 0 || index >= max)
+void LinkedRemainderList<T>::remove(unsigned int key){
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> remainderStack;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        remainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
-    void *pointer = &root;
-    for (int i = 0; i < level - 1; i++)
+    remove(key, 0, &root);
+
+}
+
+template <class T>
+void LinkedRemainderList<T>::remove(unsigned int key, unsigned short currentLevel, void *pointer)
+{
+    if (pointer == nullptr || *(long *)pointer == 0)
     {
+        return;
+    }
+    if (currentLevel < level - 1) // index level
+    {
+        void *arrayPointer = pointer;
+        pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+        remainderStack.pop();
         if (*(long *)pointer == 0)
         {
             return;
         }
         else
         {
-            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
-            remainderStack.pop();
+            remove(key, currentLevel + 1, pointer);
         }
+        pointer = *(void**)arrayPointer; //need to check if the index array could be freed
+        for (int i = 0; i < radix; i++)
+        {
+            if (*(long *)pointer != 0)
+            {
+                return; // return when there is other value;
+            }
+            pointer = pointer + sizeof(long*);
+        }
+        free(*(void**)arrayPointer); // no valid pointer, free the index array
+        memset(arrayPointer, 0, sizeof(void *)); // set pointer in above index array to nullptr
     }
-
-    if (*(long *)pointer == 0)
+    else //data level
     {
-        return;
-    }
-    ListNode<T> *nodePointer = (*(ListNode<T> **)pointer);
+        ListNode<T> *nodePointer = (*(ListNode<T> **)pointer);
 
-    // need find left
-    if (nodePointer->index == index)
-    {
-        ListNode<T> *leftPointer = findLeftNode(index);
-        if (leftPointer == nullptr)
+        // need find left
+        if (nodePointer->key == key)
         {
-            head = nodePointer->next;
-        }
-        else
-        {
-            leftPointer->next = nodePointer->next;
-        }
-        if (nodePointer->next != nullptr && nodePointer->next->index < (index / radix * radix + radix))
-        {
-            memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
-        }
-        else
-        {
-            memcpy_s(pointer, sizeof(void *), 0, sizeof(void *));
-        }
-        free(nodePointer);
-        return;
-    }
-
-    while (nodePointer != nullptr)
-    {
-        if (nodePointer->index == index)
-        {
-            memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+            ListNode<T> *leftPointer = findLeftNode(key);
+            if (leftPointer == nullptr)
+            {
+                head = nodePointer->next;
+            }
+            else
+            {
+                leftPointer->next = nodePointer->next;
+            }
+            if (nodePointer->next != nullptr && nodePointer->next->key < (key / radix * radix + radix))
+            {
+                memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+            }
+            else
+            {
+                memcpy_s(pointer, sizeof(void *), 0, sizeof(void *));
+            }
             free(nodePointer);
-            // delete nodePointer;
             return;
         }
-        else if (nodePointer->index > index)
+
+        while (nodePointer != nullptr)
         {
-            return;
-        }
-        else
-        {
-            pointer = &(nodePointer->next);
-            nodePointer = nodePointer->next;
+            if (nodePointer->key == key)
+            {
+                memcpy_s(pointer, sizeof(void *), &(nodePointer->next), sizeof(void *));
+                free(nodePointer);
+                // delete nodePointer;
+                return;
+            }
+            else if (nodePointer->key > key)
+            {
+                return;
+            }
+            else
+            {
+                pointer = &(nodePointer->next);
+                nodePointer = nodePointer->next;
+            }
         }
     }
-    return;
 }
 
 template <class T>
-void LinkedRemainderList<T>::printPath(unsigned int index)
+void LinkedRemainderList<T>::printPath(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> s;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        s.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     cout << "---------trace start---------" << endl;
-    cout << "print path of index: " << index << "; remainder stack: ";
-    stack s2 = s;
+    cout << "print path of key: " << key << "; remainder stack: ";
+    stack s2 = remainderStack;
     while (!s2.empty())
     {
         cout << s2.top() << " ";
@@ -574,10 +574,10 @@ void LinkedRemainderList<T>::printPath(unsigned int index)
         }
         else
         {
-            cout << "level: " << i << " index: " << s.top() << " address: " << *(void **)pointer << endl;
+            cout << "level: " << i << " remainder index: " << remainderStack.top() << " address: " << *(void **)pointer << endl;
             printMemory(*(void **)pointer, radix);
-            pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
-            s.pop();
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 
@@ -587,9 +587,9 @@ void LinkedRemainderList<T>::printPath(unsigned int index)
         return;
     }
     ListNode<T> *nodePointer = (*(ListNode<T> **)pointer);
-    while (nodePointer != nullptr && nodePointer->index < index/radix* radix+ radix)
+    while (nodePointer != nullptr && nodePointer->key < key/radix* radix+ radix)
     {
-        cout << "node index: " << nodePointer->index << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
+        cout << "node key: " << nodePointer->key << " element: " << nodePointer->element << " next: " << nodePointer->next << endl;
         nodePointer = nodePointer->next;
     }
     cout << "---------end----------" << endl;
@@ -613,7 +613,7 @@ void LinkedRemainderList<T>::printAllNodes()
     cout << "------iterate start-------" << endl;
     while (node != nullptr)
     {
-        cout << "node index: " << node->index << " element: " << node->element << endl;
+        cout << "node key: " << node->key << " element: " << node->element << endl;
         node = node->next;
     }
     cout << "--------iterate end-------" << endl;

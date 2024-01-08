@@ -1,6 +1,7 @@
 #include <iostream>
 #include <chrono>
 #include <unordered_set>
+#include <set>
 #include <random>
 #include <windows.h>
 #include <psapi.h>
@@ -549,17 +550,19 @@ void Test<T>::arrayRemainderListTest(unsigned short radix)
 }
 
 
-//Warning: because of the substance of process, in low data size, the memeory summary may not be accurate
-//Warning: because of the substance of process, in low data size, the memeory summary may not be accurate
-//Warning: because of the substance of process, in low data size, the memeory summary may not be accurate
+//Warning: because of the substance of process, the memeory summary may not be accurate if there are more than 1 summary time in a execution.
+//Warning: because of the substance of process, the memeory summary may not be accurate if there are more than 1 summary time in a execution.
+//Warning: because of the substance of process, the memeory summary may not be accurate if there are more than 1 summary time in a execution.
 int main()
 {
     TestLog::appendLog("");
     TestLog::appendLog("--------------------------------------------------");
     TestLog::appendLog("-----------------new statistic--------------------");
     TestLog::appendLog("--------------------------------------------------");
-    unsigned int size = 10000000;
-    unsigned int max =  10000000;
+    unsigned int size = 100;
+    unsigned int max =  100;
+
+    while(max<=100000000){
     Test<unsigned int> test = Test<unsigned int>(size,max);
     test.setRandomSet();
     string message = "Data size: " + std::to_string(test.getSetSize());
@@ -571,9 +574,12 @@ int main()
     test.linkedRemainderTreeTest(0);
     test.linkedRemainderListTest(0);
     test.BTreeTest();
-
     TestLog::printLog();
     TestLog::writeLogToFile();
+
+    size=size*10;
+    max = max*10;
+    }
 
     return 0;
 }

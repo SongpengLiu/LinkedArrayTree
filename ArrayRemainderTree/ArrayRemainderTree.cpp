@@ -18,6 +18,7 @@ private:
     unsigned int max;     // max value
     unsigned short level;
     void *root; // root array
+    stack<unsigned short> remainderStack; //remainder stack
 
 public:
     ArrayRemainderTree();
@@ -35,7 +36,7 @@ private:
     unsigned short findBestRadix(unsigned int);
     unsigned short findLevel(unsigned int, unsigned short);
     void printMemory(void *, unsigned int);
-    void destroy(void *, unsigned short);
+    void remove(unsigned int, unsigned short, void*);
 };
 
 template <class T>
@@ -51,7 +52,7 @@ ArrayRemainderTree<T>::ArrayRemainderTree()
 template <class T>
 ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue)
 {
-    if (maxValue <= 1)
+    if (maxValue <= 4)
     {
         throw new exception();
         return;
@@ -66,7 +67,7 @@ ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue)
 template <class T>
 ArrayRemainderTree<T>::ArrayRemainderTree(unsigned int maxValue, unsigned short inputRadix)
 {
-    if (maxValue <= 1 || inputRadix < 2 || inputRadix >= maxValue)
+    if (maxValue <= 4 || inputRadix < 2 || inputRadix >= maxValue)
     {
         throw std::invalid_argument("wrong max value or radix");
         return;
@@ -89,31 +90,10 @@ ArrayRemainderTree<T>::~ArrayRemainderTree()
 template <class T>
 void ArrayRemainderTree<T>::destroy()
 {
-    destroy(root, 0);
+    for(unsigned int i=0;i<max;i++){
+        remove(i);
+    }
     root = nullptr;
-}
-
-template <class T>
-void ArrayRemainderTree<T>::destroy(void *pointer, unsigned short currentLevel)
-{
-    // index level
-    if (currentLevel < level - 1)
-    {
-        for (int i = 0; i < radix; i++)
-        {
-            if (*(long *)(pointer + i * sizeof(void *)) != 0)
-            {
-                destroy(*(void **)(pointer + i * sizeof(void *)), currentLevel + 1);
-            }
-        }
-        free(pointer);
-    }
-
-    // date level
-    if (currentLevel >= level - 1)
-    {
-        free(pointer);
-    }
 }
 
 /********************************************************
@@ -125,7 +105,10 @@ void ArrayRemainderTree<T>::destroy(void *pointer, unsigned short currentLevel)
 template <class T>
 unsigned short ArrayRemainderTree<T>::findBestRadix(unsigned int maxValue)
 {
-    if (maxValue <= 100)
+    if (maxValue <= 10){
+        return maxValue -1;
+    }
+    else if (maxValue <= 100)
     {
         return 10;
     }
@@ -176,19 +159,21 @@ void ArrayRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
  * @return void
  ********************************************************/
 template <class T>
-void ArrayRemainderTree<T>::insert(unsigned int index, T element)
+void ArrayRemainderTree<T>::insert(unsigned int key, T element)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> ramainderStack;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        ramainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     // TreeNode<T>* node;
@@ -201,52 +186,54 @@ void ArrayRemainderTree<T>::insert(unsigned int index, T element)
             allocatePointer = malloc(radix * (sizeof(void *)));
             memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *));
             memset(allocatePointer, 0, radix * (sizeof(void *)));
-            pointer = allocatePointer + (unsigned int)ramainderStack.top() * sizeof(void *);
-            ramainderStack.pop();
+            pointer = allocatePointer + (unsigned int)remainderStack.top() * sizeof(void *);
+            remainderStack.pop();
         }
         else
         {
-            pointer = (*(void **)pointer + (unsigned int)ramainderStack.top() * sizeof(void *));
-            ramainderStack.pop();
+            pointer = (*(void **)pointer + (unsigned int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 
-    void *indexPointer = nullptr;
+    void *keyPointer = nullptr;
     if (*(long *)pointer == 0)
     {
         allocatePointer = malloc(sizeof(T) * radix);
         memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *));
         memset(allocatePointer, 0, sizeof(T) * radix);
-        pointer = allocatePointer + (unsigned int)ramainderStack.top() * sizeof(T);
+        pointer = allocatePointer + (unsigned int)remainderStack.top() * sizeof(T);
     }
     else
     {
-        pointer = (*(void **)pointer + (unsigned int)ramainderStack.top() * sizeof(T));
+        pointer = (*(void **)pointer + (unsigned int)remainderStack.top() * sizeof(T));
     }
-    ramainderStack.pop();
+    remainderStack.pop();
     *(T *)pointer = element;
 }
 
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief search an element in the tree based on the index
+ * @brief search an element in the tree based on the key
  * @return element
  ********************************************************/
 template <class T>
-T ArrayRemainderTree<T>::get(unsigned int index)
+T ArrayRemainderTree<T>::get(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> remainderStack;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        remainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     void *pointer = &root;
@@ -275,87 +262,113 @@ T ArrayRemainderTree<T>::get(unsigned int index)
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief remove an element from the tree based on the index
+ * @brief remove an element from the tree based on the key
  * @return void
  ********************************************************/
 template <class T>
-void ArrayRemainderTree<T>::remove(unsigned int index)
+void ArrayRemainderTree<T>::remove(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> remainderStack;
-    unsigned int index2 = index;
+    while (!remainderStack.empty())
+    {
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        remainderStack.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
-    void *pointer = &root;
-    for (int i = 0; i < level - 1; i++)
+    remove(key, 0, &root);
+}
+template <class T>
+void ArrayRemainderTree<T>::remove(unsigned int key, unsigned short currentLevel, void *pointer)
+{
+    if (pointer == nullptr || *(long *)pointer == 0)
     {
+        return;
+    }
+    if (currentLevel < level - 1) // index level
+    {
+        void *arrayPointer = pointer;
+        pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+        remainderStack.pop();
         if (*(long *)pointer == 0)
         {
             return;
         }
         else
         {
-            pointer = (*(void **)pointer + (unsigned int)remainderStack.top() * sizeof(void *));
-            remainderStack.pop();
+            remove(key, currentLevel + 1, pointer); // has valid pointer, travel to next level
         }
-    }
-
-    if (*(long *)pointer == 0)
-    {
-        return;
-    }
-    void *clearPointer = pointer;
-    pointer = (*(void **)pointer + (unsigned int)remainderStack.top() * sizeof(T));
-    memset(pointer, 0, sizeof(T));
-
-    pointer = *(void **)clearPointer;
-
-    // check if have other value;
-    for (int i = 0; i < radix; i++)
-    {
-        if (*(T *)pointer != 0)
+        pointer = *(void **)arrayPointer; // need to check if the index array could be freed
+        for (int i = 0; i < radix; i++)
         {
-            return; // return when there is other value;
+            if (*(long *)pointer != 0)
+            {
+                return; // return when there is other value;
+            }
+            pointer = pointer + sizeof(long *);
         }
-        pointer = pointer + sizeof(T);
+        free(*(void **)arrayPointer);            // no valid pointer, free the index array
+        memset(arrayPointer, 0, sizeof(void *)); // set pointer in above index array to nullptr
     }
-    free(*(void **)clearPointer); // no other value, free the data array.
-    memset(clearPointer, 0, sizeof(void *));
+    else //data level
+    {
+        void *arrayPointer = pointer;
+        pointer = (*(void **)pointer + (unsigned int)remainderStack.top() * sizeof(T));
+        remainderStack.pop();
+        memset(pointer, 0, sizeof(T));
+
+        pointer = *(void **)arrayPointer;
+
+        // check if have other value;
+        for (int i = 0; i < radix; i++)
+        {
+            if (*(T *)pointer != 0)
+            {
+                return; // return when there is other value;
+            }
+            pointer = pointer + sizeof(T);
+        }
+        free(*(void **)arrayPointer); // no other value, free the data array.
+        memset(arrayPointer, 0, sizeof(void *));
+    }
 }
+
 
 /********************************************************
  * @author Songpeng Liu
  * @date 2023-12-22
- * @brief print search path of an index
+ * @brief print search path of an key
  * @return void
  ********************************************************/
 template <class T>
-void ArrayRemainderTree<T>::printPath(unsigned int index)
+void ArrayRemainderTree<T>::printPath(unsigned int key)
 {
-    if (index < 0 || index >= max)
+    if (key < 0 || key >= max)
     {
-        throw std::invalid_argument("invalid index");
+        throw std::invalid_argument("invalid key");
     }
 
-    stack<unsigned short> s;
-    unsigned int index2 = index;
+    while(!remainderStack.empty()){
+        remainderStack.pop();
+    }
+    unsigned int key2 = key;
     for (int i = 0; i < level; i++)
     {
-        s.push(index2 % radix);
-        index2 = index2 / radix;
+        remainderStack.push(key2 % radix);
+        key2 = key2 / radix;
     }
 
     cout << "---------trace start---------" << endl;
-    cout << "print path of index: " << index << "; remainder stack: ";
-    stack s2 = s;
+    cout << "print path of key: " << key << "; remainder stack: ";
+    stack s2 = remainderStack;
     while (!s2.empty())
     {
         cout << s2.top() << " ";
@@ -375,10 +388,10 @@ void ArrayRemainderTree<T>::printPath(unsigned int index)
         }
         else
         {
-            cout << "level: " << i << " index: " << s.top() << " address: " << *(void **)pointer << endl;
+            cout << "level: " << i << " remainder index: " << remainderStack.top() << " address: " << *(void **)pointer << endl;
             printMemory(*(void **)pointer, radix);
-            pointer = (*(void **)pointer + (int)s.top() * sizeof(void *));
-            s.pop();
+            pointer = (*(void **)pointer + (int)remainderStack.top() * sizeof(void *));
+            remainderStack.pop();
         }
     }
 

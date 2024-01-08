@@ -9,46 +9,80 @@
 using namespace std;
 
 template <class T>
-unordered_set<T> getRandom(T number, T maxValue)
+unordered_set<T> getRandom(T size, T max)
 {
     std::unordered_set<T> randomSet;
     std::random_device rd;
-    if (number > maxValue)
+
+    if (size > max)
     {
         throw std::invalid_argument("invalid index");
         return randomSet;
     }
-    if (number * 11 > maxValue * 10)
+
+    // size is small, generate directly
+    if (size < 1000)
     {
-        throw std::invalid_argument("maxValue too small, hard to generate so many random number");
+        while (randomSet.size() < size)
+        {
+            randomSet.insert(rd() % max);
+        }
         return randomSet;
     }
-    while (randomSet.size() < number)
+
+    // size is mall compared with max, generate directly
+    if (max -size > max / 100)
     {
-        randomSet.insert(rd() % maxValue);
+        while (randomSet.size() < size)
+        {
+            randomSet.insert(rd() % max);
+        }
+        return randomSet;
+    }
+
+    // size is big compared with max
+    while (randomSet.size() < size - max/100)
+    {
+        randomSet.insert(rd() % max);
+    }
+
+    for (int i = 0; i < max; i++)
+    {
+        if (randomSet.find(i) == randomSet.end())
+        {
+            randomSet.insert(i);
+        }
+        if (randomSet.size() >= size)
+        {
+            break;
+        }
     }
     return randomSet;
 }
 
+template <class T>
+set<T> getOrdered(T size, T max){
+    set<T> set;
+    for(int i=0;i<size;i++){
+        set.insert(i);
+    }
+    return set;
+}
 int main()
 {
-    int size = 20;
-    int max = 22;
+    int size = 100;
+    int max =  100;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
     ArrayRemainderList<char *> *list = new ArrayRemainderList<char *>(max, 5);
-
-    string s = "EEEE:" + to_string(*randomSet.begin());
-    char c[10];
-    strcpy(c, s.c_str());
-
-    list->insert(*randomSet.begin(), c);
-
     list->printInfo();
-    // list->printPath(*randomSet.begin());
-    string cc = list->get(*randomSet.begin());
-    cout << "eeeee: " << cc << endl;
-
-    list->printAllData();
+    for(auto i:randomSet){
+    string s = "Element: " + to_string(i);
+    void* pointer = malloc(s.length());
+    s.copy((char*)pointer,s.length(),0);
+    list->insert(i, (char *)(pointer));
+    }
+    cout << "begin: " <<*randomSet.begin()<<" "<< list->get(*randomSet.begin()) << endl;
+    cout << "10: " << list->get(10) << endl;
     return 0;
 }
