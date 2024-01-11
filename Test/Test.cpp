@@ -550,9 +550,7 @@ void Test<T>::arrayRemainderListTest(unsigned short radix)
 }
 
 
-//Warning: because of the substance of process, the memeory summary may not be accurate if there are more than 1 summary time in a execution.
-//Warning: because of the substance of process, the memeory summary may not be accurate if there are more than 1 summary time in a execution.
-//Warning: because of the substance of process, the memeory summary may not be accurate if there are more than 1 summary time in a execution.
+//Warning: because of the substance of process, regarding memeory statistic, only the first memeory summary is accurate in a execution.
 int main()
 {
     TestLog::appendLog("");
