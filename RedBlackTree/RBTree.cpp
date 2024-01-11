@@ -12,12 +12,13 @@ class RBTNode{
     public:
         RBTColor color;
         T key;
+        T element;
         RBTNode *left;
         RBTNode *right;
         RBTNode *parent;
 
-        RBTNode(T value, RBTColor c, RBTNode *p, RBTNode *l, RBTNode *r):
-            key(value),color(c),parent(),left(l),right(r) {}
+        RBTNode(T value, T e, RBTColor c, RBTNode *p, RBTNode *l, RBTNode *r):
+            key(value),element(e),color(c),parent(),left(l),right(r) {}
 };
 
 template <class T>
@@ -37,7 +38,7 @@ class RBTree {
         T maximum();
         RBTNode<T>* successor(RBTNode<T> *x);
         RBTNode<T>* predecessor(RBTNode<T> *x);
-        void insert(T key);
+        void insert(T key, T element);
         void remove(T key);
         void destroy();
         void print();
@@ -396,11 +397,11 @@ void RBTree<T>::insert(RBTNode<T>* &root, RBTNode<T>* node)
 }
 
 template <class T>
-void RBTree<T>::insert(T key)
+void RBTree<T>::insert(T key, T element)
 {
     RBTNode<T> *z=NULL;
 
-    if ((z=new RBTNode<T>(key,BLACK,NULL,NULL,NULL)) == NULL)
+    if ((z=new RBTNode<T>(key,element, BLACK,NULL,NULL,NULL)) == NULL)
         return ;
 
     insert(mRoot, z);

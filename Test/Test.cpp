@@ -125,7 +125,7 @@ void Test<T>::blackRedTreeTest()
     timerStart = clock::now();
     for (auto i : set)
     {
-        redBlackTree->insert(i);
+        redBlackTree->insert(i, i);
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
@@ -559,14 +559,14 @@ int main()
     TestLog::appendLog("--------------------------------------------------");
     TestLog::appendLog("-----------------new statistic--------------------");
     TestLog::appendLog("--------------------------------------------------");
-    unsigned int size = 100;
-    unsigned int max =  100;
+    unsigned int size = 10000000;
+    unsigned int max =  10000000;
 
-    while(max<=100000000){
     Test<unsigned int> test = Test<unsigned int>(size,max);
     test.setRandomSet();
     string message = "Data size: " + std::to_string(test.getSetSize());
     TestLog::appendLog(message);
+
 
     test.blackRedTreeTest();
     test.arrayRemainderTreeTest(0);
@@ -576,10 +576,6 @@ int main()
     test.BTreeTest();
     TestLog::printLog();
     TestLog::writeLogToFile();
-
-    size=size*10;
-    max = max*10;
-    }
 
     return 0;
 }

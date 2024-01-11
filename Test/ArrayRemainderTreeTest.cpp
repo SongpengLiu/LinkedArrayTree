@@ -70,18 +70,21 @@ set<T> getOrdered(T size, T max){
 }
 
 int main(){
-    int size =1000000;
-    int max = 1000000;
+    int size =10;
+    int max = 100;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
     ArrayRemainderTree<unsigned int> *tree = new ArrayRemainderTree<unsigned int>(max);
     for(auto i: randomSet){
         tree -> insert(i,i);
     }
+    tree->printInfo();
+    tree->printPath(20);
+    tree->iterateAllData();
     for(auto i: randomSet){
         tree -> remove(i);
     }
-    tree->printPath(20);
-    tree->destroy();
+
+
     return 0;
 }

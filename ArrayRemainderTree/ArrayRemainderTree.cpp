@@ -31,12 +31,15 @@ public:
     void remove(unsigned int);
     T get(unsigned int);
     void destroy();
+    void iterateAllData();
+
 
 private:
     unsigned short findBestRadix(unsigned int);
     unsigned short findLevel(unsigned int, unsigned short);
     void printMemory(void *, unsigned int);
     void remove(unsigned int, unsigned short, void*);
+    void iterateAllData(unsigned short, void*);
 };
 
 template <class T>
@@ -409,4 +412,36 @@ void ArrayRemainderTree<T>::printPath(unsigned int key)
     }
     cout << endl;
     cout << "---------end----------" << endl;
+}
+
+template <class T>
+void ArrayRemainderTree<T>::iterateAllData(){
+    cout << "---------iterate start---------" << endl;
+    iterateAllData(0, root);
+    cout<< endl<<"------------end-----------------"<< endl;
+
+}
+
+template <class T>
+void ArrayRemainderTree<T>::iterateAllData(unsigned short currentLevel, void* pointer){
+    if(pointer == nullptr){
+        return;
+    }
+    if(currentLevel< level-1){
+        for(int i=0;i< radix;i++){
+            if(*(void**)pointer !=nullptr){
+                iterateAllData(currentLevel+1, *(void**)pointer);
+            }
+            pointer = pointer + sizeof(void*);
+        }
+    }
+    if(currentLevel>= level -1){
+        for(int i=0;i< radix;i++){
+            if(*(T*)pointer !=0){
+                cout<<" "<< *(T*)pointer;
+            }
+            pointer = pointer + sizeof(T);
+        }
+    }
+
 }

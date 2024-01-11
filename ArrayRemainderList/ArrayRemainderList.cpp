@@ -220,7 +220,7 @@ void *ArrayRemainderList<T>::findLeft(unsigned short currentLevel, void *arrayPo
     {
         keySequence = keySequence / radix;
     }
-    if (currentLevel == 0 || arraySequence >= keySequence)
+    if (arraySequence >= keySequence)
     {
         for (int i = keyArray[currentLevel]; i >= 0; i--)
         {

@@ -74,15 +74,21 @@ int main()
     int max =  100;
 
     unordered_set<unsigned int> randomSet = getRandom<unsigned int>(size, max);
-    ArrayRemainderList<char *> *list = new ArrayRemainderList<char *>(max, 5);
-    list->printInfo();
-    for(auto i:randomSet){
-    string s = "Element: " + to_string(i);
-    void* pointer = malloc(s.length());
-    s.copy((char*)pointer,s.length(),0);
-    list->insert(i, (char *)(pointer));
+    // ArrayRemainderList<char *> *list = new ArrayRemainderList<char *>(max, 5);
+    // list->printInfo();
+    // for(auto i:randomSet){
+    // string s = "Element: " + to_string(i);
+    // void* pointer = malloc(s.length());
+    // s.copy((char*)pointer,s.length(),0);
+    // list->insert(i, (char *)(pointer));
+    // }
+    // cout << "begin: " <<*randomSet.begin()<<" "<< list->get(*randomSet.begin()) << endl;
+    // cout << "10: " << list->get(10) << endl;
+
+    ArrayRemainderList<int> *list = new ArrayRemainderList<int>(max, 5);
+    for(auto i: randomSet){
+        list->insert(i,i);
     }
-    cout << "begin: " <<*randomSet.begin()<<" "<< list->get(*randomSet.begin()) << endl;
-    cout << "10: " << list->get(10) << endl;
+    list->printAllData();
     return 0;
 }

@@ -7560,3 +7560,1087 @@
 [Mon Jan 08 15:11:21 2024]  memory take(after): 10240480KB; increace memory: 5039556KB
 [Mon Jan 08 15:19:48 2024]  search time: 502285497000 average:5022.854970
 [Mon Jan 08 15:33:59 2024]  remove time: 846183698000 average:8461.836980
+[Mon Jan 08 16:58:17 2024]  
+[Mon Jan 08 16:58:17 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:17 2024]  -----------------new statistic--------------------
+[Mon Jan 08 16:58:17 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:17 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:18 2024]  Data size: 1000000
+[Mon Jan 08 16:58:18 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:18 2024]  get from set time:31397000 average:31.397000
+[Mon Jan 08 16:58:18 2024]  memory take(before): 46908KB
+[Mon Jan 08 16:58:18 2024]  max value: 1000000 radix: 2 level: 20
+[Mon Jan 08 16:58:19 2024]  insert time: 944087000 average:944.087000
+[Mon Jan 08 16:58:19 2024]  memory take(after): 94116KB; increace memory: 47208KB
+[Mon Jan 08 16:58:20 2024]  search time: 854582000 average:854.582000
+[Mon Jan 08 16:58:21 2024]  remove time: 925642000 average:925.642000
+[Mon Jan 08 16:58:22 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:23 2024]  Data size: 1000000
+[Mon Jan 08 16:58:23 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:23 2024]  get from set time:30077000 average:30.077000
+[Mon Jan 08 16:58:23 2024]  memory take(before): 47272KB
+[Mon Jan 08 16:58:23 2024]  max value: 1000000 radix: 3 level: 13
+[Mon Jan 08 16:58:24 2024]  insert time: 637356000 average:637.356000
+[Mon Jan 08 16:58:24 2024]  memory take(after): 83932KB; increace memory: 36660KB
+[Mon Jan 08 16:58:25 2024]  search time: 559459000 average:559.459000
+[Mon Jan 08 16:58:25 2024]  remove time: 599029000 average:599.029000
+[Mon Jan 08 16:58:26 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:27 2024]  Data size: 1000000
+[Mon Jan 08 16:58:27 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:27 2024]  get from set time:30745000 average:30.745000
+[Mon Jan 08 16:58:27 2024]  memory take(before): 47368KB
+[Mon Jan 08 16:58:27 2024]  max value: 1000000 radix: 4 level: 10
+[Mon Jan 08 16:58:28 2024]  insert time: 522574000 average:522.574000
+[Mon Jan 08 16:58:28 2024]  memory take(after): 82752KB; increace memory: 35384KB
+[Mon Jan 08 16:58:28 2024]  search time: 518410000 average:518.410000
+[Mon Jan 08 16:58:29 2024]  remove time: 497232000 average:497.232000
+[Mon Jan 08 16:58:29 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:31 2024]  Data size: 1000000
+[Mon Jan 08 16:58:31 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:31 2024]  get from set time:31485000 average:31.485000
+[Mon Jan 08 16:58:31 2024]  memory take(before): 47424KB
+[Mon Jan 08 16:58:31 2024]  max value: 1000000 radix: 5 level: 9
+[Mon Jan 08 16:58:31 2024]  insert time: 473454000 average:473.454000
+[Mon Jan 08 16:58:31 2024]  memory take(after): 81288KB; increace memory: 33864KB
+[Mon Jan 08 16:58:32 2024]  search time: 477330000 average:477.330000
+[Mon Jan 08 16:58:32 2024]  remove time: 444138000 average:444.138000
+[Mon Jan 08 16:58:33 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:34 2024]  Data size: 1000000
+[Mon Jan 08 16:58:34 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:34 2024]  get from set time:29545000 average:29.545000
+[Mon Jan 08 16:58:34 2024]  memory take(before): 47408KB
+[Mon Jan 08 16:58:34 2024]  max value: 1000000 radix: 6 level: 8
+[Mon Jan 08 16:58:35 2024]  insert time: 487041000 average:487.041000
+[Mon Jan 08 16:58:35 2024]  memory take(after): 80900KB; increace memory: 33492KB
+[Mon Jan 08 16:58:35 2024]  search time: 468650000 average:468.650000
+[Mon Jan 08 16:58:36 2024]  remove time: 417004000 average:417.004000
+[Mon Jan 08 16:58:36 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:37 2024]  Data size: 1000000
+[Mon Jan 08 16:58:37 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:38 2024]  get from set time:31881000 average:31.881000
+[Mon Jan 08 16:58:38 2024]  memory take(before): 47440KB
+[Mon Jan 08 16:58:38 2024]  max value: 1000000 radix: 7 level: 8
+[Mon Jan 08 16:58:38 2024]  insert time: 474181000 average:474.181000
+[Mon Jan 08 16:58:38 2024]  memory take(after): 80396KB; increace memory: 32956KB
+[Mon Jan 08 16:58:39 2024]  search time: 541361000 average:541.361000
+[Mon Jan 08 16:58:39 2024]  remove time: 441067000 average:441.067000
+[Mon Jan 08 16:58:39 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:41 2024]  Data size: 1000000
+[Mon Jan 08 16:58:41 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:41 2024]  get from set time:29869000 average:29.869000
+[Mon Jan 08 16:58:41 2024]  memory take(before): 47456KB
+[Mon Jan 08 16:58:41 2024]  max value: 1000000 radix: 8 level: 7
+[Mon Jan 08 16:58:41 2024]  insert time: 454289000 average:454.289000
+[Mon Jan 08 16:58:41 2024]  memory take(after): 80252KB; increace memory: 32796KB
+[Mon Jan 08 16:58:42 2024]  search time: 508201000 average:508.201000
+[Mon Jan 08 16:58:42 2024]  remove time: 414279000 average:414.279000
+[Mon Jan 08 16:58:43 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:44 2024]  Data size: 1000000
+[Mon Jan 08 16:58:44 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:44 2024]  get from set time:31024000 average:31.024000
+[Mon Jan 08 16:58:44 2024]  memory take(before): 47680KB
+[Mon Jan 08 16:58:44 2024]  max value: 1000000 radix: 9 level: 7
+[Mon Jan 08 16:58:45 2024]  insert time: 488744000 average:488.744000
+[Mon Jan 08 16:58:45 2024]  memory take(after): 80100KB; increace memory: 32420KB
+[Mon Jan 08 16:58:45 2024]  search time: 528846000 average:528.846000
+[Mon Jan 08 16:58:46 2024]  remove time: 433821000 average:433.821000
+[Mon Jan 08 16:58:46 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:48 2024]  Data size: 1000000
+[Mon Jan 08 16:58:48 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:48 2024]  get from set time:30444000 average:30.444000
+[Mon Jan 08 16:58:48 2024]  memory take(before): 47632KB
+[Mon Jan 08 16:58:48 2024]  max value: 1000000 radix: 10 level: 6
+[Mon Jan 08 16:58:48 2024]  insert time: 454239000 average:454.239000
+[Mon Jan 08 16:58:48 2024]  memory take(after): 79936KB; increace memory: 32304KB
+[Mon Jan 08 16:58:49 2024]  search time: 584879000 average:584.879000
+[Mon Jan 08 16:58:49 2024]  remove time: 435146000 average:435.146000
+[Mon Jan 08 16:58:49 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:51 2024]  Data size: 1000000
+[Mon Jan 08 16:58:51 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:51 2024]  get from set time:34295000 average:34.295000
+[Mon Jan 08 16:58:51 2024]  memory take(before): 47552KB
+[Mon Jan 08 16:58:51 2024]  max value: 1000000 radix: 11 level: 6
+[Mon Jan 08 16:58:52 2024]  insert time: 460538000 average:460.538000
+[Mon Jan 08 16:58:52 2024]  memory take(after): 79844KB; increace memory: 32292KB
+[Mon Jan 08 16:58:52 2024]  search time: 568417000 average:568.417000
+[Mon Jan 08 16:58:53 2024]  remove time: 415405000 average:415.405000
+[Mon Jan 08 16:58:53 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:54 2024]  Data size: 1000000
+[Mon Jan 08 16:58:54 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:54 2024]  get from set time:29670000 average:29.670000
+[Mon Jan 08 16:58:54 2024]  memory take(before): 47668KB
+[Mon Jan 08 16:58:54 2024]  max value: 1000000 radix: 12 level: 6
+[Mon Jan 08 16:58:55 2024]  insert time: 479801000 average:479.801000
+[Mon Jan 08 16:58:55 2024]  memory take(after): 79792KB; increace memory: 32124KB
+[Mon Jan 08 16:58:56 2024]  search time: 620572000 average:620.572000
+[Mon Jan 08 16:58:56 2024]  remove time: 431775000 average:431.775000
+[Mon Jan 08 16:58:56 2024]  --------------------------------------------------
+[Mon Jan 08 16:58:58 2024]  Data size: 1000000
+[Mon Jan 08 16:58:58 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:58:58 2024]  get from set time:30940000 average:30.940000
+[Mon Jan 08 16:58:58 2024]  memory take(before): 47704KB
+[Mon Jan 08 16:58:58 2024]  max value: 1000000 radix: 13 level: 6
+[Mon Jan 08 16:58:58 2024]  insert time: 496339000 average:496.339000
+[Mon Jan 08 16:58:58 2024]  memory take(after): 79740KB; increace memory: 32036KB
+[Mon Jan 08 16:58:59 2024]  search time: 674463000 average:674.463000
+[Mon Jan 08 16:59:00 2024]  remove time: 474695000 average:474.695000
+[Mon Jan 08 16:59:00 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:01 2024]  Data size: 1000000
+[Mon Jan 08 16:59:01 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:01 2024]  get from set time:34214000 average:34.214000
+[Mon Jan 08 16:59:01 2024]  memory take(before): 47544KB
+[Mon Jan 08 16:59:01 2024]  max value: 1000000 radix: 14 level: 6
+[Mon Jan 08 16:59:02 2024]  insert time: 492770000 average:492.770000
+[Mon Jan 08 16:59:02 2024]  memory take(after): 79744KB; increace memory: 32200KB
+[Mon Jan 08 16:59:03 2024]  search time: 668234000 average:668.234000
+[Mon Jan 08 16:59:03 2024]  remove time: 458847000 average:458.847000
+[Mon Jan 08 16:59:03 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:05 2024]  Data size: 1000000
+[Mon Jan 08 16:59:05 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:05 2024]  get from set time:30882000 average:30.882000
+[Mon Jan 08 16:59:05 2024]  memory take(before): 47800KB
+[Mon Jan 08 16:59:05 2024]  max value: 1000000 radix: 15 level: 6
+[Mon Jan 08 16:59:06 2024]  insert time: 537078000 average:537.078000
+[Mon Jan 08 16:59:06 2024]  memory take(after): 79844KB; increace memory: 32044KB
+[Mon Jan 08 16:59:06 2024]  search time: 709316000 average:709.316000
+[Mon Jan 08 16:59:07 2024]  remove time: 472337000 average:472.337000
+[Mon Jan 08 16:59:07 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:09 2024]  Data size: 1000000
+[Mon Jan 08 16:59:09 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:09 2024]  get from set time:33884000 average:33.884000
+[Mon Jan 08 16:59:09 2024]  memory take(before): 48004KB
+[Mon Jan 08 16:59:09 2024]  max value: 1000000 radix: 16 level: 5
+[Mon Jan 08 16:59:09 2024]  insert time: 516195000 average:516.195000
+[Mon Jan 08 16:59:09 2024]  memory take(after): 79900KB; increace memory: 31896KB
+[Mon Jan 08 16:59:10 2024]  search time: 733981000 average:733.981000
+[Mon Jan 08 16:59:10 2024]  remove time: 439465000 average:439.465000
+[Mon Jan 08 16:59:11 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:12 2024]  Data size: 1000000
+[Mon Jan 08 16:59:12 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:12 2024]  get from set time:29578000 average:29.578000
+[Mon Jan 08 16:59:12 2024]  memory take(before): 48048KB
+[Mon Jan 08 16:59:12 2024]  max value: 1000000 radix: 17 level: 5
+[Mon Jan 08 16:59:13 2024]  insert time: 511544000 average:511.544000
+[Mon Jan 08 16:59:13 2024]  memory take(after): 79964KB; increace memory: 31916KB
+[Mon Jan 08 16:59:14 2024]  search time: 746126000 average:746.126000
+[Mon Jan 08 16:59:14 2024]  remove time: 526565000 average:526.565000
+[Mon Jan 08 16:59:14 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:16 2024]  Data size: 1000000
+[Mon Jan 08 16:59:16 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:16 2024]  get from set time:30726000 average:30.726000
+[Mon Jan 08 16:59:16 2024]  memory take(before): 48004KB
+[Mon Jan 08 16:59:16 2024]  max value: 1000000 radix: 18 level: 5
+[Mon Jan 08 16:59:16 2024]  insert time: 533023000 average:533.023000
+[Mon Jan 08 16:59:16 2024]  memory take(after): 79900KB; increace memory: 31896KB
+[Mon Jan 08 16:59:17 2024]  search time: 779306000 average:779.306000
+[Mon Jan 08 16:59:18 2024]  remove time: 478435000 average:478.435000
+[Mon Jan 08 16:59:18 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:20 2024]  Data size: 1000000
+[Mon Jan 08 16:59:20 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:20 2024]  get from set time:31794000 average:31.794000
+[Mon Jan 08 16:59:20 2024]  memory take(before): 47964KB
+[Mon Jan 08 16:59:20 2024]  max value: 1000000 radix: 19 level: 5
+[Mon Jan 08 16:59:20 2024]  insert time: 539268000 average:539.268000
+[Mon Jan 08 16:59:20 2024]  memory take(after): 79884KB; increace memory: 31920KB
+[Mon Jan 08 16:59:21 2024]  search time: 821388000 average:821.388000
+[Mon Jan 08 16:59:22 2024]  remove time: 484894000 average:484.894000
+[Mon Jan 08 16:59:22 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:23 2024]  Data size: 1000000
+[Mon Jan 08 16:59:23 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:23 2024]  get from set time:28983000 average:28.983000
+[Mon Jan 08 16:59:23 2024]  memory take(before): 48060KB
+[Mon Jan 08 16:59:23 2024]  max value: 1000000 radix: 20 level: 5
+[Mon Jan 08 16:59:24 2024]  insert time: 568765000 average:568.765000
+[Mon Jan 08 16:59:24 2024]  memory take(after): 79948KB; increace memory: 31888KB
+[Mon Jan 08 16:59:25 2024]  search time: 899962000 average:899.962000
+[Mon Jan 08 16:59:25 2024]  remove time: 518381000 average:518.381000
+[Mon Jan 08 16:59:26 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:27 2024]  Data size: 1000000
+[Mon Jan 08 16:59:27 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:27 2024]  get from set time:30901000 average:30.901000
+[Mon Jan 08 16:59:27 2024]  memory take(before): 48128KB
+[Mon Jan 08 16:59:27 2024]  max value: 1000000 radix: 21 level: 5
+[Mon Jan 08 16:59:28 2024]  insert time: 566814000 average:566.814000
+[Mon Jan 08 16:59:28 2024]  memory take(after): 79932KB; increace memory: 31804KB
+[Mon Jan 08 16:59:29 2024]  search time: 937587000 average:937.587000
+[Mon Jan 08 16:59:29 2024]  remove time: 576310000 average:576.310000
+[Mon Jan 08 16:59:30 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:31 2024]  Data size: 1000000
+[Mon Jan 08 16:59:31 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:31 2024]  get from set time:31850000 average:31.850000
+[Mon Jan 08 16:59:31 2024]  memory take(before): 48088KB
+[Mon Jan 08 16:59:31 2024]  max value: 1000000 radix: 22 level: 5
+[Mon Jan 08 16:59:32 2024]  insert time: 571621000 average:571.621000
+[Mon Jan 08 16:59:32 2024]  memory take(after): 79920KB; increace memory: 31832KB
+[Mon Jan 08 16:59:33 2024]  search time: 951234000 average:951.234000
+[Mon Jan 08 16:59:33 2024]  remove time: 512942000 average:512.942000
+[Mon Jan 08 16:59:34 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:35 2024]  Data size: 1000000
+[Mon Jan 08 16:59:35 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:35 2024]  get from set time:31831000 average:31.831000
+[Mon Jan 08 16:59:35 2024]  memory take(before): 48132KB
+[Mon Jan 08 16:59:35 2024]  max value: 1000000 radix: 23 level: 5
+[Mon Jan 08 16:59:36 2024]  insert time: 583078000 average:583.078000
+[Mon Jan 08 16:59:36 2024]  memory take(after): 79892KB; increace memory: 31760KB
+[Mon Jan 08 16:59:37 2024]  search time: 961471000 average:961.471000
+[Mon Jan 08 16:59:37 2024]  remove time: 542957000 average:542.957000
+[Mon Jan 08 16:59:38 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:39 2024]  Data size: 1000000
+[Mon Jan 08 16:59:39 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:39 2024]  get from set time:31864000 average:31.864000
+[Mon Jan 08 16:59:39 2024]  memory take(before): 48116KB
+[Mon Jan 08 16:59:39 2024]  max value: 1000000 radix: 24 level: 5
+[Mon Jan 08 16:59:40 2024]  insert time: 625399000 average:625.399000
+[Mon Jan 08 16:59:40 2024]  memory take(after): 79856KB; increace memory: 31740KB
+[Mon Jan 08 16:59:41 2024]  search time: 987059000 average:987.059000
+[Mon Jan 08 16:59:41 2024]  remove time: 545237000 average:545.237000
+[Mon Jan 08 16:59:42 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:43 2024]  Data size: 1000000
+[Mon Jan 08 16:59:43 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:43 2024]  get from set time:30496000 average:30.496000
+[Mon Jan 08 16:59:43 2024]  memory take(before): 48160KB
+[Mon Jan 08 16:59:43 2024]  max value: 1000000 radix: 25 level: 5
+[Mon Jan 08 16:59:44 2024]  insert time: 597230000 average:597.230000
+[Mon Jan 08 16:59:44 2024]  memory take(after): 79904KB; increace memory: 31744KB
+[Mon Jan 08 16:59:45 2024]  search time: 1071389000 average:1071.389000
+[Mon Jan 08 16:59:46 2024]  remove time: 561973000 average:561.973000
+[Mon Jan 08 16:59:46 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:47 2024]  Data size: 1000000
+[Mon Jan 08 16:59:47 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:47 2024]  get from set time:35284000 average:35.284000
+[Mon Jan 08 16:59:47 2024]  memory take(before): 48120KB
+[Mon Jan 08 16:59:47 2024]  max value: 1000000 radix: 26 level: 5
+[Mon Jan 08 16:59:48 2024]  insert time: 602064000 average:602.064000
+[Mon Jan 08 16:59:48 2024]  memory take(after): 79856KB; increace memory: 31736KB
+[Mon Jan 08 16:59:49 2024]  search time: 1051399000 average:1051.399000
+[Mon Jan 08 16:59:50 2024]  remove time: 650538000 average:650.538000
+[Mon Jan 08 16:59:50 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:51 2024]  Data size: 1000000
+[Mon Jan 08 16:59:51 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:51 2024]  get from set time:31148000 average:31.148000
+[Mon Jan 08 16:59:51 2024]  memory take(before): 48172KB
+[Mon Jan 08 16:59:51 2024]  max value: 1000000 radix: 27 level: 5
+[Mon Jan 08 16:59:52 2024]  insert time: 624210000 average:624.210000
+[Mon Jan 08 16:59:52 2024]  memory take(after): 79868KB; increace memory: 31696KB
+[Mon Jan 08 16:59:53 2024]  search time: 1076852000 average:1076.852000
+[Mon Jan 08 16:59:54 2024]  remove time: 588818000 average:588.818000
+[Mon Jan 08 16:59:54 2024]  --------------------------------------------------
+[Mon Jan 08 16:59:56 2024]  Data size: 1000000
+[Mon Jan 08 16:59:56 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 16:59:56 2024]  get from set time:41553000 average:41.553000
+[Mon Jan 08 16:59:56 2024]  memory take(before): 48164KB
+[Mon Jan 08 16:59:56 2024]  max value: 1000000 radix: 28 level: 5
+[Mon Jan 08 16:59:57 2024]  insert time: 689794000 average:689.794000
+[Mon Jan 08 16:59:57 2024]  memory take(after): 79896KB; increace memory: 31732KB
+[Mon Jan 08 16:59:58 2024]  search time: 1231000000 average:1231.000000
+[Mon Jan 08 16:59:59 2024]  remove time: 605536000 average:605.536000
+[Mon Jan 08 17:00:33 2024]  
+[Mon Jan 08 17:00:33 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:33 2024]  -----------------new statistic--------------------
+[Mon Jan 08 17:00:33 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:35 2024]  Data size: 1000000
+[Mon Jan 08 17:00:35 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:35 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:35 2024]  get from set time:36385000 average:36.385000
+[Mon Jan 08 17:00:35 2024]  memory take(before): 46828KB
+[Mon Jan 08 17:00:35 2024]  max value: 1000000 radix: 2 level: 20
+[Mon Jan 08 17:00:36 2024]  insert time: 965983000 average:965.983000
+[Mon Jan 08 17:00:36 2024]  memory take(after): 94040KB; increace memory: 47212KB
+[Mon Jan 08 17:00:37 2024]  search time: 901366000 average:901.366000
+[Mon Jan 08 17:00:38 2024]  remove time: 994116000 average:994.116000
+[Mon Jan 08 17:00:39 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:39 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:39 2024]  get from set time:42717000 average:42.717000
+[Mon Jan 08 17:00:39 2024]  memory take(before): 48364KB
+[Mon Jan 08 17:00:39 2024]  max value: 1000000 radix: 3 level: 13
+[Mon Jan 08 17:00:39 2024]  insert time: 615476000 average:615.476000
+[Mon Jan 08 17:00:39 2024]  memory take(after): 83792KB; increace memory: 35428KB
+[Mon Jan 08 17:00:40 2024]  search time: 718300000 average:718.300000
+[Mon Jan 08 17:00:41 2024]  remove time: 640645000 average:640.645000
+[Mon Jan 08 17:00:41 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:41 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:41 2024]  get from set time:41971000 average:41.971000
+[Mon Jan 08 17:00:41 2024]  memory take(before): 48816KB
+[Mon Jan 08 17:00:41 2024]  max value: 1000000 radix: 4 level: 10
+[Mon Jan 08 17:00:42 2024]  insert time: 502124000 average:502.124000
+[Mon Jan 08 17:00:42 2024]  memory take(after): 82508KB; increace memory: 33692KB
+[Mon Jan 08 17:00:42 2024]  search time: 499473000 average:499.473000
+[Mon Jan 08 17:00:43 2024]  remove time: 502905000 average:502.905000
+[Mon Jan 08 17:00:43 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:43 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:43 2024]  get from set time:44237000 average:44.237000
+[Mon Jan 08 17:00:43 2024]  memory take(before): 48284KB
+[Mon Jan 08 17:00:43 2024]  max value: 1000000 radix: 5 level: 9
+[Mon Jan 08 17:00:43 2024]  insert time: 464058000 average:464.058000
+[Mon Jan 08 17:00:43 2024]  memory take(after): 80976KB; increace memory: 32692KB
+[Mon Jan 08 17:00:44 2024]  search time: 485231000 average:485.231000
+[Mon Jan 08 17:00:44 2024]  remove time: 447208000 average:447.208000
+[Mon Jan 08 17:00:45 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:45 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:45 2024]  get from set time:44840000 average:44.840000
+[Mon Jan 08 17:00:45 2024]  memory take(before): 49588KB
+[Mon Jan 08 17:00:45 2024]  max value: 1000000 radix: 6 level: 8
+[Mon Jan 08 17:00:45 2024]  insert time: 495685000 average:495.685000
+[Mon Jan 08 17:00:45 2024]  memory take(after): 80864KB; increace memory: 31276KB
+[Mon Jan 08 17:00:46 2024]  search time: 583080000 average:583.080000
+[Mon Jan 08 17:00:46 2024]  remove time: 560545000 average:560.545000
+[Mon Jan 08 17:00:47 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:47 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:47 2024]  get from set time:44141000 average:44.141000
+[Mon Jan 08 17:00:47 2024]  memory take(before): 49488KB
+[Mon Jan 08 17:00:47 2024]  max value: 1000000 radix: 7 level: 8
+[Mon Jan 08 17:00:47 2024]  insert time: 474492000 average:474.492000
+[Mon Jan 08 17:00:47 2024]  memory take(after): 80144KB; increace memory: 30656KB
+[Mon Jan 08 17:00:48 2024]  search time: 523315000 average:523.315000
+[Mon Jan 08 17:00:48 2024]  remove time: 433578000 average:433.578000
+[Mon Jan 08 17:00:48 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:48 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:49 2024]  get from set time:43111000 average:43.111000
+[Mon Jan 08 17:00:49 2024]  memory take(before): 53848KB
+[Mon Jan 08 17:00:49 2024]  max value: 1000000 radix: 8 level: 7
+[Mon Jan 08 17:00:49 2024]  insert time: 488282000 average:488.282000
+[Mon Jan 08 17:00:49 2024]  memory take(after): 80336KB; increace memory: 26488KB
+[Mon Jan 08 17:00:50 2024]  search time: 540658000 average:540.658000
+[Mon Jan 08 17:00:50 2024]  remove time: 449044000 average:449.044000
+[Mon Jan 08 17:00:50 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:50 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:50 2024]  get from set time:42867000 average:42.867000
+[Mon Jan 08 17:00:50 2024]  memory take(before): 59224KB
+[Mon Jan 08 17:00:50 2024]  max value: 1000000 radix: 9 level: 7
+[Mon Jan 08 17:00:51 2024]  insert time: 466754000 average:466.754000
+[Mon Jan 08 17:00:51 2024]  memory take(after): 80280KB; increace memory: 21056KB
+[Mon Jan 08 17:00:52 2024]  search time: 637690000 average:637.690000
+[Mon Jan 08 17:00:52 2024]  remove time: 535925000 average:535.925000
+[Mon Jan 08 17:00:52 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:52 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:52 2024]  get from set time:43331000 average:43.331000
+[Mon Jan 08 17:00:52 2024]  memory take(before): 58700KB
+[Mon Jan 08 17:00:52 2024]  max value: 1000000 radix: 10 level: 6
+[Mon Jan 08 17:00:53 2024]  insert time: 482332000 average:482.332000
+[Mon Jan 08 17:00:53 2024]  memory take(after): 80076KB; increace memory: 21376KB
+[Mon Jan 08 17:00:53 2024]  search time: 555708000 average:555.708000
+[Mon Jan 08 17:00:54 2024]  remove time: 411664000 average:411.664000
+[Mon Jan 08 17:00:54 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:54 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:54 2024]  get from set time:43387000 average:43.387000
+[Mon Jan 08 17:00:54 2024]  memory take(before): 58856KB
+[Mon Jan 08 17:00:54 2024]  max value: 1000000 radix: 11 level: 6
+[Mon Jan 08 17:00:55 2024]  insert time: 473759000 average:473.759000
+[Mon Jan 08 17:00:55 2024]  memory take(after): 79724KB; increace memory: 20868KB
+[Mon Jan 08 17:00:55 2024]  search time: 609935000 average:609.935000
+[Mon Jan 08 17:00:56 2024]  remove time: 431916000 average:431.916000
+[Mon Jan 08 17:00:56 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:56 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:56 2024]  get from set time:42905000 average:42.905000
+[Mon Jan 08 17:00:56 2024]  memory take(before): 58728KB
+[Mon Jan 08 17:00:56 2024]  max value: 1000000 radix: 12 level: 6
+[Mon Jan 08 17:00:56 2024]  insert time: 511958000 average:511.958000
+[Mon Jan 08 17:00:56 2024]  memory take(after): 79964KB; increace memory: 21236KB
+[Mon Jan 08 17:00:57 2024]  search time: 637277000 average:637.277000
+[Mon Jan 08 17:00:58 2024]  remove time: 439155000 average:439.155000
+[Mon Jan 08 17:00:58 2024]  --------------------------------------------------
+[Mon Jan 08 17:00:58 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:00:58 2024]  get from set time:39774000 average:39.774000
+[Mon Jan 08 17:00:58 2024]  memory take(before): 58872KB
+[Mon Jan 08 17:00:58 2024]  max value: 1000000 radix: 13 level: 6
+[Mon Jan 08 17:00:58 2024]  insert time: 482637000 average:482.637000
+[Mon Jan 08 17:00:58 2024]  memory take(after): 79568KB; increace memory: 20696KB
+[Mon Jan 08 17:00:59 2024]  search time: 669078000 average:669.078000
+[Mon Jan 08 17:01:00 2024]  remove time: 490255000 average:490.255000
+[Mon Jan 08 17:01:00 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:00 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:00 2024]  get from set time:42422000 average:42.422000
+[Mon Jan 08 17:01:00 2024]  memory take(before): 58812KB
+[Mon Jan 08 17:01:00 2024]  max value: 1000000 radix: 14 level: 6
+[Mon Jan 08 17:01:00 2024]  insert time: 679226000 average:679.226000
+[Mon Jan 08 17:01:00 2024]  memory take(after): 79664KB; increace memory: 20852KB
+[Mon Jan 08 17:01:01 2024]  search time: 914646000 average:914.646000
+[Mon Jan 08 17:01:02 2024]  remove time: 625622000 average:625.622000
+[Mon Jan 08 17:01:02 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:02 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:02 2024]  get from set time:56711000 average:56.711000
+[Mon Jan 08 17:01:02 2024]  memory take(before): 58500KB
+[Mon Jan 08 17:01:02 2024]  max value: 1000000 radix: 15 level: 6
+[Mon Jan 08 17:01:03 2024]  insert time: 655589000 average:655.589000
+[Mon Jan 08 17:01:03 2024]  memory take(after): 79376KB; increace memory: 20876KB
+[Mon Jan 08 17:01:04 2024]  search time: 842031000 average:842.031000
+[Mon Jan 08 17:01:04 2024]  remove time: 522957000 average:522.957000
+[Mon Jan 08 17:01:05 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:05 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:05 2024]  get from set time:42486000 average:42.486000
+[Mon Jan 08 17:01:05 2024]  memory take(before): 58620KB
+[Mon Jan 08 17:01:05 2024]  max value: 1000000 radix: 16 level: 5
+[Mon Jan 08 17:01:05 2024]  insert time: 553843000 average:553.843000
+[Mon Jan 08 17:01:05 2024]  memory take(after): 79576KB; increace memory: 20956KB
+[Mon Jan 08 17:01:06 2024]  search time: 781225000 average:781.225000
+[Mon Jan 08 17:01:07 2024]  remove time: 543514000 average:543.514000
+[Mon Jan 08 17:01:07 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:07 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:07 2024]  get from set time:43633000 average:43.633000
+[Mon Jan 08 17:01:07 2024]  memory take(before): 58528KB
+[Mon Jan 08 17:01:07 2024]  max value: 1000000 radix: 17 level: 5
+[Mon Jan 08 17:01:07 2024]  insert time: 548467000 average:548.467000
+[Mon Jan 08 17:01:07 2024]  memory take(after): 79404KB; increace memory: 20876KB
+[Mon Jan 08 17:01:08 2024]  search time: 780044000 average:780.044000
+[Mon Jan 08 17:01:09 2024]  remove time: 506356000 average:506.356000
+[Mon Jan 08 17:01:09 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:09 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:09 2024]  get from set time:44021000 average:44.021000
+[Mon Jan 08 17:01:09 2024]  memory take(before): 58636KB
+[Mon Jan 08 17:01:09 2024]  max value: 1000000 radix: 18 level: 5
+[Mon Jan 08 17:01:10 2024]  insert time: 583458000 average:583.458000
+[Mon Jan 08 17:01:10 2024]  memory take(after): 79412KB; increace memory: 20776KB
+[Mon Jan 08 17:01:10 2024]  search time: 852910000 average:852.910000
+[Mon Jan 08 17:01:11 2024]  remove time: 510204000 average:510.204000
+[Mon Jan 08 17:01:11 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:11 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:11 2024]  get from set time:43133000 average:43.133000
+[Mon Jan 08 17:01:11 2024]  memory take(before): 58552KB
+[Mon Jan 08 17:01:11 2024]  max value: 1000000 radix: 19 level: 5
+[Mon Jan 08 17:01:12 2024]  insert time: 549142000 average:549.142000
+[Mon Jan 08 17:01:12 2024]  memory take(after): 79300KB; increace memory: 20748KB
+[Mon Jan 08 17:01:13 2024]  search time: 848129000 average:848.129000
+[Mon Jan 08 17:01:13 2024]  remove time: 524911000 average:524.911000
+[Mon Jan 08 17:01:13 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:13 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:13 2024]  get from set time:40900000 average:40.900000
+[Mon Jan 08 17:01:13 2024]  memory take(before): 58576KB
+[Mon Jan 08 17:01:13 2024]  max value: 1000000 radix: 20 level: 5
+[Mon Jan 08 17:01:14 2024]  insert time: 565905000 average:565.905000
+[Mon Jan 08 17:01:14 2024]  memory take(after): 79356KB; increace memory: 20780KB
+[Mon Jan 08 17:01:15 2024]  search time: 899659000 average:899.659000
+[Mon Jan 08 17:01:16 2024]  remove time: 706006000 average:706.006000
+[Mon Jan 08 17:01:39 2024]  
+[Mon Jan 08 17:01:39 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:39 2024]  -----------------new statistic--------------------
+[Mon Jan 08 17:01:39 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:41 2024]  Data size: 1000000
+[Mon Jan 08 17:01:41 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:41 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:41 2024]  get from set time:31928000 average:31.928000
+[Mon Jan 08 17:01:41 2024]  memory take(before): 46840KB
+[Mon Jan 08 17:01:41 2024]  max value: 1000000 radix: 2 level: 20
+[Mon Jan 08 17:01:42 2024]  insert time: 950318000 average:950.318000
+[Mon Jan 08 17:01:42 2024]  memory take(after): 94048KB; increace memory: 47208KB
+[Mon Jan 08 17:01:43 2024]  search time: 895288000 average:895.288000
+[Mon Jan 08 17:01:44 2024]  remove time: 1010775000 average:1010.775000
+[Mon Jan 08 17:01:44 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:44 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:44 2024]  get from set time:47417000 average:47.417000
+[Mon Jan 08 17:01:44 2024]  memory take(before): 48216KB
+[Mon Jan 08 17:01:44 2024]  max value: 1000000 radix: 3 level: 13
+[Mon Jan 08 17:01:45 2024]  insert time: 661838000 average:661.838000
+[Mon Jan 08 17:01:45 2024]  memory take(after): 83788KB; increace memory: 35572KB
+[Mon Jan 08 17:01:46 2024]  search time: 680452000 average:680.452000
+[Mon Jan 08 17:01:47 2024]  remove time: 775290000 average:775.290000
+[Mon Jan 08 17:01:47 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:47 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:47 2024]  get from set time:49465000 average:49.465000
+[Mon Jan 08 17:01:47 2024]  memory take(before): 48320KB
+[Mon Jan 08 17:01:47 2024]  max value: 1000000 radix: 4 level: 10
+[Mon Jan 08 17:01:48 2024]  insert time: 674203000 average:674.203000
+[Mon Jan 08 17:01:48 2024]  memory take(after): 82532KB; increace memory: 34212KB
+[Mon Jan 08 17:01:48 2024]  search time: 536296000 average:536.296000
+[Mon Jan 08 17:01:49 2024]  remove time: 476807000 average:476.807000
+[Mon Jan 08 17:01:49 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:49 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:49 2024]  get from set time:41014000 average:41.014000
+[Mon Jan 08 17:01:49 2024]  memory take(before): 47936KB
+[Mon Jan 08 17:01:49 2024]  max value: 1000000 radix: 5 level: 9
+[Mon Jan 08 17:01:50 2024]  insert time: 511170000 average:511.170000
+[Mon Jan 08 17:01:50 2024]  memory take(after): 81012KB; increace memory: 33076KB
+[Mon Jan 08 17:01:50 2024]  search time: 488449000 average:488.449000
+[Mon Jan 08 17:01:51 2024]  remove time: 465971000 average:465.971000
+[Mon Jan 08 17:01:51 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:51 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:51 2024]  get from set time:42798000 average:42.798000
+[Mon Jan 08 17:01:51 2024]  memory take(before): 49672KB
+[Mon Jan 08 17:01:51 2024]  max value: 1000000 radix: 6 level: 8
+[Mon Jan 08 17:01:52 2024]  insert time: 515174000 average:515.174000
+[Mon Jan 08 17:01:52 2024]  memory take(after): 80872KB; increace memory: 31200KB
+[Mon Jan 08 17:01:52 2024]  search time: 506793000 average:506.793000
+[Mon Jan 08 17:01:53 2024]  remove time: 480557000 average:480.557000
+[Mon Jan 08 17:01:53 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:53 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:53 2024]  get from set time:41736000 average:41.736000
+[Mon Jan 08 17:01:53 2024]  memory take(before): 49476KB
+[Mon Jan 08 17:01:53 2024]  max value: 1000000 radix: 7 level: 8
+[Mon Jan 08 17:01:53 2024]  insert time: 493052000 average:493.052000
+[Mon Jan 08 17:01:53 2024]  memory take(after): 80264KB; increace memory: 30788KB
+[Mon Jan 08 17:01:54 2024]  search time: 537029000 average:537.029000
+[Mon Jan 08 17:01:55 2024]  remove time: 461138000 average:461.138000
+[Mon Jan 08 17:01:55 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:55 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:55 2024]  get from set time:47185000 average:47.185000
+[Mon Jan 08 17:01:55 2024]  memory take(before): 53744KB
+[Mon Jan 08 17:01:55 2024]  max value: 1000000 radix: 8 level: 7
+[Mon Jan 08 17:01:55 2024]  insert time: 489369000 average:489.369000
+[Mon Jan 08 17:01:55 2024]  memory take(after): 80468KB; increace memory: 26724KB
+[Mon Jan 08 17:01:56 2024]  search time: 649806000 average:649.806000
+[Mon Jan 08 17:01:57 2024]  remove time: 578287000 average:578.287000
+[Mon Jan 08 17:01:57 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:57 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:57 2024]  get from set time:60175000 average:60.175000
+[Mon Jan 08 17:01:57 2024]  memory take(before): 59348KB
+[Mon Jan 08 17:01:57 2024]  max value: 1000000 radix: 9 level: 7
+[Mon Jan 08 17:01:58 2024]  insert time: 565581000 average:565.581000
+[Mon Jan 08 17:01:58 2024]  memory take(after): 80440KB; increace memory: 21092KB
+[Mon Jan 08 17:01:58 2024]  search time: 669675000 average:669.675000
+[Mon Jan 08 17:01:59 2024]  remove time: 452268000 average:452.268000
+[Mon Jan 08 17:01:59 2024]  --------------------------------------------------
+[Mon Jan 08 17:01:59 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:01:59 2024]  get from set time:42591000 average:42.591000
+[Mon Jan 08 17:01:59 2024]  memory take(before): 59124KB
+[Mon Jan 08 17:01:59 2024]  max value: 1000000 radix: 10 level: 6
+[Mon Jan 08 17:02:00 2024]  insert time: 512192000 average:512.192000
+[Mon Jan 08 17:02:00 2024]  memory take(after): 80060KB; increace memory: 20936KB
+[Mon Jan 08 17:02:00 2024]  search time: 569950000 average:569.950000
+[Mon Jan 08 17:02:01 2024]  remove time: 481138000 average:481.138000
+[Mon Jan 08 17:02:01 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:01 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:01 2024]  get from set time:45955000 average:45.955000
+[Mon Jan 08 17:02:01 2024]  memory take(before): 59048KB
+[Mon Jan 08 17:02:01 2024]  max value: 1000000 radix: 11 level: 6
+[Mon Jan 08 17:02:02 2024]  insert time: 599649000 average:599.649000
+[Mon Jan 08 17:02:02 2024]  memory take(after): 79764KB; increace memory: 20716KB
+[Mon Jan 08 17:02:02 2024]  search time: 654143000 average:654.143000
+[Mon Jan 08 17:02:03 2024]  remove time: 469215000 average:469.215000
+[Mon Jan 08 17:02:03 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:03 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:03 2024]  get from set time:46850000 average:46.850000
+[Mon Jan 08 17:02:03 2024]  memory take(before): 58884KB
+[Mon Jan 08 17:02:03 2024]  max value: 1000000 radix: 12 level: 6
+[Mon Jan 08 17:02:04 2024]  insert time: 583332000 average:583.332000
+[Mon Jan 08 17:02:04 2024]  memory take(after): 79840KB; increace memory: 20956KB
+[Mon Jan 08 17:02:04 2024]  search time: 686400000 average:686.400000
+[Mon Jan 08 17:02:05 2024]  remove time: 490830000 average:490.830000
+[Mon Jan 08 17:02:05 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:05 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:05 2024]  get from set time:46359000 average:46.359000
+[Mon Jan 08 17:02:05 2024]  memory take(before): 58928KB
+[Mon Jan 08 17:02:05 2024]  max value: 1000000 radix: 13 level: 6
+[Mon Jan 08 17:02:06 2024]  insert time: 602828000 average:602.828000
+[Mon Jan 08 17:02:06 2024]  memory take(after): 79712KB; increace memory: 20784KB
+[Mon Jan 08 17:02:07 2024]  search time: 742609000 average:742.609000
+[Mon Jan 08 17:02:07 2024]  remove time: 478231000 average:478.231000
+[Mon Jan 08 17:02:07 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:07 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:07 2024]  get from set time:46571000 average:46.571000
+[Mon Jan 08 17:02:07 2024]  memory take(before): 58752KB
+[Mon Jan 08 17:02:07 2024]  max value: 1000000 radix: 14 level: 6
+[Mon Jan 08 17:02:08 2024]  insert time: 561646000 average:561.646000
+[Mon Jan 08 17:02:08 2024]  memory take(after): 79724KB; increace memory: 20972KB
+[Mon Jan 08 17:02:09 2024]  search time: 725412000 average:725.412000
+[Mon Jan 08 17:02:09 2024]  remove time: 525708000 average:525.708000
+[Mon Jan 08 17:02:09 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:09 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:09 2024]  get from set time:41442000 average:41.442000
+[Mon Jan 08 17:02:09 2024]  memory take(before): 58792KB
+[Mon Jan 08 17:02:09 2024]  max value: 1000000 radix: 15 level: 6
+[Mon Jan 08 17:02:10 2024]  insert time: 648078000 average:648.078000
+[Mon Jan 08 17:02:10 2024]  memory take(after): 79456KB; increace memory: 20664KB
+[Mon Jan 08 17:02:11 2024]  search time: 837303000 average:837.303000
+[Mon Jan 08 17:02:12 2024]  remove time: 554377000 average:554.377000
+[Mon Jan 08 17:02:12 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:12 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:12 2024]  get from set time:42334000 average:42.334000
+[Mon Jan 08 17:02:12 2024]  memory take(before): 58680KB
+[Mon Jan 08 17:02:12 2024]  max value: 1000000 radix: 16 level: 5
+[Mon Jan 08 17:02:12 2024]  insert time: 556643000 average:556.643000
+[Mon Jan 08 17:02:12 2024]  memory take(after): 79568KB; increace memory: 20888KB
+[Mon Jan 08 17:02:13 2024]  search time: 754167000 average:754.167000
+[Mon Jan 08 17:02:14 2024]  remove time: 475840000 average:475.840000
+[Mon Jan 08 17:02:14 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:14 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:14 2024]  get from set time:43916000 average:43.916000
+[Mon Jan 08 17:02:14 2024]  memory take(before): 58744KB
+[Mon Jan 08 17:02:14 2024]  max value: 1000000 radix: 17 level: 5
+[Mon Jan 08 17:02:14 2024]  insert time: 598809000 average:598.809000
+[Mon Jan 08 17:02:14 2024]  memory take(after): 79352KB; increace memory: 20608KB
+[Mon Jan 08 17:02:16 2024]  search time: 1018859000 average:1018.859000
+[Mon Jan 08 17:02:16 2024]  remove time: 596193000 average:596.193000
+[Mon Jan 08 17:02:16 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:16 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:16 2024]  get from set time:49614000 average:49.614000
+[Mon Jan 08 17:02:16 2024]  memory take(before): 58684KB
+[Mon Jan 08 17:02:16 2024]  max value: 1000000 radix: 18 level: 5
+[Mon Jan 08 17:02:17 2024]  insert time: 734789000 average:734.789000
+[Mon Jan 08 17:02:17 2024]  memory take(after): 79560KB; increace memory: 20876KB
+[Mon Jan 08 17:02:18 2024]  search time: 823612000 average:823.612000
+[Mon Jan 08 17:02:19 2024]  remove time: 480848000 average:480.848000
+[Mon Jan 08 17:02:19 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:19 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:19 2024]  get from set time:37355000 average:37.355000
+[Mon Jan 08 17:02:19 2024]  memory take(before): 58624KB
+[Mon Jan 08 17:02:19 2024]  max value: 1000000 radix: 19 level: 5
+[Mon Jan 08 17:02:19 2024]  insert time: 589224000 average:589.224000
+[Mon Jan 08 17:02:19 2024]  memory take(after): 79308KB; increace memory: 20684KB
+[Mon Jan 08 17:02:20 2024]  search time: 914950000 average:914.950000
+[Mon Jan 08 17:02:21 2024]  remove time: 518484000 average:518.484000
+[Mon Jan 08 17:02:21 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:21 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:21 2024]  get from set time:46924000 average:46.924000
+[Mon Jan 08 17:02:21 2024]  memory take(before): 58628KB
+[Mon Jan 08 17:02:21 2024]  max value: 1000000 radix: 20 level: 5
+[Mon Jan 08 17:02:22 2024]  insert time: 656572000 average:656.572000
+[Mon Jan 08 17:02:22 2024]  memory take(after): 79368KB; increace memory: 20740KB
+[Mon Jan 08 17:02:23 2024]  search time: 918999000 average:918.999000
+[Mon Jan 08 17:02:23 2024]  remove time: 512622000 average:512.622000
+[Mon Jan 08 17:02:23 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:23 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:23 2024]  get from set time:43691000 average:43.691000
+[Mon Jan 08 17:02:23 2024]  memory take(before): 58692KB
+[Mon Jan 08 17:02:23 2024]  max value: 1000000 radix: 21 level: 5
+[Mon Jan 08 17:02:24 2024]  insert time: 597132000 average:597.132000
+[Mon Jan 08 17:02:24 2024]  memory take(after): 79372KB; increace memory: 20680KB
+[Mon Jan 08 17:02:25 2024]  search time: 912245000 average:912.245000
+[Mon Jan 08 17:02:26 2024]  remove time: 523632000 average:523.632000
+[Mon Jan 08 17:02:26 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:26 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:26 2024]  get from set time:43419000 average:43.419000
+[Mon Jan 08 17:02:26 2024]  memory take(before): 58564KB
+[Mon Jan 08 17:02:26 2024]  max value: 1000000 radix: 22 level: 5
+[Mon Jan 08 17:02:26 2024]  insert time: 648706000 average:648.706000
+[Mon Jan 08 17:02:26 2024]  memory take(after): 79304KB; increace memory: 20740KB
+[Mon Jan 08 17:02:27 2024]  search time: 965416000 average:965.416000
+[Mon Jan 08 17:02:28 2024]  remove time: 533392000 average:533.392000
+[Mon Jan 08 17:02:28 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:28 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:28 2024]  get from set time:45915000 average:45.915000
+[Mon Jan 08 17:02:28 2024]  memory take(before): 58620KB
+[Mon Jan 08 17:02:28 2024]  max value: 1000000 radix: 23 level: 5
+[Mon Jan 08 17:02:29 2024]  insert time: 636453000 average:636.453000
+[Mon Jan 08 17:02:29 2024]  memory take(after): 79220KB; increace memory: 20600KB
+[Mon Jan 08 17:02:30 2024]  search time: 987140000 average:987.140000
+[Mon Jan 08 17:02:31 2024]  remove time: 558046000 average:558.046000
+[Mon Jan 08 17:02:31 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:31 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:31 2024]  get from set time:45040000 average:45.040000
+[Mon Jan 08 17:02:31 2024]  memory take(before): 58540KB
+[Mon Jan 08 17:02:31 2024]  max value: 1000000 radix: 24 level: 5
+[Mon Jan 08 17:02:31 2024]  insert time: 669892000 average:669.892000
+[Mon Jan 08 17:02:31 2024]  memory take(after): 79308KB; increace memory: 20768KB
+[Mon Jan 08 17:02:32 2024]  search time: 1029614000 average:1029.614000
+[Mon Jan 08 17:02:33 2024]  remove time: 563126000 average:563.126000
+[Mon Jan 08 17:02:33 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:33 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:33 2024]  get from set time:45401000 average:45.401000
+[Mon Jan 08 17:02:33 2024]  memory take(before): 58620KB
+[Mon Jan 08 17:02:33 2024]  max value: 1000000 radix: 25 level: 5
+[Mon Jan 08 17:02:34 2024]  insert time: 660871000 average:660.871000
+[Mon Jan 08 17:02:34 2024]  memory take(after): 79236KB; increace memory: 20616KB
+[Mon Jan 08 17:02:35 2024]  search time: 1058323000 average:1058.323000
+[Mon Jan 08 17:02:36 2024]  remove time: 563116000 average:563.116000
+[Mon Jan 08 17:02:36 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:36 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:36 2024]  get from set time:40366000 average:40.366000
+[Mon Jan 08 17:02:36 2024]  memory take(before): 58544KB
+[Mon Jan 08 17:02:36 2024]  max value: 1000000 radix: 26 level: 5
+[Mon Jan 08 17:02:37 2024]  insert time: 685140000 average:685.140000
+[Mon Jan 08 17:02:37 2024]  memory take(after): 79296KB; increace memory: 20752KB
+[Mon Jan 08 17:02:38 2024]  search time: 1090362000 average:1090.362000
+[Mon Jan 08 17:02:38 2024]  remove time: 578785000 average:578.785000
+[Mon Jan 08 17:02:38 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:38 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:39 2024]  get from set time:40433000 average:40.433000
+[Mon Jan 08 17:02:39 2024]  memory take(before): 58408KB
+[Mon Jan 08 17:02:39 2024]  max value: 1000000 radix: 27 level: 5
+[Mon Jan 08 17:02:39 2024]  insert time: 689726000 average:689.726000
+[Mon Jan 08 17:02:39 2024]  memory take(after): 79164KB; increace memory: 20756KB
+[Mon Jan 08 17:02:40 2024]  search time: 1101530000 average:1101.530000
+[Mon Jan 08 17:02:41 2024]  remove time: 622852000 average:622.852000
+[Mon Jan 08 17:02:41 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:41 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:41 2024]  get from set time:41192000 average:41.192000
+[Mon Jan 08 17:02:41 2024]  memory take(before): 58480KB
+[Mon Jan 08 17:02:41 2024]  max value: 1000000 radix: 28 level: 5
+[Mon Jan 08 17:02:42 2024]  insert time: 737047000 average:737.047000
+[Mon Jan 08 17:02:42 2024]  memory take(after): 79296KB; increace memory: 20816KB
+[Mon Jan 08 17:02:43 2024]  search time: 1158302000 average:1158.302000
+[Mon Jan 08 17:02:44 2024]  remove time: 597685000 average:597.685000
+[Mon Jan 08 17:02:44 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:44 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:44 2024]  get from set time:44114000 average:44.114000
+[Mon Jan 08 17:02:44 2024]  memory take(before): 58512KB
+[Mon Jan 08 17:02:44 2024]  max value: 1000000 radix: 29 level: 5
+[Mon Jan 08 17:02:45 2024]  insert time: 700198000 average:700.198000
+[Mon Jan 08 17:02:45 2024]  memory take(after): 79216KB; increace memory: 20704KB
+[Mon Jan 08 17:02:46 2024]  search time: 1181914000 average:1181.914000
+[Mon Jan 08 17:02:47 2024]  remove time: 642627000 average:642.627000
+[Mon Jan 08 17:02:47 2024]  --------------------------------------------------
+[Mon Jan 08 17:02:47 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:02:47 2024]  get from set time:43714000 average:43.714000
+[Mon Jan 08 17:02:47 2024]  memory take(before): 58504KB
+[Mon Jan 08 17:02:47 2024]  max value: 1000000 radix: 30 level: 5
+[Mon Jan 08 17:02:48 2024]  insert time: 733654000 average:733.654000
+[Mon Jan 08 17:02:48 2024]  memory take(after): 79300KB; increace memory: 20796KB
+[Mon Jan 08 17:02:49 2024]  search time: 1200204000 average:1200.204000
+[Mon Jan 08 17:02:50 2024]  remove time: 622829000 average:622.829000
+[Mon Jan 08 17:12:34 2024]  
+[Mon Jan 08 17:12:34 2024]  --------------------------------------------------
+[Mon Jan 08 17:12:34 2024]  -----------------new statistic--------------------
+[Mon Jan 08 17:12:34 2024]  --------------------------------------------------
+[Mon Jan 08 17:12:55 2024]  Data size: 10000000
+[Mon Jan 08 17:12:55 2024]  --------------------------------------------------
+[Mon Jan 08 17:12:55 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:12:56 2024]  get from set time:446266000 average:44.626600
+[Mon Jan 08 17:12:56 2024]  memory take(before): 413376KB
+[Mon Jan 08 17:12:56 2024]  max value: 10000000 radix: 2 level: 24
+[Mon Jan 08 17:13:14 2024]  insert time: 17211056000 average:1721.105600
+[Mon Jan 08 17:13:14 2024]  memory take(after): 885440KB; increace memory: 472064KB
+[Mon Jan 08 17:13:34 2024]  search time: 20015353000 average:2001.535300
+[Mon Jan 08 17:13:54 2024]  remove time: 19999478000 average:1999.947800
+[Mon Jan 08 17:14:06 2024]  --------------------------------------------------
+[Mon Jan 08 17:14:06 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:14:06 2024]  get from set time:561780000 average:56.178000
+[Mon Jan 08 17:14:06 2024]  memory take(before): 427928KB
+[Mon Jan 08 17:14:06 2024]  max value: 10000000 radix: 3 level: 15
+[Mon Jan 08 17:14:21 2024]  insert time: 14019189000 average:1401.918900
+[Mon Jan 08 17:14:21 2024]  memory take(after): 782988KB; increace memory: 355060KB
+[Mon Jan 08 17:14:35 2024]  search time: 13995285000 average:1399.528500
+[Mon Jan 08 17:14:50 2024]  remove time: 14085569000 average:1408.556900
+[Mon Jan 08 17:14:57 2024]  --------------------------------------------------
+[Mon Jan 08 17:14:57 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:14:58 2024]  get from set time:547860000 average:54.786000
+[Mon Jan 08 17:14:58 2024]  memory take(before): 432592KB
+[Mon Jan 08 17:14:58 2024]  max value: 10000000 radix: 4 level: 12
+[Mon Jan 08 17:15:10 2024]  insert time: 11976101000 average:1197.610100
+[Mon Jan 08 17:15:10 2024]  memory take(after): 769996KB; increace memory: 337404KB
+[Mon Jan 08 17:15:23 2024]  search time: 12190286000 average:1219.028600
+[Mon Jan 08 17:15:35 2024]  remove time: 11742320000 average:1174.232000
+[Mon Jan 08 17:15:41 2024]  --------------------------------------------------
+[Mon Jan 08 17:15:41 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:15:41 2024]  get from set time:556423000 average:55.642300
+[Mon Jan 08 17:15:41 2024]  memory take(before): 430240KB
+[Mon Jan 08 17:15:41 2024]  max value: 10000000 radix: 5 level: 11
+[Mon Jan 08 17:15:53 2024]  insert time: 11008452000 average:1100.845200
+[Mon Jan 08 17:15:53 2024]  memory take(after): 754960KB; increace memory: 324720KB
+[Mon Jan 08 17:16:05 2024]  search time: 11422342000 average:1142.234200
+[Mon Jan 08 17:16:16 2024]  remove time: 10669847000 average:1066.984700
+[Mon Jan 08 17:16:21 2024]  --------------------------------------------------
+[Mon Jan 08 17:16:21 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:16:22 2024]  get from set time:553477000 average:55.347700
+[Mon Jan 08 17:16:22 2024]  memory take(before): 443424KB
+[Mon Jan 08 17:16:22 2024]  max value: 10000000 radix: 6 level: 9
+[Mon Jan 08 17:16:33 2024]  insert time: 10240901000 average:1024.090100
+[Mon Jan 08 17:16:33 2024]  memory take(after): 753404KB; increace memory: 309980KB
+[Mon Jan 08 17:16:44 2024]  search time: 10824937000 average:1082.493700
+[Mon Jan 08 17:16:54 2024]  remove time: 9625694000 average:962.569400
+[Mon Jan 08 17:16:59 2024]  --------------------------------------------------
+[Mon Jan 08 17:16:59 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:16:59 2024]  get from set time:553082000 average:55.308200
+[Mon Jan 08 17:16:59 2024]  memory take(before): 441620KB
+[Mon Jan 08 17:16:59 2024]  max value: 10000000 radix: 7 level: 9
+[Mon Jan 08 17:17:10 2024]  insert time: 10168597000 average:1016.859700
+[Mon Jan 08 17:17:10 2024]  memory take(after): 747216KB; increace memory: 305596KB
+[Mon Jan 08 17:17:21 2024]  search time: 10964502000 average:1096.450200
+[Mon Jan 08 17:17:31 2024]  remove time: 9522690000 average:952.269000
+[Mon Jan 08 17:17:36 2024]  --------------------------------------------------
+[Mon Jan 08 17:17:36 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:17:36 2024]  get from set time:543691000 average:54.369100
+[Mon Jan 08 17:17:36 2024]  memory take(before): 437904KB
+[Mon Jan 08 17:17:36 2024]  max value: 10000000 radix: 8 level: 8
+[Mon Jan 08 17:17:46 2024]  insert time: 9580025000 average:958.002500
+[Mon Jan 08 17:17:46 2024]  memory take(after): 745788KB; increace memory: 307884KB
+[Mon Jan 08 17:17:58 2024]  search time: 11286488000 average:1128.648800
+[Mon Jan 08 17:18:07 2024]  remove time: 7891080000 average:789.108000
+[Mon Jan 08 17:18:09 2024]  --------------------------------------------------
+[Mon Jan 08 17:18:09 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:18:09 2024]  get from set time:484986000 average:48.498600
+[Mon Jan 08 17:18:09 2024]  memory take(before): 453864KB
+[Mon Jan 08 17:18:09 2024]  max value: 10000000 radix: 9 level: 8
+[Mon Jan 08 17:18:17 2024]  insert time: 7419652000 average:741.965200
+[Mon Jan 08 17:18:17 2024]  memory take(after): 744180KB; increace memory: 290316KB
+[Mon Jan 08 17:18:26 2024]  search time: 8632233000 average:863.223300
+[Mon Jan 08 17:18:33 2024]  remove time: 6645085000 average:664.508500
+[Mon Jan 08 17:18:36 2024]  --------------------------------------------------
+[Mon Jan 08 17:18:36 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:18:36 2024]  get from set time:455411000 average:45.541100
+[Mon Jan 08 17:18:36 2024]  memory take(before): 474420KB
+[Mon Jan 08 17:18:36 2024]  max value: 10000000 radix: 10 level: 7
+[Mon Jan 08 17:18:44 2024]  insert time: 7531878000 average:753.187800
+[Mon Jan 08 17:18:44 2024]  memory take(after): 744176KB; increace memory: 269756KB
+[Mon Jan 08 17:18:55 2024]  search time: 10989425000 average:1098.942500
+[Mon Jan 08 17:19:06 2024]  remove time: 10065301000 average:1006.530100
+[Mon Jan 08 17:19:09 2024]  --------------------------------------------------
+[Mon Jan 08 17:19:09 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:19:10 2024]  get from set time:597902000 average:59.790200
+[Mon Jan 08 17:19:10 2024]  memory take(before): 475856KB
+[Mon Jan 08 17:19:10 2024]  max value: 10000000 radix: 11 level: 7
+[Mon Jan 08 17:19:21 2024]  insert time: 10376390000 average:1037.639000
+[Mon Jan 08 17:19:21 2024]  memory take(after): 743128KB; increace memory: 267272KB
+[Mon Jan 08 17:19:34 2024]  search time: 12354186000 average:1235.418600
+[Mon Jan 08 17:19:44 2024]  remove time: 9398167000 average:939.816700
+[Mon Jan 08 17:19:47 2024]  --------------------------------------------------
+[Mon Jan 08 17:19:47 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:19:48 2024]  get from set time:568951000 average:56.895100
+[Mon Jan 08 17:19:48 2024]  memory take(before): 473624KB
+[Mon Jan 08 17:19:48 2024]  max value: 10000000 radix: 12 level: 7
+[Mon Jan 08 17:19:59 2024]  insert time: 10335788000 average:1033.578800
+[Mon Jan 08 17:19:59 2024]  memory take(after): 741492KB; increace memory: 267868KB
+[Mon Jan 08 17:20:12 2024]  search time: 12534632000 average:1253.463200
+[Mon Jan 08 17:20:22 2024]  remove time: 9989432000 average:998.943200
+[Mon Jan 08 17:20:26 2024]  --------------------------------------------------
+[Mon Jan 08 17:20:26 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:20:26 2024]  get from set time:564414000 average:56.441400
+[Mon Jan 08 17:20:26 2024]  memory take(before): 465996KB
+[Mon Jan 08 17:20:26 2024]  max value: 10000000 radix: 13 level: 7
+[Mon Jan 08 17:20:37 2024]  insert time: 10514613000 average:1051.461300
+[Mon Jan 08 17:20:37 2024]  memory take(after): 739448KB; increace memory: 273452KB
+[Mon Jan 08 17:20:51 2024]  search time: 13186892000 average:1318.689200
+[Mon Jan 08 17:21:01 2024]  remove time: 9559331000 average:955.933100
+[Mon Jan 08 17:21:04 2024]  --------------------------------------------------
+[Mon Jan 08 17:21:04 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:21:05 2024]  get from set time:570490000 average:57.049000
+[Mon Jan 08 17:21:05 2024]  memory take(before): 547380KB
+[Mon Jan 08 17:21:05 2024]  max value: 10000000 radix: 14 level: 7
+[Mon Jan 08 17:21:16 2024]  insert time: 10818046000 average:1081.804600
+[Mon Jan 08 17:21:16 2024]  memory take(after): 740072KB; increace memory: 192692KB
+[Mon Jan 08 17:21:31 2024]  search time: 13703781000 average:1370.378100
+[Mon Jan 08 17:21:41 2024]  remove time: 9956714000 average:995.671400
+[Mon Jan 08 17:21:44 2024]  --------------------------------------------------
+[Mon Jan 08 17:21:44 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:21:44 2024]  get from set time:469284000 average:46.928400
+[Mon Jan 08 17:21:44 2024]  memory take(before): 530208KB
+[Mon Jan 08 17:21:44 2024]  max value: 10000000 radix: 15 level: 6
+[Mon Jan 08 17:21:53 2024]  insert time: 8060388000 average:806.038800
+[Mon Jan 08 17:21:53 2024]  memory take(after): 738480KB; increace memory: 208272KB
+[Mon Jan 08 17:22:06 2024]  search time: 12723888000 average:1272.388800
+[Mon Jan 08 17:22:17 2024]  remove time: 10621203000 average:1062.120300
+[Mon Jan 08 17:22:20 2024]  --------------------------------------------------
+[Mon Jan 08 17:22:20 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:22:20 2024]  get from set time:530120000 average:53.012000
+[Mon Jan 08 17:22:20 2024]  memory take(before): 551648KB
+[Mon Jan 08 17:22:20 2024]  max value: 10000000 radix: 16 level: 6
+[Mon Jan 08 17:22:32 2024]  insert time: 10871262000 average:1087.126200
+[Mon Jan 08 17:22:32 2024]  memory take(after): 738648KB; increace memory: 187000KB
+[Mon Jan 08 17:22:47 2024]  search time: 14899122000 average:1489.912200
+[Mon Jan 08 17:22:59 2024]  remove time: 10811166000 average:1081.116600
+[Mon Jan 08 17:23:01 2024]  --------------------------------------------------
+[Mon Jan 08 17:23:01 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:23:02 2024]  get from set time:552171000 average:55.217100
+[Mon Jan 08 17:23:02 2024]  memory take(before): 555024KB
+[Mon Jan 08 17:23:02 2024]  max value: 10000000 radix: 17 level: 6
+[Mon Jan 08 17:23:14 2024]  insert time: 11400075000 average:1140.007500
+[Mon Jan 08 17:23:14 2024]  memory take(after): 737788KB; increace memory: 182764KB
+[Mon Jan 08 17:23:30 2024]  search time: 15278634000 average:1527.863400
+[Mon Jan 08 17:23:41 2024]  remove time: 10542094000 average:1054.209400
+[Mon Jan 08 17:23:44 2024]  --------------------------------------------------
+[Mon Jan 08 17:23:44 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:23:44 2024]  get from set time:538927000 average:53.892700
+[Mon Jan 08 17:23:44 2024]  memory take(before): 555156KB
+[Mon Jan 08 17:23:44 2024]  max value: 10000000 radix: 18 level: 6
+[Mon Jan 08 17:23:56 2024]  insert time: 11456958000 average:1145.695800
+[Mon Jan 08 17:23:56 2024]  memory take(after): 737880KB; increace memory: 182724KB
+[Mon Jan 08 17:24:13 2024]  search time: 16450961000 average:1645.096100
+[Mon Jan 08 17:24:25 2024]  remove time: 11175040000 average:1117.504000
+[Mon Jan 08 17:24:28 2024]  --------------------------------------------------
+[Mon Jan 08 17:24:28 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:24:28 2024]  get from set time:568735000 average:56.873500
+[Mon Jan 08 17:24:28 2024]  memory take(before): 557476KB
+[Mon Jan 08 17:24:28 2024]  max value: 10000000 radix: 19 level: 6
+[Mon Jan 08 17:24:41 2024]  insert time: 12119519000 average:1211.951900
+[Mon Jan 08 17:24:41 2024]  memory take(after): 737412KB; increace memory: 179936KB
+[Mon Jan 08 17:24:58 2024]  search time: 16374656000 average:1637.465600
+[Mon Jan 08 17:25:10 2024]  remove time: 11985432000 average:1198.543200
+[Mon Jan 08 17:25:14 2024]  --------------------------------------------------
+[Mon Jan 08 17:25:14 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:25:14 2024]  get from set time:564186000 average:56.418600
+[Mon Jan 08 17:25:14 2024]  memory take(before): 528632KB
+[Mon Jan 08 17:25:14 2024]  max value: 10000000 radix: 20 level: 6
+[Mon Jan 08 17:25:27 2024]  insert time: 12502947000 average:1250.294700
+[Mon Jan 08 17:25:27 2024]  memory take(after): 737268KB; increace memory: 208636KB
+[Mon Jan 08 17:25:45 2024]  search time: 17010397000 average:1701.039700
+[Mon Jan 08 17:25:57 2024]  remove time: 11624309000 average:1162.430900
+[Mon Jan 08 17:26:00 2024]  --------------------------------------------------
+[Mon Jan 08 17:26:00 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:26:00 2024]  get from set time:564105000 average:56.410500
+[Mon Jan 08 17:26:00 2024]  memory take(before): 555280KB
+[Mon Jan 08 17:26:00 2024]  max value: 10000000 radix: 21 level: 6
+[Mon Jan 08 17:26:13 2024]  insert time: 12521911000 average:1252.191100
+[Mon Jan 08 17:26:13 2024]  memory take(after): 736656KB; increace memory: 181376KB
+[Mon Jan 08 17:26:31 2024]  search time: 17528284000 average:1752.828400
+[Mon Jan 08 17:26:44 2024]  remove time: 11788380000 average:1178.838000
+[Mon Jan 08 17:26:46 2024]  --------------------------------------------------
+[Mon Jan 08 17:26:46 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:26:46 2024]  get from set time:475637000 average:47.563700
+[Mon Jan 08 17:26:46 2024]  memory take(before): 557632KB
+[Mon Jan 08 17:26:46 2024]  max value: 10000000 radix: 22 level: 6
+[Mon Jan 08 17:26:57 2024]  insert time: 10283409000 average:1028.340900
+[Mon Jan 08 17:26:57 2024]  memory take(after): 736784KB; increace memory: 179152KB
+[Mon Jan 08 17:27:13 2024]  search time: 15451549000 average:1545.154900
+[Mon Jan 08 17:27:23 2024]  remove time: 9736706000 average:973.670600
+[Mon Jan 08 17:27:25 2024]  --------------------------------------------------
+[Mon Jan 08 17:27:25 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:27:25 2024]  get from set time:464316000 average:46.431600
+[Mon Jan 08 17:27:25 2024]  memory take(before): 556712KB
+[Mon Jan 08 17:27:25 2024]  max value: 10000000 radix: 23 level: 6
+[Mon Jan 08 17:27:36 2024]  insert time: 10495661000 average:1049.566100
+[Mon Jan 08 17:27:36 2024]  memory take(after): 736504KB; increace memory: 179792KB
+[Mon Jan 08 17:27:53 2024]  search time: 17037544000 average:1703.754400
+[Mon Jan 08 17:28:04 2024]  remove time: 9877294000 average:987.729400
+[Mon Jan 08 17:28:05 2024]  --------------------------------------------------
+[Mon Jan 08 17:28:05 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:28:06 2024]  get from set time:484608000 average:48.460800
+[Mon Jan 08 17:28:06 2024]  memory take(before): 557628KB
+[Mon Jan 08 17:28:06 2024]  max value: 10000000 radix: 24 level: 6
+[Mon Jan 08 17:28:17 2024]  insert time: 10988676000 average:1098.867600
+[Mon Jan 08 17:28:17 2024]  memory take(after): 736572KB; increace memory: 178944KB
+[Mon Jan 08 17:28:37 2024]  search time: 18722963000 average:1872.296300
+[Mon Jan 08 17:28:49 2024]  remove time: 12429029000 average:1242.902900
+[Mon Jan 08 17:28:51 2024]  --------------------------------------------------
+[Mon Jan 08 17:28:51 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:28:52 2024]  get from set time:468817000 average:46.881700
+[Mon Jan 08 17:28:52 2024]  memory take(before): 559652KB
+[Mon Jan 08 17:28:52 2024]  max value: 10000000 radix: 25 level: 6
+[Mon Jan 08 17:29:04 2024]  insert time: 11715080000 average:1171.508000
+[Mon Jan 08 17:29:04 2024]  memory take(after): 736100KB; increace memory: 176448KB
+[Mon Jan 08 17:29:24 2024]  search time: 19865622000 average:1986.562200
+[Mon Jan 08 17:29:35 2024]  remove time: 10130556000 average:1013.055600
+[Mon Jan 08 17:29:36 2024]  --------------------------------------------------
+[Mon Jan 08 17:29:36 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:29:37 2024]  get from set time:492304000 average:49.230400
+[Mon Jan 08 17:29:37 2024]  memory take(before): 559232KB
+[Mon Jan 08 17:29:37 2024]  max value: 10000000 radix: 26 level: 5
+[Mon Jan 08 17:29:50 2024]  insert time: 12475564000 average:1247.556400
+[Mon Jan 08 17:29:50 2024]  memory take(after): 736228KB; increace memory: 176996KB
+[Mon Jan 08 17:30:10 2024]  search time: 20039394000 average:2003.939400
+[Mon Jan 08 17:30:22 2024]  remove time: 10751314000 average:1075.131400
+[Mon Jan 08 17:30:23 2024]  --------------------------------------------------
+[Mon Jan 08 17:30:23 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:30:24 2024]  get from set time:549635000 average:54.963500
+[Mon Jan 08 17:30:24 2024]  memory take(before): 560472KB
+[Mon Jan 08 17:30:24 2024]  max value: 10000000 radix: 27 level: 5
+[Mon Jan 08 17:30:38 2024]  insert time: 13475269000 average:1347.526900
+[Mon Jan 08 17:30:38 2024]  memory take(after): 736032KB; increace memory: 175560KB
+[Mon Jan 08 17:30:59 2024]  search time: 20401260000 average:2040.126000
+[Mon Jan 08 17:31:12 2024]  remove time: 12509716000 average:1250.971600
+[Mon Jan 08 17:31:14 2024]  --------------------------------------------------
+[Mon Jan 08 17:31:14 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:31:15 2024]  get from set time:540931000 average:54.093100
+[Mon Jan 08 17:31:15 2024]  memory take(before): 560340KB
+[Mon Jan 08 17:31:15 2024]  max value: 10000000 radix: 28 level: 5
+[Mon Jan 08 17:31:29 2024]  insert time: 13388637000 average:1338.863700
+[Mon Jan 08 17:31:29 2024]  memory take(after): 736036KB; increace memory: 175696KB
+[Mon Jan 08 17:31:50 2024]  search time: 20787981000 average:2078.798100
+[Mon Jan 08 17:32:04 2024]  remove time: 13068752000 average:1306.875200
+[Mon Jan 08 17:32:06 2024]  --------------------------------------------------
+[Mon Jan 08 17:32:06 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:32:07 2024]  get from set time:534816000 average:53.481600
+[Mon Jan 08 17:32:07 2024]  memory take(before): 560384KB
+[Mon Jan 08 17:32:07 2024]  max value: 10000000 radix: 29 level: 5
+[Mon Jan 08 17:32:21 2024]  insert time: 14238730000 average:1423.873000
+[Mon Jan 08 17:32:21 2024]  memory take(after): 735772KB; increace memory: 175388KB
+[Mon Jan 08 17:32:44 2024]  search time: 22041378000 average:2204.137800
+[Mon Jan 08 17:32:59 2024]  remove time: 14026684000 average:1402.668400
+[Mon Jan 08 17:33:01 2024]  --------------------------------------------------
+[Mon Jan 08 17:33:01 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 17:33:01 2024]  get from set time:541168000 average:54.116800
+[Mon Jan 08 17:33:01 2024]  memory take(before): 529324KB
+[Mon Jan 08 17:33:01 2024]  max value: 10000000 radix: 30 level: 5
+[Mon Jan 08 17:33:17 2024]  insert time: 15059655000 average:1505.965500
+[Mon Jan 08 17:33:17 2024]  memory take(after): 735396KB; increace memory: 206072KB
+[Mon Jan 08 17:33:42 2024]  search time: 24086090000 average:2408.609000
+[Mon Jan 08 17:33:56 2024]  remove time: 14087340000 average:1408.734000
+[Mon Jan 08 22:15:09 2024]  
+[Mon Jan 08 22:15:09 2024]  --------------------------------------------------
+[Mon Jan 08 22:15:09 2024]  -----------------new statistic--------------------
+[Mon Jan 08 22:15:09 2024]  --------------------------------------------------
+[Mon Jan 08 22:20:14 2024]  Data size: 100000000
+[Mon Jan 08 22:20:14 2024]  --------------Linked Remainder Tree--------------
+[Mon Jan 08 22:20:20 2024]  get from set time:5475870000 average:54.758700
+[Mon Jan 08 22:20:20 2024]  memory take(before): 3943736KB
+[Mon Jan 08 22:20:20 2024]  max value: 100000000 radix: 8 level: 9
+[Mon Jan 08 22:22:38 2024]  insert time: 132739339000 average:1327.393390
+[Mon Jan 08 22:22:38 2024]  memory take(after): 7230556KB; increace memory: 3286820KB
+[Mon Jan 08 22:25:09 2024]  search time: 145102112000 average:1451.021120
+[Mon Jan 08 22:27:14 2024]  remove time: 120351908000 average:1203.519080
+[Wed Jan 10 21:19:23 2024]  
+[Wed Jan 10 21:19:23 2024]  --------------------------------------------------
+[Wed Jan 10 21:19:23 2024]  -----------------new statistic--------------------
+[Wed Jan 10 21:19:23 2024]  --------------------------------------------------
+[Wed Jan 10 21:19:43 2024]  Data size: 10000000
+[Wed Jan 10 21:19:43 2024]  --------------Array Remainder List--------------
+[Wed Jan 10 21:19:44 2024]  get from set time:440109000 average:44.010900
+[Wed Jan 10 21:19:44 2024]  memory take(before): 413448KB
+[Wed Jan 10 21:19:44 2024]  max value: 10000000 radix: 1000 level: 3
+[Wed Jan 10 21:19:47 2024]  insert time: 3054741000 average:305.474100
+[Wed Jan 10 21:19:47 2024]  memory take(after): 454260KB; increace memory: 40812KB
+[Wed Jan 10 21:19:50 2024]  search time: 1856705000 average:185.670500
+[Wed Jan 10 21:19:52 2024]  remove time: 1883982000 average:188.398200
+[Wed Jan 10 21:20:42 2024]  
+[Wed Jan 10 21:20:42 2024]  --------------------------------------------------
+[Wed Jan 10 21:20:42 2024]  -----------------new statistic--------------------
+[Wed Jan 10 21:20:42 2024]  --------------------------------------------------
+[Wed Jan 10 21:21:03 2024]  Data size: 10000000
+[Wed Jan 10 21:21:03 2024]  --------------Array Remainder List--------------
+[Wed Jan 10 21:21:03 2024]  get from set time:435131000 average:43.513100
+[Wed Jan 10 21:21:03 2024]  memory take(before): 413372KB
+[Wed Jan 10 21:21:03 2024]  max value: 10000000 radix: 1000 level: 3
+[Wed Jan 10 21:21:07 2024]  insert time: 3125817000 average:312.581700
+[Wed Jan 10 21:21:07 2024]  memory take(after): 454184KB; increace memory: 40812KB
+[Wed Jan 10 21:21:09 2024]  search time: 1826030000 average:182.603000
+[Wed Jan 10 21:21:11 2024]  remove time: 1890264000 average:189.026400
+[Wed Jan 10 21:22:16 2024]  
+[Wed Jan 10 21:22:16 2024]  --------------------------------------------------
+[Wed Jan 10 21:22:16 2024]  -----------------new statistic--------------------
+[Wed Jan 10 21:22:16 2024]  --------------------------------------------------
+[Wed Jan 10 21:22:38 2024]  Data size: 10000000
+[Wed Jan 10 21:22:38 2024]  --------------Array Remainder List--------------
+[Wed Jan 10 21:22:38 2024]  get from set time:439792000 average:43.979200
+[Wed Jan 10 21:22:38 2024]  memory take(before): 413372KB
+[Wed Jan 10 21:22:38 2024]  max value: 10000000 radix: 1000 level: 3
+[Wed Jan 10 21:22:40 2024]  insert time: 1660484000 average:166.048400
+[Wed Jan 10 21:22:40 2024]  memory take(after): 454312KB; increace memory: 40940KB
+[Wed Jan 10 21:22:43 2024]  search time: 1994606000 average:199.460600
+[Wed Jan 10 21:22:45 2024]  remove time: 2031746000 average:203.174600
+[Wed Jan 10 21:36:27 2024]  
+[Wed Jan 10 21:36:27 2024]  --------------------------------------------------
+[Wed Jan 10 21:36:27 2024]  -----------------new statistic--------------------
+[Wed Jan 10 21:36:27 2024]  --------------------------------------------------
+[Wed Jan 10 21:36:49 2024]  Data size: 10000000
+[Wed Jan 10 21:36:49 2024]  --------------Array Remainder List--------------
+[Wed Jan 10 21:36:49 2024]  get from set time:453276000 average:45.327600
+[Wed Jan 10 21:36:49 2024]  memory take(before): 413368KB
+[Wed Jan 10 21:36:49 2024]  max value: 10000000 radix: 1000 level: 3
+[Wed Jan 10 21:36:52 2024]  insert time: 1984557000 average:198.455700
+[Wed Jan 10 21:36:52 2024]  memory take(after): 454308KB; increace memory: 40940KB
+[Wed Jan 10 21:36:54 2024]  search time: 2106774000 average:210.677400
+[Wed Jan 10 21:36:57 2024]  remove time: 2134755000 average:213.475500
+[Wed Jan 10 21:37:09 2024]  
+[Wed Jan 10 21:37:09 2024]  --------------------------------------------------
+[Wed Jan 10 21:37:09 2024]  -----------------new statistic--------------------
+[Wed Jan 10 21:37:09 2024]  --------------------------------------------------
+[Wed Jan 10 21:37:31 2024]  Data size: 10000000
+[Wed Jan 10 21:37:31 2024]  --------------Array Remainder List--------------
+[Wed Jan 10 21:37:31 2024]  get from set time:534299000 average:53.429900
+[Wed Jan 10 21:37:31 2024]  memory take(before): 413372KB
+[Wed Jan 10 21:37:31 2024]  max value: 10000000 radix: 1000 level: 3
+[Wed Jan 10 21:37:34 2024]  insert time: 1833005000 average:183.300500
+[Wed Jan 10 21:37:34 2024]  memory take(after): 454312KB; increace memory: 40940KB
+[Wed Jan 10 21:37:36 2024]  search time: 1827821000 average:182.782100
+[Wed Jan 10 21:37:39 2024]  remove time: 2786295000 average:278.629500
+[Thu Jan 11 17:03:41 2024]  
+[Thu Jan 11 17:03:41 2024]  --------------------------------------------------
+[Thu Jan 11 17:03:41 2024]  -----------------new statistic--------------------
+[Thu Jan 11 17:03:41 2024]  --------------------------------------------------
+[Thu Jan 11 17:04:05 2024]  Data size: 10000000
+[Thu Jan 11 17:04:05 2024]  --------------Red Black Tree--------------
+[Thu Jan 11 17:04:05 2024]  get from set time:455503000 average:45.550300
+[Thu Jan 11 17:04:05 2024]  memory take(before): 413444KB
+[Thu Jan 11 17:04:17 2024]  insert time 11033722000 average:1103.372200
+[Thu Jan 11 17:04:17 2024]  memory take(after): 884880KB; increace memory: 471436KB
+[Thu Jan 11 17:04:29 2024]  search time 11437594000 average:1143.759400
+[Thu Jan 11 17:04:43 2024]  remove time 14278216000 average:1427.821600
+[Thu Jan 11 17:07:58 2024]  
+[Thu Jan 11 17:07:58 2024]  --------------------------------------------------
+[Thu Jan 11 17:07:58 2024]  -----------------new statistic--------------------
+[Thu Jan 11 17:07:58 2024]  --------------------------------------------------
+[Thu Jan 11 17:08:21 2024]  Data size: 10000000
+[Thu Jan 11 17:08:21 2024]  --------------Red Black Tree--------------
+[Thu Jan 11 17:08:21 2024]  get from set time:469858000 average:46.985800
+[Thu Jan 11 17:08:21 2024]  memory take(before): 413368KB
+[Thu Jan 11 17:08:33 2024]  insert time 11759466000 average:1175.946600
+[Thu Jan 11 17:08:33 2024]  memory take(after): 884804KB; increace memory: 471436KB
+[Thu Jan 11 17:08:47 2024]  search time 13093726000 average:1309.372600
+[Thu Jan 11 17:09:02 2024]  remove time 15117870000 average:1511.787000
