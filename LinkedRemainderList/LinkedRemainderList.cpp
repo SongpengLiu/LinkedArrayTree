@@ -183,7 +183,7 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
     {
         return nullptr;
     }
-    // reached the last key level
+    // reached the last index level
     if (currentLevel >= level - 1)
     {
         ListNode<T> *nodePointer = (ListNode<T> *)arrayPointer;
@@ -202,7 +202,7 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
         }
     }
 
-    // if not reached the last key level, will recursively search
+    // if not reached the last index level, will recursively search
     unsigned int keySequence = key;
     for (int i = currentLevel; i < level; i++)
     {

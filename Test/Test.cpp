@@ -89,7 +89,6 @@ void Test<T>::setRandomSet()
     return;
 }
 
-
 template <class T>
 T Test<T>::getSetSize(){
     return set.size();
@@ -147,7 +146,18 @@ void Test<T>::blackRedTreeTest()
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    message = "random search time " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for (auto i =0; i<set.size();i++)
+    {
+        redBlackTree->search(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime = spentTime - getTime;
+    message = "ordered search time " + to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
@@ -225,7 +235,18 @@ void Test<T>::linkedRemainderTreeTest(unsigned short radix)
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    message = "random search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for (auto i =0 ;i< set.size();i++)
+    {
+        tree->get(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime = spentTime - getTime;
+    message = "ordered search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
@@ -295,7 +316,18 @@ void Test<T>::BTreeTest()
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    message = "random search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for (auto i =0;i< set.size();i++)
+    {
+        tree->search(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime = spentTime - getTime;
+    message = "ordered search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
@@ -374,7 +406,18 @@ void Test<T>::arrayRemainderTreeTest(unsigned short radix)
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    message = "random search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for (auto i =0 ;i< set.size();i++)
+    {
+        tree->get(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime = spentTime - getTime;
+    message = "ordered search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
@@ -452,7 +495,18 @@ void Test<T>::linkedRemainderListTest(unsigned short radix)
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
     spentTime = spentTime - getTime;
-    message = "search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    message = "random search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
+    for (auto i =0;i< set.size();i++)
+    {
+        list->get(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime = spentTime - getTime;
+    message = "ordered search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     TestLog::appendLog(message);
 
     timerStart = clock::now();
@@ -536,6 +590,17 @@ void Test<T>::arrayRemainderListTest(unsigned short radix)
     TestLog::appendLog(message);
 
     timerStart = clock::now();
+    for (auto i =0;i< set.size();i++)
+    {
+        list->get(i);
+    }
+    timerEnd = clock::now();
+    spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
+    spentTime = spentTime - getTime;
+    message = "ordered search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
+    TestLog::appendLog(message);
+
+    timerStart = clock::now();
     for (auto i : set)
     {
         list->remove(i);
@@ -549,7 +614,6 @@ void Test<T>::arrayRemainderListTest(unsigned short radix)
     delete list;
 }
 
-
 //Warning: because of the substance of process, regarding memeory statistic, only the first memeory summary is accurate in a execution.
 int main()
 {
@@ -557,9 +621,11 @@ int main()
     TestLog::appendLog("--------------------------------------------------");
     TestLog::appendLog("-----------------new statistic--------------------");
     TestLog::appendLog("--------------------------------------------------");
-    unsigned int size = 10000000;
-    unsigned int max =  10000000;
+    unsigned int size = 100;
+    unsigned int max =  100;
 
+    while (size<=100000000)
+    {
     Test<unsigned int> test = Test<unsigned int>(size,max);
     test.setRandomSet();
     string message = "Data size: " + std::to_string(test.getSetSize());
@@ -574,6 +640,11 @@ int main()
     test.BTreeTest();
     TestLog::printLog();
     TestLog::writeLogToFile();
+    size=size*10;
+    max=max*10;
+    }
+
+
 
     return 0;
 }

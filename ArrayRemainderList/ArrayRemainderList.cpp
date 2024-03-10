@@ -208,13 +208,13 @@ void *ArrayRemainderList<T>::findLeft(unsigned short currentLevel, void *arrayPo
         return nullptr;
     }
 
-    // reached the last key level
+    // reached the last index level
     if (currentLevel >= level - 1)
     {
         return arrayPointer;
     }
 
-    // if not reached the last key level, will recursively search
+    // if not reached the last index level, will recursively search
     unsigned int keySequence = key;
     for (int i = currentLevel; i < level; i++)
     {
@@ -405,6 +405,12 @@ void ArrayRemainderList<T>::remove(unsigned int key)
     remove(key, 0, &root);
 }
 
+/********************************************************
+ * @author Songpeng Liu
+ * @date 2023-12-22
+ * @brief remove the element from the list, and then check the aray
+ * @return void
+ ********************************************************/
 template <class T>
 void ArrayRemainderList<T>::remove(unsigned int key, unsigned short currentLevel, void *pointer)
 {
@@ -474,7 +480,6 @@ void ArrayRemainderList<T>::remove(unsigned int key, unsigned short currentLevel
         memset(arrayPointer, 0, sizeof(void *));
     }
 }
-
 
 /********************************************************
  * @author Songpeng Liu
