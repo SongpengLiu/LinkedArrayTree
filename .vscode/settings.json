@@ -66,5 +66,6 @@
         "semaphore": "cpp",
         "stop_token": "cpp",
         "thread": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "D:/AnuProjects/LinkedArrayTree/cpp-btree-1.0.1"
 }

@@ -18,6 +18,7 @@ private:
     uint16_t level;
     void *root; // root array
     void *head;
+    uint64_t currentSize;
 
 
 public:
@@ -30,6 +31,7 @@ public:
     ValueType* get(const KeyType);
     void destroy();
     void printAllData();
+    uint64_t size();
 
 private:
     void printMemory(void *, unsigned int);
@@ -43,6 +45,7 @@ LinkedArrayTree<KeyType, ValueType>::LinkedArrayTree()
 {
     radix =(KeyType)RADIX;
     level=sizeof(KeyType);
+    currentSize =0;
     root = NULL;
     head = nullptr;
 }
@@ -228,6 +231,9 @@ void LinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueT
     {
         pointer = (*(void **)pointer + (unsigned int)remainders[0] * sizeof(ValueType))+ sizeof(void *);
     }
+    if(!*(ValueType *)pointer){
+        currentSize++;
+    }
     *(ValueType *)pointer = value;
 }
 
@@ -319,6 +325,7 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* rem
         pointer = (*(void **)pointer + sizeof(void *)+(unsigned int)remainders[0] * sizeof(ValueType));
 
         memset(pointer, 0, sizeof(ValueType));
+        currentSize--;
 
         pointer = *(void **)arrayPointer+ sizeof(void *);
 
@@ -345,6 +352,11 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* rem
         free(*(void **)arrayPointer); // no other value, free the data array.
         memset(arrayPointer, 0, sizeof(void *));
     }
+}
+
+template <class KeyType, class ValueType>
+uint64_t LinkedArrayTree<KeyType, ValueType>::size(){
+    return currentSize;
 }
 
 /********************************************************

@@ -4,8 +4,6 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
-                // "D:/AnuProjects/RemainderSearchCode/tlx",
-                // "D:/AnuProjects/RemainderSearchCode/tlx/tlx"
             ],
             "defines": [
                 "_DEBUG",

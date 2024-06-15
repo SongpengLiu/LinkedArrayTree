@@ -96,7 +96,7 @@ void TreeTest(unordered_set<T> set)
 
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
-    spentTime = spentTime - getTime;
+    spentTime = spentTime;
     message = "random search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     cout<<message<<endl;
 
@@ -107,7 +107,7 @@ void TreeTest(unordered_set<T> set)
     }
     timerEnd = clock::now();
     spentTime = std::chrono::duration_cast<std::chrono::nanoseconds>(timerEnd - timerStart).count();
-    spentTime = spentTime - getTime;
+    spentTime = spentTime;
     message = "ordered search time: " + std::to_string(spentTime) + " average:" + to_string((double)spentTime / set.size());
     cout<<message<<endl;
 
@@ -124,23 +124,26 @@ void TreeTest(unordered_set<T> set)
 }
 
 int main(){
-    // TreeTest<uint64_t>(getRandom<uint64_t>(10000000));
+    // TreeTest<uint64_t>(getRandom<uint64_t>(100000000));
     // the first test result is astonishing. Write in 6/14/2024, the time take for searching
     // in 100 elements and 1000000000 elements are the same. Even the key is 64 bits, one search only takes 10-30 ns.
     // The most performance devour part is the remainder calculation. Since I eliminated it, the result is in expection.
 
     LinkedArrayTree<uint16_t,uint64_t> lat;
     lat.printStructureInfo();
+    cout<<(uint64_t)lat.size()<<endl;
     lat.insert(1,1);
     lat.insert(5,5);
     lat.insert(266,266);
     lat.insert(300,300);
     lat.insert(600,600);
-    lat.insert(900000000,900000000);
-    lat.printPath(266);
-    lat.printAllData();
+    cout<<(uint64_t)lat.size()<<endl;
+    // lat.insert(900000000,900000000);
+    // lat.printPath(266);
+    // lat.printAllData();
     // cout<<*lat.get(266);
-    // lat.remove(266);
+    lat.remove(266);
+    cout<<(uint64_t)lat.size()<<endl;
     // lat.printPath(266);
     // lat.printPath(1);
 

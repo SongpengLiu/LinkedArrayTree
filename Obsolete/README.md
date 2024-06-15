@@ -1,5 +1,7 @@
 Files in this folder are obsoleted.
 
-Linked Remainder Tree, Array Remainder List, Linked Remainder List are varients of Array Remainder Tree. I have designed them for vairous usage. However, for the sake of clear and concise, I only introduced Array Remainder List in the thesis, and other variants are not updated and optimized. Array Remainder List was assigned a new name as Linked Array Tree.
+Code of these data strctures, including the traditional search algorithms red-black tree, google B+-tree, and some new data structures are obsoleted.
 
-You sould updated and optimized them if you want to use them.
+The new data structures are used to attempt to meet diverse usage scenarios during inventing the new search algorithm. But for the sake of clear and concise, I only introduced LRT in the paper. Code in this folder should be only for study.
+
+You should updated and optimized them if you want to use them.
