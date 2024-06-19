@@ -5,13 +5,16 @@
 #include <cstring>
 #include <stack>
 #include <memory>
+#include <queue>
 using namespace std;
 
 
-#define RADIX pow(2,8);
+#define POWER 4
+#define RADIX pow(2,POWER);
+
 
 template <class KeyType, class ValueType>
-class LinkedArrayTree
+class UnlinkedArrayTree
 {
 private:
     uint16_t radix; //array size
@@ -21,11 +24,12 @@ private:
     uint64_t currentSize;
     void* iterator;
     int iteratorCount;
+    queue<void*> iteratorQueue;
 
 
 public:
-    LinkedArrayTree();
-    // ~LinkedArrayTree();
+    UnlinkedArrayTree();
+    // ~UnlinkedArrayTree();
     string printStructureInfo();
     void printPath(const KeyType);
     void insert(const KeyType, const ValueType);
@@ -34,38 +38,40 @@ public:
     void destroy();
     void printAllData();
     uint64_t size();
-    ValueType* nextValue();
-    void setBegin();
+        ValueType* nextValue();
+    ValueType* begin();
+    void begin(unsigned short currentLevel, void* pointer);
 
 private:
     void printMemory(void *, unsigned int);
     void *findLeft(const KeyType);
     void *findLeft(unsigned short, void *, uint8_t*, bool);
     void remove(const KeyType, uint8_t*, unsigned short, void*);
+    void printAllData(unsigned short currentLevel, void* pointer);
 };
 
 template <class KeyType, class ValueType>
-LinkedArrayTree<KeyType, ValueType>::LinkedArrayTree()
+UnlinkedArrayTree<KeyType, ValueType>::UnlinkedArrayTree()
 {
     radix =(KeyType)RADIX;
-    level=sizeof(KeyType);
+    level=ceil(sizeof(KeyType)*8/POWER);
     currentSize =0;
     root = NULL;
     head = nullptr;
-    iterator = &head;
+        iterator = &head;
     iteratorCount=-1;
 }
 
 
 
 // template <class KeyType, class ValueType>
-// LinkedArrayTree<KeyType, ValueType>::~LinkedArrayTree()
+// UnlinkedArrayTree<KeyType, ValueType>::~UnlinkedArrayTree()
 // {
 //     destroy();
 // }
 
 // template <class KeyType, class ValueType>
-// void LinkedArrayTree<KeyType, ValueType>::destroy()
+// void UnlinkedArrayTree<KeyType, ValueType>::destroy()
 // {
 //     for(unsigned int i=0;i<max;i++){
 //         remove(i);
@@ -81,7 +87,7 @@ LinkedArrayTree<KeyType, ValueType>::LinkedArrayTree()
  * @return info
  ********************************************************/
 template <class KeyType, class ValueType>
-string LinkedArrayTree<KeyType, ValueType>::printStructureInfo()
+string UnlinkedArrayTree<KeyType, ValueType>::printStructureInfo()
 {
     string s = "Structure Information: max value: 2^" + to_string(sizeof(KeyType)*8) + ", radix: " + to_string(radix) + ", level: " + to_string(level)
                 +", Key length (Bytes):" +to_string(sizeof(KeyType)) +", Value length (Bytes): "+to_string(sizeof(ValueType));
@@ -90,7 +96,7 @@ string LinkedArrayTree<KeyType, ValueType>::printStructureInfo()
 }
 
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned int nLen)
+void UnlinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned int nLen)
 {
     if (NULL == pBuff || 0 == nLen)
     {
@@ -112,7 +118,7 @@ void LinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned int 
  * @return array pointer
  ********************************************************/
 template <class KeyType, class ValueType>
-void *LinkedArrayTree<KeyType, ValueType>::findLeft(const KeyType key)
+void *UnlinkedArrayTree<KeyType, ValueType>::findLeft(const KeyType key)
 {
     KeyType key2 = key;
     if (key2 >= radix)
@@ -124,13 +130,19 @@ void *LinkedArrayTree<KeyType, ValueType>::findLeft(const KeyType key)
         return nullptr;
     }
 
-    uint8_t* keyArray = (uint8_t*)&key2;
+    // uint8_t* keyArray = (uint8_t*)&key2;
+    uint8_t keyArray[level];
+
+    for(int i=0;i<level;i++){
+        keyArray[i]=key2 &(radix-1);
+        key2 = key2>>POWER;
+    }
 
     return findLeft(0, root, keyArray, true);
 }
 
 template <class KeyType, class ValueType>
-void *LinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentLevel, void *arrayPointer, uint8_t* keyArray, bool isOnPath)
+void *UnlinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentLevel, void *arrayPointer, uint8_t* keyArray, bool isOnPath)
 {
     if (arrayPointer == nullptr)
     {
@@ -190,10 +202,15 @@ void *LinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentLevel,
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueType value)
+void UnlinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueType value)
 {
-    uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
-
+    // uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
+    uint8_t remainders[level];
+    KeyType key2 =key;
+    for(int i=0;i<level;i++){
+        remainders[i]=key2 &(radix-1);
+        key2 = key2>>POWER;
+    }
     void *pointer = &root;
     void *allocatePointer;
 
@@ -217,24 +234,14 @@ void LinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueT
     void *keyPointer = nullptr;
     if (*(long long *)pointer == 0)//no data array, allocate a new.
     {
-        allocatePointer = malloc(sizeof(ValueType) * radix + sizeof(void *)); //allocate data array
+        allocatePointer = malloc(sizeof(ValueType) * radix); //allocate data array
         memcpy_s(pointer, sizeof(void *), &allocatePointer, sizeof(void *)); //copy the array pointer to index array
-        memset(allocatePointer, 0, sizeof(ValueType) * radix + sizeof(void *)); //initialize the data array.
-        pointer = allocatePointer + (unsigned int)remainders[0] * sizeof(ValueType)+ sizeof(void *); //get the pointer of the element
-
-        // new allocated array needs to find left array
-        void *leftPointer = findLeft(key);
-
-        if (leftPointer == nullptr) //no left array, I'm the first
-        {
-            leftPointer = &head;
-        }
-        memcpy_s(allocatePointer, sizeof(void *), leftPointer, sizeof(void *));// copy the left array's right array pointer to me
-        memcpy_s(leftPointer, sizeof(void *), &allocatePointer, sizeof(void *));// copy me to the left
+        memset(allocatePointer, 0, sizeof(ValueType) * radix); //initialize the data array.
+        pointer = allocatePointer + (unsigned int)remainders[0] * sizeof(ValueType); //get the pointer of the element
     }
     else
     {
-        pointer = (*(void **)pointer + (unsigned int)remainders[0] * sizeof(ValueType))+ sizeof(void *);
+        pointer = (*(void **)pointer + (unsigned int)remainders[0] * sizeof(ValueType));
     }
     if(!*(ValueType *)pointer){
         currentSize++;
@@ -249,9 +256,15 @@ void LinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueT
  * @return pointer of the value
  ********************************************************/
 template <class KeyType, class ValueType>
-ValueType* LinkedArrayTree<KeyType, ValueType>::get(KeyType key)
+ValueType* UnlinkedArrayTree<KeyType, ValueType>::get(KeyType key)
 {
-    uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
+    // uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
+        uint8_t remainders[level];
+    KeyType key2 =key;
+        for(int i=0;i<level;i++){
+        remainders[i]=key2 &(radix-1);
+        key2 = key2>>POWER;
+    }
     void *pointer = &root;
     for (int i = 0; i < level - 1; i++)
     {
@@ -270,7 +283,7 @@ ValueType* LinkedArrayTree<KeyType, ValueType>::get(KeyType key)
         return nullptr;
     }
 
-    pointer = (*(void **)pointer +sizeof(void *)+ (unsigned int)remainders[0] * sizeof(ValueType));
+    pointer = (*(void **)pointer + (unsigned int)remainders[0] * sizeof(ValueType));
     return (ValueType*)pointer;
 }
 
@@ -281,9 +294,15 @@ ValueType* LinkedArrayTree<KeyType, ValueType>::get(KeyType key)
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
+void UnlinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
 {
-    uint8_t* remainders = (uint8_t*)&key;
+    // uint8_t* remainders = (uint8_t*)&key;
+        uint8_t remainders[level];
+    KeyType key2 =key;
+        for(int i=0;i<level;i++){
+        remainders[i]=key2 &(radix-1);
+        key2 = key2>>POWER;
+    }
     remove(key, remainders, 0, &root);
 }
 
@@ -294,7 +313,7 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* remainders, unsigned short currentLevel, void *pointer)
+void UnlinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* remainders, unsigned short currentLevel, void *pointer)
 {
     if (pointer == nullptr || *(long long*)pointer == 0)
     {
@@ -327,12 +346,12 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* rem
     else // data level
     {
         void *arrayPointer = pointer;
-        pointer = (*(void **)pointer + sizeof(void *)+(unsigned int)remainders[0] * sizeof(ValueType));
+        pointer = (*(void **)pointer +(unsigned int)remainders[0] * sizeof(ValueType));
 
         memset(pointer, 0, sizeof(ValueType));
         currentSize--;
 
-        pointer = *(void **)arrayPointer+ sizeof(void *);
+        pointer = *(void **)arrayPointer;
 
         // check if have other value;
         for (int i = 0; i < radix; i++)
@@ -343,24 +362,13 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* rem
             }
         }
         //end loop, all value is 0
-
-        // find left array
-        void *leftPointer = findLeft(key);
-
-        if (leftPointer == nullptr)
-        {
-            leftPointer = &head;
-        }
-
-        memcpy_s(leftPointer, sizeof(void *), *(void **)arrayPointer, sizeof(void *));
-
         free(*(void **)arrayPointer); // no other value, free the data array.
         memset(arrayPointer, 0, sizeof(void *));
     }
 }
 
 template <class KeyType, class ValueType>
-uint64_t LinkedArrayTree<KeyType, ValueType>::size(){
+uint64_t UnlinkedArrayTree<KeyType, ValueType>::size(){
     return currentSize;
 }
 
@@ -371,9 +379,15 @@ uint64_t LinkedArrayTree<KeyType, ValueType>::size(){
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
+void UnlinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
 {
-    uint8_t* remainders = (uint8_t*)&key;
+    // uint8_t* remainders = (uint8_t*)&key;
+        uint8_t remainders[level];
+    KeyType key2 =key;
+        for(int i=0;i<level;i++){
+        remainders[i]=key2 &(radix-1);
+        key2 = key2>>POWER;
+    }
     cout << "---------trace start---------" << endl;
     cout << "print path of key: " << key << "; remainders (top-to-down): ";
     for(int i =level-1;i>=0;i--){
@@ -426,54 +440,86 @@ void LinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::printAllData()
+void UnlinkedArrayTree<KeyType, ValueType>::printAllData()
 {
-    if (head == nullptr)
-    {
-        cout << "----------no data-----------" << endl;
-        return;
-    }
-    void *arrayPointer = head;
-    arrayPointer=arrayPointer;
-    cout << "------iterate start-------" << endl;
-    do
-    {
-        cout << "->";
-        for (int i = 0; i < radix; i++)
-        {
-            if(*(ValueType *)(arrayPointer+ sizeof(void *) +i*sizeof(ValueType)) !=NULL)
-                cout << " " << *(ValueType *)(arrayPointer+ sizeof(void *) +i*sizeof(ValueType));
-        }
-        arrayPointer = *(void **)arrayPointer;
-        cout << endl;
-    }
-    while (arrayPointer != nullptr);
-    cout << "--------iterate end-------" << endl;
+    cout << "---------iterate start---------" << endl;
+    printAllData(0, root);
+    cout<< endl<<"------------end-----------------"<< endl;
 }
 
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::setBegin(){
+void UnlinkedArrayTree<KeyType, ValueType>::printAllData(unsigned short currentLevel, void* pointer){
+    if(pointer == nullptr){
+        return;
+    }
+    if(currentLevel< level-1){
+        for(int i=0;i< radix;i++){
+            if(*(void**)pointer !=nullptr){
+                printAllData(currentLevel+1, *(void**)pointer);
+            }
+            pointer = pointer + sizeof(void*);
+        }
+    }
+    if(currentLevel>= level -1){
+        for(int i=0;i< radix;i++){
+            if(*(ValueType*)pointer !=0){
+                cout<<" "<< *(ValueType*)pointer;
+            }
+            pointer = pointer + sizeof(ValueType);
+        }
+        cout<<endl;
+    }
+
+}
+
+template <class KeyType, class ValueType>
+ValueType*  UnlinkedArrayTree<KeyType, ValueType>::begin(){
     iterator =&head;
     iteratorCount =-1;
+    begin(0, root);
+    return nextValue();
 }
+
 template <class KeyType, class ValueType>
-ValueType* LinkedArrayTree<KeyType, ValueType>::nextValue(){
+void  UnlinkedArrayTree<KeyType, ValueType>::begin(unsigned short currentLevel, void* pointer){
+    if(pointer == nullptr){
+        return;
+    }
+    if(currentLevel< level-1){
+        for(int i=0;i< radix;i++){
+            if(*(void**)pointer !=nullptr){
+                begin(currentLevel+1, *(void**)pointer);
+            }
+            pointer = pointer + sizeof(void*);
+        }
+    }
+    if(currentLevel>= level -1){
+        iteratorQueue.push(pointer);
+    }
+}
+
+
+template <class KeyType, class ValueType>
+ValueType* UnlinkedArrayTree<KeyType, ValueType>::nextValue(){
     if(iterator ==nullptr){
         return nullptr;
     }
     while(iterator !=nullptr){
         iteratorCount++;
     if(iteratorCount%radix ==0){
-        iterator = *(void**)iterator;
+        if(iteratorQueue.empty()){
+            return nullptr;
+        }
+        iterator = iteratorQueue.front();
+        iteratorQueue.pop();
         iteratorCount =0;
         if(iterator == nullptr){
             return nullptr;
         }
     }
-    if(*(ValueType*)(iterator+sizeof(void*)+sizeof(ValueType)*iteratorCount) !=0){
-        return (ValueType*)(iterator+sizeof(void*)+sizeof(ValueType)*iteratorCount);
+    if(*(ValueType*)(iterator+sizeof(ValueType)*iteratorCount) !=0){
+        return (ValueType*)(iterator+sizeof(ValueType)*iteratorCount);
     }
     }
     return nullptr;
-
 }

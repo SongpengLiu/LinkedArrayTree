@@ -8,10 +8,11 @@
 using namespace std;
 
 
-#define RADIX pow(2,8);
+
+
 
 template <class KeyType, class ValueType>
-class LinkedArrayTree
+class RadixLinkedArrayTree
 {
 private:
     uint16_t radix; //array size
@@ -19,13 +20,11 @@ private:
     void *root; // root array
     void *head;
     uint64_t currentSize;
-    void* iterator;
-    int iteratorCount;
 
 
 public:
-    LinkedArrayTree();
-    // ~LinkedArrayTree();
+    RadixLinkedArrayTree(KeyType);
+    // ~RadixLinkedArrayTree();
     string printStructureInfo();
     void printPath(const KeyType);
     void insert(const KeyType, const ValueType);
@@ -34,8 +33,6 @@ public:
     void destroy();
     void printAllData();
     uint64_t size();
-    ValueType* nextValue();
-    void setBegin();
 
 private:
     void printMemory(void *, unsigned int);
@@ -45,27 +42,25 @@ private:
 };
 
 template <class KeyType, class ValueType>
-LinkedArrayTree<KeyType, ValueType>::LinkedArrayTree()
+RadixLinkedArrayTree<KeyType, ValueType>::RadixLinkedArrayTree(KeyType inputRadix)
 {
-    radix =(KeyType)RADIX;
-    level=sizeof(KeyType);
+    radix =inputRadix;
+    level = ceil(sizeof(KeyType)*8/log2(radix));
     currentSize =0;
     root = NULL;
     head = nullptr;
-    iterator = &head;
-    iteratorCount=-1;
 }
 
 
 
 // template <class KeyType, class ValueType>
-// LinkedArrayTree<KeyType, ValueType>::~LinkedArrayTree()
+// RadixLinkedArrayTree<KeyType, ValueType>::~RadixLinkedArrayTree()
 // {
 //     destroy();
 // }
 
 // template <class KeyType, class ValueType>
-// void LinkedArrayTree<KeyType, ValueType>::destroy()
+// void RadixLinkedArrayTree<KeyType, ValueType>::destroy()
 // {
 //     for(unsigned int i=0;i<max;i++){
 //         remove(i);
@@ -81,7 +76,7 @@ LinkedArrayTree<KeyType, ValueType>::LinkedArrayTree()
  * @return info
  ********************************************************/
 template <class KeyType, class ValueType>
-string LinkedArrayTree<KeyType, ValueType>::printStructureInfo()
+string RadixLinkedArrayTree<KeyType, ValueType>::printStructureInfo()
 {
     string s = "Structure Information: max value: 2^" + to_string(sizeof(KeyType)*8) + ", radix: " + to_string(radix) + ", level: " + to_string(level)
                 +", Key length (Bytes):" +to_string(sizeof(KeyType)) +", Value length (Bytes): "+to_string(sizeof(ValueType));
@@ -90,7 +85,7 @@ string LinkedArrayTree<KeyType, ValueType>::printStructureInfo()
 }
 
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned int nLen)
+void RadixLinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned int nLen)
 {
     if (NULL == pBuff || 0 == nLen)
     {
@@ -112,7 +107,7 @@ void LinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned int 
  * @return array pointer
  ********************************************************/
 template <class KeyType, class ValueType>
-void *LinkedArrayTree<KeyType, ValueType>::findLeft(const KeyType key)
+void *RadixLinkedArrayTree<KeyType, ValueType>::findLeft(const KeyType key)
 {
     KeyType key2 = key;
     if (key2 >= radix)
@@ -124,13 +119,19 @@ void *LinkedArrayTree<KeyType, ValueType>::findLeft(const KeyType key)
         return nullptr;
     }
 
-    uint8_t* keyArray = (uint8_t*)&key2;
+    // uint8_t* keyArray = (uint8_t*)&key2;
+    uint8_t keyArray[level];
+
+    for(int i=0;i<level;i++){
+        keyArray[i]=key2 %radix;
+        key2 = key2/radix;
+    }
 
     return findLeft(0, root, keyArray, true);
 }
 
 template <class KeyType, class ValueType>
-void *LinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentLevel, void *arrayPointer, uint8_t* keyArray, bool isOnPath)
+void *RadixLinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentLevel, void *arrayPointer, uint8_t* keyArray, bool isOnPath)
 {
     if (arrayPointer == nullptr)
     {
@@ -190,10 +191,15 @@ void *LinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentLevel,
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueType value)
+void RadixLinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueType value)
 {
-    uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
-
+    // uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
+    uint8_t remainders[level];
+    KeyType key2 =key;
+    for(int i=0;i<level;i++){
+        remainders[i]=key2 %radix;
+        key2 = key2/radix;
+    }
     void *pointer = &root;
     void *allocatePointer;
 
@@ -249,9 +255,15 @@ void LinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const ValueT
  * @return pointer of the value
  ********************************************************/
 template <class KeyType, class ValueType>
-ValueType* LinkedArrayTree<KeyType, ValueType>::get(KeyType key)
+ValueType* RadixLinkedArrayTree<KeyType, ValueType>::get(KeyType key)
 {
-    uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
+    // uint8_t* remainders = (uint8_t*)&key; // mind that data in memeory is stored in a reversed order
+        uint8_t remainders[level];
+    KeyType key2 =key;
+        for(int i=0;i<level;i++){
+        remainders[i]=key2 %radix;
+        key2 = key2/radix;
+    }
     void *pointer = &root;
     for (int i = 0; i < level - 1; i++)
     {
@@ -281,9 +293,15 @@ ValueType* LinkedArrayTree<KeyType, ValueType>::get(KeyType key)
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
+void RadixLinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
 {
-    uint8_t* remainders = (uint8_t*)&key;
+    // uint8_t* remainders = (uint8_t*)&key;
+        uint8_t remainders[level];
+    KeyType key2 =key;
+        for(int i=0;i<level;i++){
+        remainders[i]=key2 %radix;
+        key2 = key2/radix;
+    }
     remove(key, remainders, 0, &root);
 }
 
@@ -294,7 +312,7 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* remainders, unsigned short currentLevel, void *pointer)
+void RadixLinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* remainders, unsigned short currentLevel, void *pointer)
 {
     if (pointer == nullptr || *(long long*)pointer == 0)
     {
@@ -360,7 +378,7 @@ void LinkedArrayTree<KeyType, ValueType>::remove(const KeyType key, uint8_t* rem
 }
 
 template <class KeyType, class ValueType>
-uint64_t LinkedArrayTree<KeyType, ValueType>::size(){
+uint64_t RadixLinkedArrayTree<KeyType, ValueType>::size(){
     return currentSize;
 }
 
@@ -371,9 +389,15 @@ uint64_t LinkedArrayTree<KeyType, ValueType>::size(){
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
+void RadixLinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
 {
-    uint8_t* remainders = (uint8_t*)&key;
+    // uint8_t* remainders = (uint8_t*)&key;
+        uint8_t remainders[level];
+    KeyType key2 =key;
+        for(int i=0;i<level;i++){
+        remainders[i]=key2 %radix;
+        key2 = key2/radix;
+    }
     cout << "---------trace start---------" << endl;
     cout << "print path of key: " << key << "; remainders (top-to-down): ";
     for(int i =level-1;i>=0;i--){
@@ -426,7 +450,7 @@ void LinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
  * @return void
  ********************************************************/
 template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::printAllData()
+void RadixLinkedArrayTree<KeyType, ValueType>::printAllData()
 {
     if (head == nullptr)
     {
@@ -449,31 +473,4 @@ void LinkedArrayTree<KeyType, ValueType>::printAllData()
     }
     while (arrayPointer != nullptr);
     cout << "--------iterate end-------" << endl;
-}
-
-template <class KeyType, class ValueType>
-void LinkedArrayTree<KeyType, ValueType>::setBegin(){
-    iterator =&head;
-    iteratorCount =-1;
-}
-template <class KeyType, class ValueType>
-ValueType* LinkedArrayTree<KeyType, ValueType>::nextValue(){
-    if(iterator ==nullptr){
-        return nullptr;
-    }
-    while(iterator !=nullptr){
-        iteratorCount++;
-    if(iteratorCount%radix ==0){
-        iterator = *(void**)iterator;
-        iteratorCount =0;
-        if(iterator == nullptr){
-            return nullptr;
-        }
-    }
-    if(*(ValueType*)(iterator+sizeof(void*)+sizeof(ValueType)*iteratorCount) !=0){
-        return (ValueType*)(iterator+sizeof(void*)+sizeof(ValueType)*iteratorCount);
-    }
-    }
-    return nullptr;
-
 }

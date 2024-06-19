@@ -65,7 +65,8 @@
         "mutex": "cpp",
         "semaphore": "cpp",
         "stop_token": "cpp",
-        "thread": "cpp"
+        "thread": "cpp",
+        "bitset": "cpp"
     },
-    "cmake.sourceDirectory": "D:/AnuProjects/LinkedArrayTree/cpp-btree-1.0.1"
+    "cmake.sourceDirectory": "D:/AnuProjects/LinkedArrayTree/Obsolete/cpp-btree-1.0.1"
 }

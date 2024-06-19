@@ -1,0 +1,1540 @@
+
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 18:00:51 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:100.000000
+[Tue Jun 18 18:00:51 2024]  Average search time:10.000000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:90.000000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 18:00:51 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:350.000000
+[Tue Jun 18 18:00:51 2024]  Average search time:90.000000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:160.000000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 18:00:51 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:160.000000
+[Tue Jun 18 18:00:51 2024]  Average search time:70.000000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:140.000000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 18:00:51 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:30.900000
+[Tue Jun 18 18:00:51 2024]  Average search time:12.200000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:142.600000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 18:00:51 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:284.100000
+[Tue Jun 18 18:00:51 2024]  Average search time:139.500000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:237.800000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 18:00:51 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:162.700000
+[Tue Jun 18 18:00:51 2024]  Average search time:105.800000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:466.700000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 18:00:51 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:00:51 2024]  Average insert time:16.555000
+[Tue Jun 18 18:00:51 2024]  Average search time:12.474000
+[Tue Jun 18 18:00:51 2024]  Average deletion time:238.526000
+[Tue Jun 18 18:00:51 2024]  --------------End--------------
+[Tue Jun 18 18:00:51 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:51 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 18:00:51 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:00:52 2024]  Average insert time:388.977000
+[Tue Jun 18 18:00:52 2024]  Average search time:204.742000
+[Tue Jun 18 18:00:52 2024]  Average deletion time:350.172000
+[Tue Jun 18 18:00:52 2024]  --------------End--------------
+[Tue Jun 18 18:00:52 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:52 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 18:00:52 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:00:52 2024]  Average insert time:223.106000
+[Tue Jun 18 18:00:52 2024]  Average search time:162.625000
+[Tue Jun 18 18:00:53 2024]  Average deletion time:281.821000
+[Tue Jun 18 18:00:53 2024]  --------------End--------------
+[Tue Jun 18 18:00:53 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:00:53 2024]  --------------Data set size: 100000000--------------
+[Tue Jun 18 18:00:53 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:00:54 2024]  Average insert time:16.407310
+[Tue Jun 18 18:00:56 2024]  Average search time:12.081840
+[Tue Jun 18 18:01:28 2024]  Average deletion time:325.493000
+[Tue Jun 18 18:01:28 2024]  --------------End--------------
+[Tue Jun 18 18:01:28 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:01:28 2024]  --------------Data set size: 100000000--------------
+[Tue Jun 18 18:01:28 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:02:18 2024]  Average insert time:497.358280
+[Tue Jun 18 18:02:42 2024]  Average search time:243.252010
+[Tue Jun 18 18:03:25 2024]  Average deletion time:425.399050
+[Tue Jun 18 18:03:25 2024]  --------------End--------------
+[Tue Jun 18 18:03:25 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:03:25 2024]  --------------Data set size: 100000000--------------
+[Tue Jun 18 18:03:25 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:03:52 2024]  Average insert time:270.953780
+[Tue Jun 18 18:04:11 2024]  Average search time:191.114460
+[Tue Jun 18 18:04:47 2024]  Average deletion time:358.020850
+[Tue Jun 18 18:04:47 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 18:09:49 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:100.000000
+[Tue Jun 18 18:09:49 2024]  Average search time:20.000000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:90.000000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 18:09:49 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:310.000000
+[Tue Jun 18 18:09:49 2024]  Average search time:90.000000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:150.000000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 18:09:49 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:150.000000
+[Tue Jun 18 18:09:49 2024]  Average search time:80.000000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:170.000000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 18:09:49 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:27.200000
+[Tue Jun 18 18:09:49 2024]  Average search time:20.900000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:167.300000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 18:09:49 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:267.500000
+[Tue Jun 18 18:09:49 2024]  Average search time:140.600000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:224.000000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 18:09:49 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:151.700000
+[Tue Jun 18 18:09:49 2024]  Average search time:107.200000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:226.200000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 18:09:49 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:19.199000
+[Tue Jun 18 18:09:49 2024]  Average search time:12.480000
+[Tue Jun 18 18:09:49 2024]  Average deletion time:236.194000
+[Tue Jun 18 18:09:49 2024]  --------------End--------------
+[Tue Jun 18 18:09:49 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:49 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 18:09:49 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:09:49 2024]  Average insert time:365.676000
+[Tue Jun 18 18:09:49 2024]  Average search time:210.826000
+[Tue Jun 18 18:09:50 2024]  Average deletion time:337.985000
+[Tue Jun 18 18:09:50 2024]  --------------End--------------
+[Tue Jun 18 18:09:50 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:50 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 18:09:50 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:09:50 2024]  Average insert time:217.239000
+[Tue Jun 18 18:09:50 2024]  Average search time:160.092000
+[Tue Jun 18 18:09:50 2024]  Average deletion time:314.813000
+[Tue Jun 18 18:09:50 2024]  --------------End--------------
+[Tue Jun 18 18:09:50 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:09:50 2024]  --------------Data set size: 100000000--------------
+[Tue Jun 18 18:09:50 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 18:09:52 2024]  Average insert time:15.756140
+[Tue Jun 18 18:09:53 2024]  Average search time:12.352970
+[Tue Jun 18 18:10:26 2024]  Average deletion time:324.249150
+[Tue Jun 18 18:10:26 2024]  --------------End--------------
+[Tue Jun 18 18:10:26 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:10:26 2024]  --------------Data set size: 100000000--------------
+[Tue Jun 18 18:10:26 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 18:11:12 2024]  Average insert time:462.905210
+[Tue Jun 18 18:11:36 2024]  Average search time:243.889040
+[Tue Jun 18 18:12:19 2024]  Average deletion time:426.227390
+[Tue Jun 18 18:12:19 2024]  --------------End--------------
+[Tue Jun 18 18:12:19 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 18:12:19 2024]  --------------Data set size: 100000000--------------
+[Tue Jun 18 18:12:19 2024]  --------------B+-Tree--------------
+[Tue Jun 18 18:12:46 2024]  Average insert time:268.686690
+[Tue Jun 18 18:13:05 2024]  Average search time:190.152860
+[Tue Jun 18 18:13:43 2024]  Average deletion time:384.350230
+[Tue Jun 18 18:13:43 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 21:06:28 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:1500.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:70.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:1090.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 21:06:28 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:270.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:120.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:230.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 21:06:28 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:230.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:120.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:230.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 21:06:28 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:1680.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:80.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:860.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 21:06:28 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:370.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:160.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:280.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 21:06:28 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:220.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:130.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:220.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 21:06:28 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:2590.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:110.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:920.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 21:06:28 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:350.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:200.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:320.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 21:06:28 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:06:28 2024]  Average insert time:260.000000
+[Tue Jun 18 21:06:28 2024]  Average search time:180.000000
+[Tue Jun 18 21:06:28 2024]  Average deletion time:250.000000
+[Tue Jun 18 21:06:28 2024]  --------------End--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:28 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 21:06:28 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:06:29 2024]  Average insert time:3990.000000
+[Tue Jun 18 21:06:29 2024]  Average search time:490.000000
+[Tue Jun 18 21:06:29 2024]  Average deletion time:2400.000000
+[Tue Jun 18 21:06:29 2024]  --------------End--------------
+[Tue Jun 18 21:06:29 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:29 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 21:06:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:06:29 2024]  Average insert time:890.000000
+[Tue Jun 18 21:06:29 2024]  Average search time:250.000000
+[Tue Jun 18 21:06:29 2024]  Average deletion time:380.000000
+[Tue Jun 18 21:06:29 2024]  --------------End--------------
+[Tue Jun 18 21:06:29 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:29 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 21:06:29 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:06:29 2024]  Average insert time:340.000000
+[Tue Jun 18 21:06:29 2024]  Average search time:230.000000
+[Tue Jun 18 21:06:29 2024]  Average deletion time:310.000000
+[Tue Jun 18 21:06:29 2024]  --------------End--------------
+[Tue Jun 18 21:06:29 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:29 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 21:06:29 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:06:31 2024]  Average insert time:3070.000000
+[Tue Jun 18 21:06:31 2024]  Average search time:280.000000
+[Tue Jun 18 21:06:31 2024]  Average deletion time:1060.000000
+[Tue Jun 18 21:06:31 2024]  --------------End--------------
+[Tue Jun 18 21:06:31 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:31 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 21:06:31 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:06:32 2024]  Average insert time:1110.000000
+[Tue Jun 18 21:06:32 2024]  Average search time:270.000000
+[Tue Jun 18 21:06:32 2024]  Average deletion time:400.000000
+[Tue Jun 18 21:06:32 2024]  --------------End--------------
+[Tue Jun 18 21:06:32 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:32 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 21:06:32 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:06:33 2024]  Average insert time:460.000000
+[Tue Jun 18 21:06:33 2024]  Average search time:250.000000
+[Tue Jun 18 21:06:33 2024]  Average deletion time:370.000000
+[Tue Jun 18 21:06:33 2024]  --------------End--------------
+[Tue Jun 18 21:06:33 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:06:33 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 21:06:33 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:07:01 2024]  Average insert time:2190.000000
+[Tue Jun 18 21:07:01 2024]  Average search time:100.000000
+[Tue Jun 18 21:07:01 2024]  Average deletion time:750.000000
+[Tue Jun 18 21:07:01 2024]  --------------End--------------
+[Tue Jun 18 21:07:01 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:07:01 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 21:07:01 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:07:17 2024]  Average insert time:1740.000000
+[Tue Jun 18 21:07:17 2024]  Average search time:350.000000
+[Tue Jun 18 21:07:17 2024]  Average deletion time:470.000000
+[Tue Jun 18 21:07:17 2024]  --------------End--------------
+[Tue Jun 18 21:07:19 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 21:07:19 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 21:07:19 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:07:27 2024]  Average insert time:700.000000
+[Tue Jun 18 21:07:27 2024]  Average search time:290.000000
+[Tue Jun 18 21:07:27 2024]  Average deletion time:400.000000
+[Tue Jun 18 21:07:27 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 21:50:38 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:100.000000
+[Tue Jun 18 21:50:38 2024]  Average search time:20.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:90.000000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 21:50:38 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:350.000000
+[Tue Jun 18 21:50:38 2024]  Average search time:100.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:160.000000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 21:50:38 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:140.000000
+[Tue Jun 18 21:50:38 2024]  Average search time:80.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:170.000000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 21:50:38 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:19.000000
+[Tue Jun 18 21:50:38 2024]  Average search time:13.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:132.000000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 21:50:38 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:266.000000
+[Tue Jun 18 21:50:38 2024]  Average search time:120.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:178.000000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 21:50:38 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:134.000000
+[Tue Jun 18 21:50:38 2024]  Average search time:99.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:185.000000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 21:50:38 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:29.100000
+[Tue Jun 18 21:50:38 2024]  Average search time:22.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:146.100000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 21:50:38 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:280.700000
+[Tue Jun 18 21:50:38 2024]  Average search time:143.000000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:219.500000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 21:50:38 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:159.400000
+[Tue Jun 18 21:50:38 2024]  Average search time:116.600000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:220.600000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 21:50:38 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:15.560000
+[Tue Jun 18 21:50:38 2024]  Average search time:12.080000
+[Tue Jun 18 21:50:38 2024]  Average deletion time:249.420000
+[Tue Jun 18 21:50:38 2024]  --------------End--------------
+[Tue Jun 18 21:50:38 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:38 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 21:50:38 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:50:38 2024]  Average insert time:347.670000
+[Tue Jun 18 21:50:38 2024]  Average search time:195.450000
+[Tue Jun 18 21:50:39 2024]  Average deletion time:312.300000
+[Tue Jun 18 21:50:39 2024]  --------------End--------------
+[Tue Jun 18 21:50:39 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:39 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 21:50:39 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:50:39 2024]  Average insert time:190.190000
+[Tue Jun 18 21:50:39 2024]  Average search time:145.050000
+[Tue Jun 18 21:50:39 2024]  Average deletion time:267.690000
+[Tue Jun 18 21:50:39 2024]  --------------End--------------
+[Tue Jun 18 21:50:39 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:39 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 21:50:39 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:50:39 2024]  Average insert time:16.676000
+[Tue Jun 18 21:50:39 2024]  Average search time:15.195000
+[Tue Jun 18 21:50:39 2024]  Average deletion time:237.359000
+[Tue Jun 18 21:50:39 2024]  --------------End--------------
+[Tue Jun 18 21:50:39 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:39 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 21:50:39 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:50:39 2024]  Average insert time:392.258000
+[Tue Jun 18 21:50:39 2024]  Average search time:214.847000
+[Tue Jun 18 21:50:40 2024]  Average deletion time:359.563000
+[Tue Jun 18 21:50:40 2024]  --------------End--------------
+[Tue Jun 18 21:50:40 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:40 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 21:50:40 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:50:40 2024]  Average insert time:225.127000
+[Tue Jun 18 21:50:40 2024]  Average search time:167.964000
+[Tue Jun 18 21:50:41 2024]  Average deletion time:313.402000
+[Tue Jun 18 21:50:41 2024]  --------------End--------------
+[Tue Jun 18 21:50:41 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:41 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 21:50:41 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 21:50:41 2024]  Average insert time:16.461600
+[Tue Jun 18 21:50:41 2024]  Average search time:12.645700
+[Tue Jun 18 21:50:44 2024]  Average deletion time:291.504200
+[Tue Jun 18 21:50:44 2024]  --------------End--------------
+[Tue Jun 18 21:50:44 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:44 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 21:50:44 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 21:50:48 2024]  Average insert time:438.895500
+[Tue Jun 18 21:50:50 2024]  Average search time:231.007900
+[Tue Jun 18 21:50:54 2024]  Average deletion time:397.285700
+[Tue Jun 18 21:50:54 2024]  --------------End--------------
+[Tue Jun 18 21:50:54 2024]  --------------dataIntensityTest--------------
+[Tue Jun 18 21:50:54 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 21:50:54 2024]  --------------B+-Tree--------------
+[Tue Jun 18 21:50:57 2024]  Average insert time:244.295500
+[Tue Jun 18 21:50:59 2024]  Average search time:183.356500
+[Tue Jun 18 21:51:02 2024]  Average deletion time:339.610300
+[Tue Jun 18 21:51:02 2024]  --------------End--------------
+[Tue Jun 18 22:00:07 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:00:07 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 22:00:07 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 22:00:34 2024]  Average insert time:2200.000000
+[Tue Jun 18 22:00:34 2024]  Average search time:250.000000
+[Tue Jun 18 22:00:34 2024]  Average deletion time:920.000000
+[Tue Jun 18 22:00:34 2024]  --------------End--------------
+[Tue Jun 18 22:00:34 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:00:34 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 22:00:34 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 22:00:51 2024]  Average insert time:1740.000000
+[Tue Jun 18 22:00:51 2024]  Average search time:330.000000
+[Tue Jun 18 22:00:51 2024]  Average deletion time:510.000000
+[Tue Jun 18 22:00:51 2024]  --------------End--------------
+[Tue Jun 18 22:00:53 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:00:53 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 22:00:53 2024]  --------------B+-Tree--------------
+[Tue Jun 18 22:01:00 2024]  Average insert time:720.000000
+[Tue Jun 18 22:01:00 2024]  Average search time:310.000000
+[Tue Jun 18 22:01:00 2024]  Average deletion time:450.000000
+[Tue Jun 18 22:01:00 2024]  --------------End--------------
+[Tue Jun 18 22:01:46 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:01:46 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 22:01:46 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 22:02:13 2024]  Average insert time:2340.000000
+[Tue Jun 18 22:02:13 2024]  Average search time:140.000000
+[Tue Jun 18 22:02:13 2024]  Average deletion time:880.000000
+[Tue Jun 18 22:02:13 2024]  --------------End--------------
+[Tue Jun 18 22:02:13 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:02:13 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 22:02:13 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 22:02:31 2024]  Average insert time:1790.000000
+[Tue Jun 18 22:02:31 2024]  Average search time:330.000000
+[Tue Jun 18 22:02:31 2024]  Average deletion time:480.000000
+[Tue Jun 18 22:02:31 2024]  --------------End--------------
+[Tue Jun 18 22:02:33 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:02:33 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 22:02:33 2024]  --------------B+-Tree--------------
+[Tue Jun 18 22:02:41 2024]  Average insert time:760.000000
+[Tue Jun 18 22:02:41 2024]  Average search time:310.000000
+[Tue Jun 18 22:02:41 2024]  Average deletion time:460.000000
+[Tue Jun 18 22:02:41 2024]  --------------End--------------
+[Tue Jun 18 22:02:51 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:02:51 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 22:02:51 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 22:02:51 2024]  Average insert time:2010.000000
+[Tue Jun 18 22:02:51 2024]  Average search time:100.000000
+[Tue Jun 18 22:02:51 2024]  Average deletion time:840.000000
+[Tue Jun 18 22:02:51 2024]  --------------End--------------
+[Tue Jun 18 22:02:51 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:02:51 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 22:02:51 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 22:02:51 2024]  Average insert time:690.000000
+[Tue Jun 18 22:02:51 2024]  Average search time:250.000000
+[Tue Jun 18 22:02:51 2024]  Average deletion time:390.000000
+[Tue Jun 18 22:02:51 2024]  --------------End--------------
+[Tue Jun 18 22:02:51 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:02:51 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 22:02:51 2024]  --------------B+-Tree--------------
+[Tue Jun 18 22:02:51 2024]  Average insert time:350.000000
+[Tue Jun 18 22:02:51 2024]  Average search time:230.000000
+[Tue Jun 18 22:02:51 2024]  Average deletion time:310.000000
+[Tue Jun 18 22:02:51 2024]  --------------End--------------
+[Tue Jun 18 22:04:19 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:04:19 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 22:04:19 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 22:04:21 2024]  Average insert time:2610.000000
+[Tue Jun 18 22:04:21 2024]  Average search time:90.000000
+[Tue Jun 18 22:04:21 2024]  Average deletion time:800.000000
+[Tue Jun 18 22:04:21 2024]  --------------End--------------
+[Tue Jun 18 22:04:21 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:04:21 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 22:04:21 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 22:04:22 2024]  Average insert time:1230.000000
+[Tue Jun 18 22:04:22 2024]  Average search time:290.000000
+[Tue Jun 18 22:04:22 2024]  Average deletion time:470.000000
+[Tue Jun 18 22:04:22 2024]  --------------End--------------
+[Tue Jun 18 22:04:22 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:04:22 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 22:04:22 2024]  --------------B+-Tree--------------
+[Tue Jun 18 22:04:23 2024]  Average insert time:520.000000
+[Tue Jun 18 22:04:23 2024]  Average search time:270.000000
+[Tue Jun 18 22:04:23 2024]  Average deletion time:360.000000
+[Tue Jun 18 22:04:23 2024]  --------------End--------------
+[Tue Jun 18 22:04:42 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:04:42 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 22:04:42 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 22:04:45 2024]  Average insert time:3490.000000
+[Tue Jun 18 22:04:45 2024]  Average search time:130.000000
+[Tue Jun 18 22:04:45 2024]  Average deletion time:920.000000
+[Tue Jun 18 22:04:45 2024]  --------------End--------------
+[Tue Jun 18 22:04:45 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:04:45 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 22:04:45 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 22:04:46 2024]  Average insert time:1370.000000
+[Tue Jun 18 22:04:46 2024]  Average search time:280.000000
+[Tue Jun 18 22:04:46 2024]  Average deletion time:460.000000
+[Tue Jun 18 22:04:46 2024]  --------------End--------------
+[Tue Jun 18 22:04:46 2024]  --------------Data Sparse Test--------------
+[Tue Jun 18 22:04:46 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 22:04:46 2024]  --------------B+-Tree--------------
+[Tue Jun 18 22:04:46 2024]  Average insert time:500.000000
+[Tue Jun 18 22:04:46 2024]  Average search time:270.000000
+[Tue Jun 18 22:04:46 2024]  Average deletion time:370.000000
+[Tue Jun 18 22:04:46 2024]  --------------End--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:17:29 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:2000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:17:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:6000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:17:29 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:1000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:7000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:21000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 23:17:29 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:27000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:27000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:138000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 23:17:29 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:143000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:930000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:2747000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 23:17:29 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:1859000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:3515000.000000
+[Tue Jun 18 23:17:29 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:29 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 23:17:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:17:29 2024]  Iteration time:29742000.000000
+[Tue Jun 18 23:17:30 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:30 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 23:17:30 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:17:30 2024]  Iteration time:22343000.000000
+[Tue Jun 18 23:17:30 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:30 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 23:17:30 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:17:30 2024]  Iteration time:35529000.000000
+[Tue Jun 18 23:17:30 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:30 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 23:17:30 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:17:36 2024]  Iteration time:283714000.000000
+[Tue Jun 18 23:17:36 2024]  --------------Data Intensity Iteration Test--------------
+[Tue Jun 18 23:17:36 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 23:17:36 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:17:39 2024]  Iteration time:209369000.000000
+[Tue Jun 18 23:30:44 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:30:44 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:30:44 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:30:44 2024]  Iteration time:34000.000000
+[Tue Jun 18 23:30:44 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:30:44 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:30:44 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:30:44 2024]  Iteration time:2000.000000
+[Tue Jun 18 23:30:44 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:30:44 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:30:44 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:30:44 2024]  Iteration time:1000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:32:34 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:5000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:32:34 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:2000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 100--------------
+[Tue Jun 18 23:32:34 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:1000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:40000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:20000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 1000--------------
+[Tue Jun 18 23:32:34 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:14000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:1244000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:256000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 10000--------------
+[Tue Jun 18 23:32:34 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:142000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:14189000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:2570000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 100000--------------
+[Tue Jun 18 23:32:34 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:32:34 2024]  Iteration time:1422000.000000
+[Tue Jun 18 23:32:34 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:34 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 23:32:34 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:32:37 2024]  Iteration time:178513000.000000
+[Tue Jun 18 23:32:37 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:37 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 23:32:37 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:32:38 2024]  Iteration time:117019000.000000
+[Tue Jun 18 23:32:38 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:38 2024]  --------------Data set size: 1000000--------------
+[Tue Jun 18 23:32:38 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:32:39 2024]  Iteration time:24030000.000000
+[Tue Jun 18 23:32:39 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:32:39 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 23:32:39 2024]  --------------Linked Array Tree--------------
+[Tue Jun 18 23:33:11 2024]  Iteration time:2338237000.000000
+[Tue Jun 18 23:33:11 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:33:11 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 23:33:11 2024]  --------------Red Black Tree--------------
+[Tue Jun 18 23:33:30 2024]  Iteration time:1304562000.000000
+[Tue Jun 18 23:33:32 2024]  --------------Data Sparse Iteration Test--------------
+[Tue Jun 18 23:33:32 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 18 23:33:32 2024]  --------------B+-Tree--------------
+[Tue Jun 18 23:33:43 2024]  Iteration time:262130000.000000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:39:35 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:1360.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:70.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:960.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:39:35 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:270.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:120.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:220.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:39:35 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:190.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:100.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:230.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:39:35 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:1190.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:70.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:520.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:1530.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:80.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:830.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:350.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:150.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:270.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:39:35 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:200.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:140.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:230.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:1130.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:70.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:370.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:2230.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:100.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:870.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:350.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:200.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:330.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:39:35 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:260.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:180.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:280.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:1270.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:90.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:420.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:2080.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:100.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:830.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:550.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:240.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:380.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:39:35 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:410.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:210.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:310.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:39:35 2024]  Average insert time:1180.000000
+[Wed Jun 19 17:39:35 2024]  Average search time:80.000000
+[Wed Jun 19 17:39:35 2024]  Average deletion time:390.000000
+[Wed Jun 19 17:39:35 2024]  --------------End--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:35 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:39:35 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:39:38 2024]  Average insert time:3230.000000
+[Wed Jun 19 17:39:38 2024]  Average search time:190.000000
+[Wed Jun 19 17:39:38 2024]  Average deletion time:1010.000000
+[Wed Jun 19 17:39:38 2024]  --------------End--------------
+[Wed Jun 19 17:39:38 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:38 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:39:38 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:39:39 2024]  Average insert time:1050.000000
+[Wed Jun 19 17:39:39 2024]  Average search time:290.000000
+[Wed Jun 19 17:39:39 2024]  Average deletion time:430.000000
+[Wed Jun 19 17:39:39 2024]  --------------End--------------
+[Wed Jun 19 17:39:39 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:39 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:39:39 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:39:40 2024]  Average insert time:620.000000
+[Wed Jun 19 17:39:40 2024]  Average search time:270.000000
+[Wed Jun 19 17:39:40 2024]  Average deletion time:410.000000
+[Wed Jun 19 17:39:40 2024]  --------------End--------------
+[Wed Jun 19 17:39:40 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:40 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:39:40 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:39:41 2024]  Average insert time:1630.000000
+[Wed Jun 19 17:39:41 2024]  Average search time:90.000000
+[Wed Jun 19 17:39:41 2024]  Average deletion time:430.000000
+[Wed Jun 19 17:39:41 2024]  --------------End--------------
+[Wed Jun 19 17:39:41 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:39:41 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:39:41 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:40:14 2024]  Average insert time:4510.000000
+[Wed Jun 19 17:40:14 2024]  Average search time:230.000000
+[Wed Jun 19 17:40:14 2024]  Average deletion time:890.000000
+[Wed Jun 19 17:40:14 2024]  --------------End--------------
+[Wed Jun 19 17:40:14 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:40:14 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:40:14 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:40:33 2024]  Average insert time:2080.000000
+[Wed Jun 19 17:40:33 2024]  Average search time:380.000000
+[Wed Jun 19 17:40:33 2024]  Average deletion time:540.000000
+[Wed Jun 19 17:40:33 2024]  --------------End--------------
+[Wed Jun 19 17:40:35 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:40:35 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:40:35 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:40:43 2024]  Average insert time:690.000000
+[Wed Jun 19 17:40:43 2024]  Average search time:300.000000
+[Wed Jun 19 17:40:43 2024]  Average deletion time:440.000000
+[Wed Jun 19 17:40:43 2024]  --------------End--------------
+[Wed Jun 19 17:40:43 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:40:43 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:40:43 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Average insert time:1920.000000
+[Wed Jun 19 17:41:04 2024]  Average search time:700.000000
+[Wed Jun 19 17:41:04 2024]  Average deletion time:960.000000
+[Wed Jun 19 17:41:04 2024]  --------------End--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:04 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:1000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:04 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:3000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:04 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:1000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:04 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:2000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:4000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:16000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:04 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:8000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:11000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:62000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:287000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:04 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:197000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:101000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:488000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:3000000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:04 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:1924000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:1233000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:04 2024]  Iteration time:3729000.000000
+[Wed Jun 19 17:41:04 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:04 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:04 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:05 2024]  Iteration time:29900000.000000
+[Wed Jun 19 17:41:05 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:05 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:05 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:05 2024]  Iteration time:19933000.000000
+[Wed Jun 19 17:41:05 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:05 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:05 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:05 2024]  Iteration time:11554000.000000
+[Wed Jun 19 17:41:05 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:05 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:41:05 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:05 2024]  Iteration time:35331000.000000
+[Wed Jun 19 17:41:05 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:05 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:41:05 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:11 2024]  Iteration time:295617000.000000
+[Wed Jun 19 17:41:12 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:12 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:41:12 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:194089000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:118103000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:15 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:5000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:15 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:9000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:15 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:1000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:41:15 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:42000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:44000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:22000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:15 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:13000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:421000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:1394000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:258000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:15 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:141000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:15 2024]  Iteration time:10945000.000000
+[Wed Jun 19 17:41:15 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:15 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:15 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:16 2024]  Iteration time:14606000.000000
+[Wed Jun 19 17:41:16 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:16 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:16 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:16 2024]  Iteration time:7094000.000000
+[Wed Jun 19 17:41:16 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:16 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:16 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:16 2024]  Iteration time:1522000.000000
+[Wed Jun 19 17:41:16 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:16 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:41:16 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:16 2024]  Iteration time:115890000.000000
+[Wed Jun 19 17:41:16 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:16 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:16 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:41:20 2024]  Iteration time:209287000.000000
+[Wed Jun 19 17:41:20 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:20 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:20 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:41:22 2024]  Iteration time:119174000.000000
+[Wed Jun 19 17:41:22 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:22 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:22 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:41:22 2024]  Iteration time:22114000.000000
+[Wed Jun 19 17:41:22 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 17:41:22 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:41:22 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:41:37 2024]  Iteration time:1220126000.000000
+
+
+
+
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:52:46 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1520.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:70.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:990.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:52:46 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:320.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:140.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:290.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:52:46 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:190.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:110.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:230.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:52:46 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1110.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:80.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:410.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1970.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:80.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:890.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:440.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:180.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:330.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:52:46 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:210.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:140.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:220.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1360.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:80.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:400.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:2650.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:100.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:900.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:400.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:240.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:400.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:52:46 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:270.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:190.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:280.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1410.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:80.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:400.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1870.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:90.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:770.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:510.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:250.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:420.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:52:46 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:300.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:220.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:310.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:52:46 2024]  Average insert time:1100.000000
+[Wed Jun 19 17:52:46 2024]  Average search time:80.000000
+[Wed Jun 19 17:52:46 2024]  Average deletion time:390.000000
+[Wed Jun 19 17:52:46 2024]  --------------End--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:46 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:52:46 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:52:49 2024]  Average insert time:2450.000000
+[Wed Jun 19 17:52:49 2024]  Average search time:90.000000
+[Wed Jun 19 17:52:49 2024]  Average deletion time:810.000000
+[Wed Jun 19 17:52:49 2024]  --------------End--------------
+[Wed Jun 19 17:52:49 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:49 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:52:49 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:52:50 2024]  Average insert time:1150.000000
+[Wed Jun 19 17:52:50 2024]  Average search time:310.000000
+[Wed Jun 19 17:52:50 2024]  Average deletion time:510.000000
+[Wed Jun 19 17:52:50 2024]  --------------End--------------
+[Wed Jun 19 17:52:50 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:50 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:52:50 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:52:50 2024]  Average insert time:480.000000
+[Wed Jun 19 17:52:50 2024]  Average search time:270.000000
+[Wed Jun 19 17:52:50 2024]  Average deletion time:370.000000
+[Wed Jun 19 17:52:50 2024]  --------------End--------------
+[Wed Jun 19 17:52:50 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:50 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:52:50 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:52:51 2024]  Average insert time:640.000000
+[Wed Jun 19 17:52:51 2024]  Average search time:90.000000
+[Wed Jun 19 17:52:51 2024]  Average deletion time:390.000000
+[Wed Jun 19 17:52:51 2024]  --------------End--------------
+[Wed Jun 19 17:52:51 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:52:51 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:52:51 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:53:15 2024]  Average insert time:2620.000000
+[Wed Jun 19 17:53:15 2024]  Average search time:120.000000
+[Wed Jun 19 17:53:15 2024]  Average deletion time:760.000000
+[Wed Jun 19 17:53:15 2024]  --------------End--------------
+[Wed Jun 19 17:53:15 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:53:15 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:53:15 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:53:31 2024]  Average insert time:1680.000000
+[Wed Jun 19 17:53:31 2024]  Average search time:370.000000
+[Wed Jun 19 17:53:31 2024]  Average deletion time:560.000000
+[Wed Jun 19 17:53:31 2024]  --------------End--------------
+[Wed Jun 19 17:53:33 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:53:33 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:53:33 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:53:40 2024]  Average insert time:730.000000
+[Wed Jun 19 17:53:40 2024]  Average search time:320.000000
+[Wed Jun 19 17:53:40 2024]  Average deletion time:470.000000
+[Wed Jun 19 17:53:40 2024]  --------------End--------------
+[Wed Jun 19 17:53:40 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:53:40 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:53:40 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:53:56 2024]  Average insert time:1570.000000
+[Wed Jun 19 17:53:56 2024]  Average search time:400.000000
+[Wed Jun 19 17:53:56 2024]  Average deletion time:830.000000
+[Wed Jun 19 17:53:56 2024]  --------------End--------------
+[Wed Jun 19 17:57:46 2024]  --------------Data Sparse Test--------------
+[Wed Jun 19 17:57:46 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:57:46 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:58:08 2024]  Average insert time:980.000000
+[Wed Jun 19 17:58:08 2024]  Average search time:90.000000
+[Wed Jun 19 17:58:08 2024]  Average deletion time:380.000000
+[Wed Jun 19 17:58:08 2024]  --------------End--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:59:41 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:1000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:59:41 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:4000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:59:41 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:2000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 17:59:41 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:2000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:5000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:12000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:59:41 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:20000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:10000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:63000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:145000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:59:41 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:203000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:102000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:308000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:2858000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:59:41 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:1578000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:979000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:59:41 2024]  Iteration time:3564000.000000
+[Wed Jun 19 17:59:41 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:41 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:59:41 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:59:42 2024]  Iteration time:26642000.000000
+[Wed Jun 19 17:59:42 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:42 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:59:42 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:59:42 2024]  Iteration time:22141000.000000
+[Wed Jun 19 17:59:42 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:42 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 17:59:42 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:59:42 2024]  Iteration time:10204000.000000
+[Wed Jun 19 17:59:42 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:42 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:59:42 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 17:59:42 2024]  Iteration time:30721000.000000
+[Wed Jun 19 17:59:42 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:42 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:59:42 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 17:59:48 2024]  Iteration time:259377000.000000
+[Wed Jun 19 17:59:48 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:48 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:59:48 2024]  --------------B+-Tree--------------
+[Wed Jun 19 17:59:51 2024]  Iteration time:221357000.000000
+[Wed Jun 19 17:59:51 2024]  --------------Data Intensity Iteration Test--------------
+[Wed Jun 19 17:59:51 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 17:59:51 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 17:59:52 2024]  Iteration time:111088000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 18:06:38 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:4000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 18:06:38 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:2000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 18:06:38 2024]  --------------B+-Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:2000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 18:06:38 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:44000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:41000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:20000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 18:06:38 2024]  --------------B+-Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:13000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:436000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:1010000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:245000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 18:06:38 2024]  --------------B+-Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:141000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:8156000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:13820000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:2602000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 18:06:38 2024]  --------------B+-Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:1377000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 18:06:38 2024]  Iteration time:109730000.000000
+[Wed Jun 19 18:06:38 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:38 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 18:06:38 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 18:06:41 2024]  Iteration time:168167000.000000
+[Wed Jun 19 18:06:41 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:41 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 18:06:41 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 18:06:42 2024]  Iteration time:104660000.000000
+[Wed Jun 19 18:06:42 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:42 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 18:06:42 2024]  --------------B+-Tree--------------
+[Wed Jun 19 18:06:42 2024]  Iteration time:20033000.000000
+[Wed Jun 19 18:06:42 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:42 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 18:06:42 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 18:06:45 2024]  Iteration time:1167739000.000000
+[Wed Jun 19 18:06:45 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:06:45 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 18:06:45 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 18:07:27 2024]  Iteration time:2292423000.000000
+[Wed Jun 19 18:07:27 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:07:27 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 18:07:27 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 18:07:45 2024]  Iteration time:1230073000.000000
+[Wed Jun 19 18:07:47 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:07:47 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 18:07:47 2024]  --------------B+-Tree--------------
+[Wed Jun 19 18:07:55 2024]  Iteration time:234800000.000000
+[Wed Jun 19 18:07:55 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 18:07:55 2024]  --------------Data set size: 10000000--------------
+[Wed Jun 19 18:07:55 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 18:08:29 2024]  Iteration time:11807867000.000000
+[Wed Jun 19 21:29:02 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:29:02 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:29:02 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:29:02 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:29:02 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:29:02 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 21:31:32 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:4000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 21:31:32 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:2000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 21:31:32 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:1000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100--------------
+[Wed Jun 19 21:31:32 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:45000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:51000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:21000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 21:31:32 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:13000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 1000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:444000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:906000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:223000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 21:31:32 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:146000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 10000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:8770000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:13943000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:2739000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:31:32 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:31:32 2024]  Iteration time:1362000.000000
+[Wed Jun 19 21:31:32 2024]  --------------Data Sparse Iteration Test--------------
+[Wed Jun 19 21:31:32 2024]  --------------Data set size: 100000--------------
+[Wed Jun 19 21:31:32 2024]  --------------Unlinked Array Tree--------------
+[Wed Jun 19 21:31:33 2024]  Iteration time:111362000.000000
+[Wed Jun 19 21:32:24 2024]  --------------Data Sparse Memory Test--------------
+[Wed Jun 19 21:32:24 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:32:28 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:32:28 2024]  Increased memeory (KB):0
+[Wed Jun 19 21:32:28 2024]  --------------Data Sparse Memory Test--------------
+[Wed Jun 19 21:32:28 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:32:29 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:32:29 2024]  Increased memeory (KB):0
+[Wed Jun 19 21:32:29 2024]  --------------Data Sparse Memory Test--------------
+[Wed Jun 19 21:32:29 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:32:30 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:32:30 2024]  Increased memeory (KB):0
+[Wed Jun 19 21:34:31 2024]  --------------Data Sparse Memory Test--------------
+[Wed Jun 19 21:34:31 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:34:34 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:34:34 2024]  Increased memeory (KB):1506112
+[Wed Jun 19 21:34:34 2024]  --------------Data Sparse Memory Test--------------
+[Wed Jun 19 21:34:34 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:34:35 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:34:35 2024]  Increased memeory (KB):62832
+[Wed Jun 19 21:34:35 2024]  --------------Data Sparse Memory Test--------------
+[Wed Jun 19 21:34:35 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:34:36 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:34:36 2024]  Increased memeory (KB):488
+[Wed Jun 19 21:42:22 2024]  --------------Data Intensity Memory Test--------------
+[Wed Jun 19 21:42:22 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:42:22 2024]  --------------Linked Array Tree--------------
+[Wed Jun 19 21:42:22 2024]  Increased memeory (KB):9648
+[Wed Jun 19 21:42:22 2024]  --------------Data Intensity Memory Test--------------
+[Wed Jun 19 21:42:22 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:42:22 2024]  --------------Red Black Tree--------------
+[Wed Jun 19 21:42:22 2024]  Increased memeory (KB):62812
+[Wed Jun 19 21:42:22 2024]  --------------Data Intensity Memory Test--------------
+[Wed Jun 19 21:42:22 2024]  --------------Data set size: 1000000--------------
+[Wed Jun 19 21:42:23 2024]  --------------B+-Tree--------------
+[Wed Jun 19 21:42:23 2024]  Increased memeory (KB):39664

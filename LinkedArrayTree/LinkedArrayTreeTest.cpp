@@ -5,8 +5,11 @@
 #include <unordered_set>
 #include <windows.h>
 #include <psapi.h>
+#include <map>
 #include "LinkedArrayTree.cpp"
-
+#include "SparseLinkedArrayTree.cpp"
+#include "RadixLinkedArrayTree.cpp"
+#include "UnlinkedArrayTree.cpp"
 template <class T>
 unordered_set<T> getRandom(T size)
 {
@@ -124,41 +127,29 @@ void TreeTest(unordered_set<T> set)
 }
 
 int main(){
-    // TreeTest<uint64_t>(getRandom<uint64_t>(100000000));
-    // the first test result is astonishing. Write in 6/14/2024, the time take for searching
-    // in 100 elements and 1000000000 elements are the same. Even the key is 64 bits, one search only takes 10-30 ns.
-    // The most performance devour part is the remainder calculation. Since I eliminated it, the result is in expection.
-
-    LinkedArrayTree<uint16_t,uint64_t> lat;
+    UnlinkedArrayTree<uint64_t,uint64_t> lat;
     lat.printStructureInfo();
-    cout<<(uint64_t)lat.size()<<endl;
-    lat.insert(1,1);
-    lat.insert(5,5);
-    lat.insert(266,266);
-    lat.insert(300,300);
-    lat.insert(600,600);
-    cout<<(uint64_t)lat.size()<<endl;
-    // lat.insert(900000000,900000000);
-    // lat.printPath(266);
-    // lat.printAllData();
-    // cout<<*lat.get(266);
-    lat.remove(266);
-    cout<<(uint64_t)lat.size()<<endl;
-    // lat.printPath(266);
-    // lat.printPath(1);
+    int size =19;
+    uint64_t i;
+    random_device rd;
+    // while(lat.size()<size){
+    //         i= ((uint64_t)rd() << 32) | rd();
+    //         lat.insert(i,i);
+    //     }
+    for(int i=1;i<100;i=i+7){
+        lat.insert(i,i);
+    }
+    cout<< lat.size();
+    lat.printAllData();
+    cout<<"============="<<endl;
 
-    // uint64_t i = 2000;
-    // uint8_t j= 100;
-    // uint8_t* p = (uint8_t*)&i;
-    // cout<<(int)p[0]<<" ";
-    // cout<<(int)p[1]<<" ";
-    // cout<<(int)p[2]<<" ";
-    // cout<<(int)p[3]<<" ";
-    // cout<<(int)p[4]<<" ";
-    // cout<<(int)p[5]<<" ";
-    // cout<<(int)p[6]<<" ";
-    // cout<<(int)p[7]<<" ";
+    uint64_t* p;
+    p=lat.begin();
 
-    // cout<<endl;
+    while(p !=nullptr){
+        cout<< *p<<" ";
+        p=lat.nextValue();
+    }
+
 
 }
