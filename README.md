@@ -9,5 +9,5 @@ To be released
 To be released.
 
 # Open-source Code Reference:
-    Red-Black Tree: https://www.cnblogs.com/alantu2018/p/8462017.html
-    B Tree: https://www.cnblogs.com/yxsrt/p/12201655.html
+    Red-Black Tree: C++ STL map
+    B Tree: https://github.com/tlx/tlx
