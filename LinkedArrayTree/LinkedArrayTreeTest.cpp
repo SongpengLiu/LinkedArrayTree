@@ -127,29 +127,44 @@ void TreeTest(unordered_set<T> set)
 }
 
 int main(){
-    UnlinkedArrayTree<uint64_t,uint64_t> lat;
-    lat.printStructureInfo();
-    int size =19;
-    uint64_t i;
+    // UnlinkedArrayTree<uint64_t,uint64_t> lat;
+    // lat.printStructureInfo();
+    // int size =19;
+    // uint64_t i;
     random_device rd;
-    // while(lat.size()<size){
-    //         i= ((uint64_t)rd() << 32) | rd();
-    //         lat.insert(i,i);
+    // // while(lat.size()<size){
+    // //         i= ((uint64_t)rd() << 32) | rd();
+    // //         lat.insert(i,i);
+    // //     }
+    // for(int i=1;i<100;i=i+7){
+    //     lat.insert(i,i);
+    // }
+    // cout<< lat.size();
+    // lat.printAllData();
+    // cout<<"============="<<endl;
+
+    // uint64_t* p;
+    // p=lat.begin();
+
+    // while(p !=nullptr){
+    //     cout<< *p<<" ";
+    //     p=lat.nextValue();
+    // }
+
+    SparseLinkedArrayTree<uint8_t, uint64_t> lat;
+    uint8_t i;
+
+    // while (lat.size() < pow(2,8))
+    //     {
+    //         i = (uint8_t)rd();
+    //         lat.insert(i, i);
     //     }
-    for(int i=1;i<100;i=i+7){
-        lat.insert(i,i);
-    }
-    cout<< lat.size();
-    lat.printAllData();
-    cout<<"============="<<endl;
+    lat.insert(83,83);
+    lat.insert(124,124);
+    lat.insert(83,83);
+    lat.insert(124,124);
 
-    uint64_t* p;
-    p=lat.begin();
-
-    while(p !=nullptr){
-        cout<< *p<<" ";
-        p=lat.nextValue();
-    }
-
+        lat.printAllData();
+        cout<<lat.size();
 
 }

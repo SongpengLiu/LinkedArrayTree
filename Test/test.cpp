@@ -32,6 +32,7 @@ public:
     void dataSparseIteration(Algorithm type, u_int64 size);
     void dataSparseUnlinkedArrayTreeTest(u_int64 size);
     void dataSparseMemoryTest(Algorithm type, u_int64 size);
+    void dataSparseMemoryTest64(Algorithm type, u_int64 size);
     void dataIntensityMemoryTest(Algorithm type, u_int64 size);
 };
 
@@ -576,6 +577,79 @@ void Test::dataSparseMemoryTest(Algorithm type, u_int64 size)
         memoryBefore = pmc.WorkingSetSize / 1024;
     }
 
+    message = "Initial memeory (KB):" + to_string(memoryBefore);
+    TestLog::appendLog(message);
+
+    if (type == Algorithm::LAT)
+    {
+        message = "--------------Linked Array Tree--------------";
+        SparseLinkedArrayTree<uint16_t, uint64_t> lat;
+        while (lat.size() < size)
+        {
+            i = ((uint64_t)rd() << 32) | rd();
+            lat.insert((uint16_t)i, i);
+        }
+        if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+        {
+            memoryAfter = pmc.WorkingSetSize / 1024;
+        }
+    }
+    else if (type == Algorithm::RBT)
+    {
+        message = "--------------Red Black Tree--------------";
+        map<uint16_t, uint64_t> rbt;
+        while (rbt.size() < size)
+        {
+            i = ((uint64_t)rd() << 32) | rd();
+            rbt.insert(make_pair((uint16_t)i, i));
+        }
+        if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+        {
+            memoryAfter = pmc.WorkingSetSize / 1024;
+        }
+    }
+    else if (type == Algorithm::BT)
+    {
+        message = "--------------B+-Tree--------------";
+        tlx::btree_map<uint16_t, uint64_t> bt;
+        while (bt.size() < size)
+        {
+            i = ((uint64_t)rd() << 32) | rd();
+            bt.insert(make_pair((uint16_t)i, i));
+        }
+        if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+        {
+            memoryAfter = pmc.WorkingSetSize / 1024;
+        }
+    }
+    TestLog::appendLog(message);
+
+    message = "After memeory (KB):" + to_string(memoryAfter);
+    TestLog::appendLog(message);
+    message = "Increased memeory (KB):" + to_string(memoryAfter - memoryBefore);
+    TestLog::appendLog(message);
+}
+
+void Test::dataSparseMemoryTest64(Algorithm type, u_int64 size)
+{
+    string message = "--------------Data Sparse Memory Test--------------";
+    TestLog::appendLog(message);
+    message = "--------------Data set size: " + to_string(size) + "--------------";
+    TestLog::appendLog(message);
+
+    uint64_t i;
+    random_device rd;
+    PROCESS_MEMORY_COUNTERS pmc;
+    uint32_t memoryAfter;
+    uint32_t memoryBefore;
+    if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
+    {
+        memoryBefore = pmc.WorkingSetSize / 1024;
+    }
+
+    message = "Initial memeory (KB):" + to_string(memoryBefore);
+    TestLog::appendLog(message);
+
     if (type == Algorithm::LAT)
     {
         message = "--------------Linked Array Tree--------------";
@@ -618,7 +692,9 @@ void Test::dataSparseMemoryTest(Algorithm type, u_int64 size)
             memoryAfter = pmc.WorkingSetSize / 1024;
         }
     }
+    TestLog::appendLog(message);
 
+    message = "After memeory (KB):" + to_string(memoryAfter);
     TestLog::appendLog(message);
     message = "Increased memeory (KB):" + to_string(memoryAfter - memoryBefore);
     TestLog::appendLog(message);
@@ -644,10 +720,10 @@ void Test::dataIntensityMemoryTest(Algorithm type, u_int64 size)
     if (type == Algorithm::LAT)
     {
         message = "--------------Linked Array Tree--------------";
-        SparseLinkedArrayTree<uint64_t, uint64_t> lat;
+        SparseLinkedArrayTree<uint16_t, uint64_t> lat;
         for (uint64_t i = 0; i < size; i++)
         {
-            lat.insert(i, i);
+            lat.insert((uint16_t)i, i);
         }
         if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
         {
@@ -657,10 +733,10 @@ void Test::dataIntensityMemoryTest(Algorithm type, u_int64 size)
     else if (type == Algorithm::RBT)
     {
         message = "--------------Red Black Tree--------------";
-        map<uint64_t, uint64_t> rbt;
+        map<uint16_t, uint64_t> rbt;
         for (uint64_t i = 0; i < size; i++)
         {
-            rbt.insert(make_pair(i, i));
+            rbt.insert(make_pair((uint16_t)i, i));
         }
         if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
         {
@@ -670,11 +746,11 @@ void Test::dataIntensityMemoryTest(Algorithm type, u_int64 size)
     else if (type == Algorithm::BT)
     {
         message = "--------------B+-Tree--------------";
-        tlx::btree_map<uint64_t, uint64_t> bt;
+        tlx::btree_map<uint16_t, uint64_t> bt;
 
         for (uint64_t i = 0; i < size; i++)
         {
-            bt.insert(make_pair(i, i));
+            bt.insert(make_pair((uint16_t)i, i));
         }
         if (GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc)))
         {
@@ -694,7 +770,7 @@ int main()
     // // uint64_t n= ((uint64_t)rd() << 32) | rd();
     // uint64_t n=(uint64_t)rd();
     // cout<<std::bitset<64>(n);
-    Test test;
+    // Test test;
     // for(uint64_t i =100;i<=10000000;i=i*10){// data intensity test
     // test.dataIntensityTest(Algorithm::LAT,i);
     // test.dataIntensityTest(Algorithm::RBT,i);
@@ -733,25 +809,40 @@ int main()
     //     TestLog::writeLogToFile();
     // }
 
-    for (uint64_t i = 10000000; i <= 10000000; i = i * 10)
+
+    int p =1024;
+    p=p*5;
+    // for (uint64_t i = p; i <= p; i = i * 4)
     { // data sparse test
+        // Test test;
         // test.dataSparseMemoryTest(Algorithm::BT, i);
         // test.dataSparseMemoryTest(Algorithm::RBT, i);
-        test.dataSparseMemoryTest(Algorithm::LAT, i);
-
-
-        TestLog::printLog();
+        // test.dataSparseMemoryTest(Algorithm::LAT, i);
+        // TestLog::printLog();
         // TestLog::writeLogToFile();
+        // TestLog::clearLog();
     }
-    //     for (uint64_t i = 1000000; i <= 1000000; i = i * 10)
+
+        for (uint64_t i = p; i <= p; i = i * 4)
+    { // data sparse test
+        Test test;
+        // test.dataIntensityMemoryTest(Algorithm::BT, i);
+        test.dataIntensityMemoryTest(Algorithm::RBT, i);
+        // test.dataIntensityMemoryTest(Algorithm::LAT, i);
+        TestLog::printLog();
+        TestLog::writeLogToFile();
+    }
+
+        // int p =16;
+    // for (uint64_t i = 10000000; i <= 10000000; i = i * 10)
     // { // data sparse test
-    //     test.dataIntensityMemoryTest(Algorithm::BT, i);
-    //     test.dataIntensityMemoryTest(Algorithm::RBT, i);
-    //     test.dataIntensityMemoryTest(Algorithm::LAT, i);
-
-
+    //     Test test;
+    //     test.dataSparseMemoryTest64(Algorithm::BT, i);
+    //     // test.dataSparseMemoryTest64(Algorithm::RBT, i);
+    //     // test.dataSparseMemoryTest64(Algorithm::LAT, i);
     //     TestLog::printLog();
-    //     // TestLog::writeLogToFile();
+    //     TestLog::writeLogToFile();
+    //     // TestLog::clearLog();
     // }
     return 0;
 }

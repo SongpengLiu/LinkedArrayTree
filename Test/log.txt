@@ -1538,3 +1538,511 @@
 [Wed Jun 19 21:42:22 2024]  --------------Data set size: 1000000--------------
 [Wed Jun 19 21:42:23 2024]  --------------B+-Tree--------------
 [Wed Jun 19 21:42:23 2024]  Increased memeory (KB):39664
+[Tue Jun 25 17:39:08 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:39:08 2024]  --------------Data set size: 64--------------
+[Tue Jun 25 17:39:08 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:39:08 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:39:08 2024]  After memeory (KB):4024
+[Tue Jun 25 17:39:08 2024]  Increased memeory (KB):212
+[Tue Jun 25 17:39:24 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:39:24 2024]  --------------Data set size: 64--------------
+[Tue Jun 25 17:39:24 2024]  Initial memeory (KB):3808
+[Tue Jun 25 17:39:24 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:39:24 2024]  After memeory (KB):4008
+[Tue Jun 25 17:39:24 2024]  Increased memeory (KB):200
+[Tue Jun 25 17:39:44 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:39:44 2024]  --------------Data set size: 64--------------
+[Tue Jun 25 17:39:44 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:39:44 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:39:44 2024]  After memeory (KB):4024
+[Tue Jun 25 17:39:44 2024]  Increased memeory (KB):212
+[Tue Jun 25 17:39:58 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:39:58 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 17:39:58 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:39:58 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:39:58 2024]  After memeory (KB):4648
+[Tue Jun 25 17:39:58 2024]  Increased memeory (KB):836
+[Tue Jun 25 17:40:24 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:40:24 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 17:40:24 2024]  Initial memeory (KB):3808
+[Tue Jun 25 17:40:24 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:40:24 2024]  After memeory (KB):4644
+[Tue Jun 25 17:40:24 2024]  Increased memeory (KB):836
+[Tue Jun 25 17:40:45 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:40:45 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 17:40:45 2024]  Initial memeory (KB):3808
+[Tue Jun 25 17:40:45 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:40:45 2024]  After memeory (KB):4452
+[Tue Jun 25 17:40:45 2024]  Increased memeory (KB):644
+[Tue Jun 25 17:41:07 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:41:07 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 17:41:07 2024]  Initial memeory (KB):3808
+[Tue Jun 25 17:41:07 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:41:07 2024]  After memeory (KB):4164
+[Tue Jun 25 17:41:07 2024]  Increased memeory (KB):356
+[Tue Jun 25 17:41:31 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:41:31 2024]  --------------Data set size: 256--------------
+[Tue Jun 25 17:41:31 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:41:31 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:41:31 2024]  After memeory (KB):4060
+[Tue Jun 25 17:41:31 2024]  Increased memeory (KB):248
+[Tue Jun 25 17:41:48 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:41:48 2024]  --------------Data set size: 64--------------
+[Tue Jun 25 17:41:48 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:41:48 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 17:41:48 2024]  After memeory (KB):4024
+[Tue Jun 25 17:41:48 2024]  Increased memeory (KB):212
+[Tue Jun 25 17:42:16 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:42:16 2024]  --------------Data set size: 64--------------
+[Tue Jun 25 17:42:16 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:42:16 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:42:16 2024]  After memeory (KB):4024
+[Tue Jun 25 17:42:16 2024]  Increased memeory (KB):212
+[Tue Jun 25 17:42:32 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:42:32 2024]  --------------Data set size: 256--------------
+[Tue Jun 25 17:42:32 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:42:32 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:42:32 2024]  After memeory (KB):4028
+[Tue Jun 25 17:42:32 2024]  Increased memeory (KB):216
+[Tue Jun 25 17:42:49 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:42:49 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 17:42:49 2024]  Initial memeory (KB):3812
+[Tue Jun 25 17:42:49 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:42:49 2024]  After memeory (KB):4060
+[Tue Jun 25 17:42:49 2024]  Increased memeory (KB):248
+[Tue Jun 25 17:43:20 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:43:20 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 17:43:20 2024]  Initial memeory (KB):3808
+[Tue Jun 25 17:43:20 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:43:20 2024]  After memeory (KB):4136
+[Tue Jun 25 17:43:20 2024]  Increased memeory (KB):328
+[Tue Jun 25 17:43:33 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:43:33 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 17:43:33 2024]  Initial memeory (KB):3804
+[Tue Jun 25 17:43:33 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:43:33 2024]  After memeory (KB):4500
+[Tue Jun 25 17:43:33 2024]  Increased memeory (KB):696
+[Tue Jun 25 17:45:48 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 17:45:48 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 17:45:48 2024]  Initial memeory (KB):3804
+[Tue Jun 25 17:45:48 2024]  --------------B+-Tree--------------
+[Tue Jun 25 17:45:48 2024]  After memeory (KB):6008
+[Tue Jun 25 17:45:48 2024]  Increased memeory (KB):2204
+[Tue Jun 25 18:06:09 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 18:06:09 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 18:06:09 2024]  Initial memeory (KB):3808
+[Tue Jun 25 18:06:09 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 18:06:09 2024]  After memeory (KB):4644
+[Tue Jun 25 18:06:09 2024]  Increased memeory (KB):836
+[Tue Jun 25 18:52:31 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 18:52:31 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 25 18:52:31 2024]  Initial memeory (KB):3816
+[Tue Jun 25 18:53:04 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 18:53:04 2024]  After memeory (KB):13880584
+[Tue Jun 25 18:53:04 2024]  Increased memeory (KB):13876768
+[Tue Jun 25 18:53:41 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 18:53:41 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 25 18:53:41 2024]  Initial memeory (KB):3812
+[Tue Jun 25 18:54:00 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 18:54:00 2024]  After memeory (KB):631508
+[Tue Jun 25 18:54:00 2024]  Increased memeory (KB):627696
+[Tue Jun 25 18:54:47 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 18:54:47 2024]  --------------Data set size: 10000000--------------
+[Tue Jun 25 18:54:47 2024]  Initial memeory (KB):3816
+[Tue Jun 25 18:54:54 2024]  --------------B+-Tree--------------
+[Tue Jun 25 18:54:54 2024]  After memeory (KB):277056
+[Tue Jun 25 18:54:54 2024]  Increased memeory (KB):273240
+[Tue Jun 25 19:06:33 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:06:33 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:06:33 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:06:33 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:06:33 2024]  After memeory (KB):4652
+[Tue Jun 25 19:06:33 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:06:53 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:06:53 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:06:53 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:06:53 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:06:53 2024]  After memeory (KB):4656
+[Tue Jun 25 19:06:53 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:07:13 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:07:13 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:07:13 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:07:13 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:07:13 2024]  After memeory (KB):6208
+[Tue Jun 25 19:07:13 2024]  Increased memeory (KB):2392
+[Tue Jun 25 19:07:21 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:07:21 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:07:21 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:07:21 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:07:21 2024]  After memeory (KB):5148
+[Tue Jun 25 19:07:21 2024]  Increased memeory (KB):1336
+[Tue Jun 25 19:07:57 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:07:57 2024]  --------------Data set size: 49152--------------
+[Tue Jun 25 19:07:57 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:07:57 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:07:57 2024]  After memeory (KB):7140
+[Tue Jun 25 19:07:57 2024]  Increased memeory (KB):3324
+[Tue Jun 25 19:08:07 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:08:07 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:08:07 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:08:07 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:08:07 2024]  After memeory (KB):8192
+[Tue Jun 25 19:08:07 2024]  Increased memeory (KB):4380
+[Tue Jun 25 19:08:31 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:08:31 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:08:31 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:08:32 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:08:32 2024]  After memeory (KB):8196
+[Tue Jun 25 19:08:32 2024]  Increased memeory (KB):4380
+[Tue Jun 25 19:09:00 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:09:00 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:09:00 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:09:00 2024]  --------------B+-Tree--------------
+[Tue Jun 25 19:09:00 2024]  After memeory (KB):5996
+[Tue Jun 25 19:09:00 2024]  Increased memeory (KB):2180
+[Tue Jun 25 19:10:04 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:10:04 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:10:04 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:10:04 2024]  --------------B+-Tree--------------
+[Tue Jun 25 19:10:04 2024]  After memeory (KB):4912
+[Tue Jun 25 19:10:04 2024]  Increased memeory (KB):1096
+[Tue Jun 25 19:10:35 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:10:35 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:10:35 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:10:35 2024]  --------------B+-Tree--------------
+[Tue Jun 25 19:10:35 2024]  After memeory (KB):4508
+[Tue Jun 25 19:10:35 2024]  Increased memeory (KB):692
+[Tue Jun 25 19:10:55 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:10:55 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:10:55 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:10:55 2024]  --------------B+-Tree--------------
+[Tue Jun 25 19:10:55 2024]  After memeory (KB):4912
+[Tue Jun 25 19:10:55 2024]  Increased memeory (KB):1096
+[Tue Jun 25 19:11:48 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:11:48 2024]  --------------Data set size: 49152--------------
+[Tue Jun 25 19:11:48 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:11:48 2024]  --------------B+-Tree--------------
+[Tue Jun 25 19:11:48 2024]  After memeory (KB):5476
+[Tue Jun 25 19:11:48 2024]  Increased memeory (KB):1660
+[Tue Jun 25 19:12:20 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:12:20 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:12:20 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:12:20 2024]  --------------B+-Tree--------------
+[Tue Jun 25 19:12:20 2024]  After memeory (KB):6008
+[Tue Jun 25 19:12:20 2024]  Increased memeory (KB):2196
+[Tue Jun 25 19:13:11 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:13:11 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:13:11 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:13:11 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:13:11 2024]  After memeory (KB):5148
+[Tue Jun 25 19:13:11 2024]  Increased memeory (KB):1336
+[Tue Jun 25 19:13:25 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:13:25 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:13:25 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:13:25 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:13:25 2024]  After memeory (KB):6208
+[Tue Jun 25 19:13:25 2024]  Increased memeory (KB):2392
+[Tue Jun 25 19:13:49 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:13:49 2024]  --------------Data set size: 49152--------------
+[Tue Jun 25 19:13:49 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:13:49 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:13:49 2024]  After memeory (KB):7140
+[Tue Jun 25 19:13:49 2024]  Increased memeory (KB):3324
+[Tue Jun 25 19:14:19 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:14:19 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:14:19 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:14:19 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:14:19 2024]  After memeory (KB):8196
+[Tue Jun 25 19:14:19 2024]  Increased memeory (KB):4380
+[Tue Jun 25 19:16:23 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:16:23 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:16:23 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:16:23 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:16:23 2024]  After memeory (KB):4656
+[Tue Jun 25 19:16:23 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:16:43 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:16:43 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:16:43 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:16:43 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:16:43 2024]  After memeory (KB):4652
+[Tue Jun 25 19:16:43 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:17:03 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:17:03 2024]  --------------Data set size: 49152--------------
+[Tue Jun 25 19:17:03 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:17:03 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:17:03 2024]  After memeory (KB):4652
+[Tue Jun 25 19:17:03 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:17:21 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:17:21 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:17:21 2024]  Initial memeory (KB):3812
+[Tue Jun 25 19:17:21 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:17:21 2024]  After memeory (KB):4652
+[Tue Jun 25 19:17:21 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:20:27 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:20:27 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:20:27 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:20:27 2024]  Increased memeory (KB):1124
+[Tue Jun 25 19:24:10 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:24:10 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:24:10 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:24:10 2024]  Increased memeory (KB):2180
+[Tue Jun 25 19:24:27 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:24:27 2024]  --------------Data set size: 49152--------------
+[Tue Jun 25 19:24:27 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:24:27 2024]  Increased memeory (KB):3244
+[Tue Jun 25 19:24:35 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:24:35 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:24:35 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:24:35 2024]  Increased memeory (KB):4168
+[Tue Jun 25 19:25:02 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:25:02 2024]  --------------Data set size: 8192--------------
+[Tue Jun 25 19:25:02 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 19:25:02 2024]  Increased memeory (KB):588
+[Tue Jun 25 19:25:40 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 19:25:40 2024]  --------------Data set size: 8192--------------
+[Tue Jun 25 19:25:40 2024]  Initial memeory (KB):3816
+[Tue Jun 25 19:25:40 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:25:40 2024]  After memeory (KB):4656
+[Tue Jun 25 19:25:40 2024]  Increased memeory (KB):840
+[Tue Jun 25 19:28:40 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:28:40 2024]  --------------Data set size: 16384--------------
+[Tue Jun 25 19:28:40 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:28:40 2024]  Increased memeory (KB):184
+[Tue Jun 25 19:28:56 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:28:56 2024]  --------------Data set size: 32768--------------
+[Tue Jun 25 19:28:56 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:28:56 2024]  Increased memeory (KB):344
+[Tue Jun 25 19:29:09 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:29:09 2024]  --------------Data set size: 49152--------------
+[Tue Jun 25 19:29:09 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:29:09 2024]  Increased memeory (KB):536
+[Tue Jun 25 19:29:25 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 19:29:25 2024]  --------------Data set size: 65536--------------
+[Tue Jun 25 19:29:25 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 19:29:25 2024]  Increased memeory (KB):664
+[Tue Jun 25 20:00:39 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:00:39 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:00:39 2024]  Initial memeory (KB):3812
+[Tue Jun 25 20:00:39 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:00:39 2024]  After memeory (KB):4460
+[Tue Jun 25 20:00:39 2024]  Increased memeory (KB):648
+[Tue Jun 25 20:00:59 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:00:59 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:00:59 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:00:59 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:00:59 2024]  After memeory (KB):4336
+[Tue Jun 25 20:00:59 2024]  Increased memeory (KB):520
+[Tue Jun 25 20:01:40 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:01:40 2024]  --------------Data set size: 1042--------------
+[Tue Jun 25 20:01:40 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:01:40 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:01:40 2024]  After memeory (KB):4208
+[Tue Jun 25 20:01:40 2024]  Increased memeory (KB):392
+[Tue Jun 25 20:02:54 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:02:54 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 20:02:54 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:02:54 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:02:54 2024]  After memeory (KB):4208
+[Tue Jun 25 20:02:54 2024]  Increased memeory (KB):392
+[Tue Jun 25 20:03:14 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:03:14 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:03:14 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:03:14 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:03:14 2024]  After memeory (KB):4336
+[Tue Jun 25 20:03:14 2024]  Increased memeory (KB):520
+[Tue Jun 25 20:03:40 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:03:40 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:03:40 2024]  Initial memeory (KB):3812
+[Tue Jun 25 20:03:40 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:03:40 2024]  After memeory (KB):4396
+[Tue Jun 25 20:03:40 2024]  Increased memeory (KB):584
+[Tue Jun 25 20:04:04 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:04:04 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:04:04 2024]  Initial memeory (KB):3812
+[Tue Jun 25 20:04:04 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:04:04 2024]  After memeory (KB):4460
+[Tue Jun 25 20:04:04 2024]  Increased memeory (KB):648
+[Tue Jun 25 20:04:27 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:04:27 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:04:27 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:04:27 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:04:27 2024]  After memeory (KB):4528
+[Tue Jun 25 20:04:27 2024]  Increased memeory (KB):712
+[Tue Jun 25 20:04:57 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:04:57 2024]  --------------Data set size: 6144--------------
+[Tue Jun 25 20:04:57 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:04:57 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:04:57 2024]  After memeory (KB):4528
+[Tue Jun 25 20:04:57 2024]  Increased memeory (KB):712
+[Tue Jun 25 20:06:13 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:06:13 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 20:06:13 2024]  Initial memeory (KB):3808
+[Tue Jun 25 20:06:13 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:06:13 2024]  After memeory (KB):4096
+[Tue Jun 25 20:06:13 2024]  Increased memeory (KB):288
+[Tue Jun 25 20:06:32 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:06:32 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:06:32 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:06:32 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:06:32 2024]  After memeory (KB):4164
+[Tue Jun 25 20:06:32 2024]  Increased memeory (KB):348
+[Tue Jun 25 20:06:45 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:06:45 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:06:45 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:06:45 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:06:45 2024]  After memeory (KB):4232
+[Tue Jun 25 20:06:45 2024]  Increased memeory (KB):416
+[Tue Jun 25 20:06:56 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:06:56 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:06:56 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:06:56 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:06:56 2024]  After memeory (KB):4232
+[Tue Jun 25 20:06:56 2024]  Increased memeory (KB):416
+[Tue Jun 25 20:07:05 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:07:05 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:07:05 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:07:05 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:07:05 2024]  After memeory (KB):4296
+[Tue Jun 25 20:07:05 2024]  Increased memeory (KB):480
+[Tue Jun 25 20:07:16 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:07:16 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:07:16 2024]  Initial memeory (KB):3812
+[Tue Jun 25 20:07:16 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:07:16 2024]  After memeory (KB):4420
+[Tue Jun 25 20:07:16 2024]  Increased memeory (KB):608
+[Tue Jun 25 20:07:36 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:07:36 2024]  --------------Data set size: 6144--------------
+[Tue Jun 25 20:07:36 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:07:36 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:07:36 2024]  After memeory (KB):4488
+[Tue Jun 25 20:07:36 2024]  Increased memeory (KB):672
+[Tue Jun 25 20:12:45 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:12:45 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 20:12:45 2024]  Initial memeory (KB):3812
+[Tue Jun 25 20:12:45 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:12:45 2024]  After memeory (KB):4052
+[Tue Jun 25 20:12:45 2024]  Increased memeory (KB):240
+[Tue Jun 25 20:13:05 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:13:05 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:13:05 2024]  Initial memeory (KB):3812
+[Tue Jun 25 20:13:05 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:13:05 2024]  After memeory (KB):4084
+[Tue Jun 25 20:13:05 2024]  Increased memeory (KB):272
+[Tue Jun 25 20:13:21 2024]  --------------Data Sparse Memory Test--------------
+[Tue Jun 25 20:13:21 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:13:21 2024]  Initial memeory (KB):3816
+[Tue Jun 25 20:13:21 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:13:21 2024]  After memeory (KB):4124
+[Tue Jun 25 20:13:21 2024]  Increased memeory (KB):308
+[Tue Jun 25 20:20:47 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:20:47 2024]  --------------Data set size: 1--------------
+[Tue Jun 25 20:20:47 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:20:47 2024]  Increased memeory (KB):16
+[Tue Jun 25 20:20:59 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:20:59 2024]  --------------Data set size: 1--------------
+[Tue Jun 25 20:20:59 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:20:59 2024]  Increased memeory (KB):32
+[Tue Jun 25 20:25:39 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:25:39 2024]  --------------Data set size: 1--------------
+[Tue Jun 25 20:25:39 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:25:39 2024]  Increased memeory (KB):24
+[Tue Jun 25 20:25:51 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:25:51 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 20:25:51 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:25:51 2024]  Increased memeory (KB):72
+[Tue Jun 25 20:26:06 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:26:06 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:26:06 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:26:06 2024]  Increased memeory (KB):124
+[Tue Jun 25 20:26:16 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:26:16 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:26:16 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:26:16 2024]  Increased memeory (KB):164
+[Tue Jun 25 20:26:29 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:26:29 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:26:29 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:26:29 2024]  Increased memeory (KB):212
+[Tue Jun 25 20:26:34 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:26:34 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:26:34 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:26:34 2024]  Increased memeory (KB):244
+[Tue Jun 25 20:26:50 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:26:50 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:26:50 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:26:50 2024]  Increased memeory (KB):244
+[Tue Jun 25 20:27:00 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:27:00 2024]  --------------Data set size: 6144--------------
+[Tue Jun 25 20:27:00 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:27:00 2024]  Increased memeory (KB):284
+[Tue Jun 25 20:27:49 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:27:49 2024]  --------------Data set size: 1--------------
+[Tue Jun 25 20:27:49 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:27:49 2024]  Increased memeory (KB):32
+[Tue Jun 25 20:28:03 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:28:03 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 20:28:03 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:28:03 2024]  Increased memeory (KB):104
+[Tue Jun 25 20:28:17 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:28:17 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:28:17 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:28:17 2024]  Increased memeory (KB):164
+[Tue Jun 25 20:28:29 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:28:29 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:28:29 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:28:29 2024]  Increased memeory (KB):232
+[Tue Jun 25 20:28:42 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:28:42 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:28:42 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:28:42 2024]  Increased memeory (KB):396
+[Tue Jun 25 20:29:03 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:29:03 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:29:03 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:29:03 2024]  Increased memeory (KB):396
+[Tue Jun 25 20:29:16 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:29:16 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:29:16 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:29:16 2024]  Increased memeory (KB):396
+[Tue Jun 25 20:29:32 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:29:32 2024]  --------------Data set size: 6144--------------
+[Tue Jun 25 20:29:32 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:29:32 2024]  Increased memeory (KB):460
+[Tue Jun 25 20:30:00 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:30:00 2024]  --------------Data set size: 1--------------
+[Tue Jun 25 20:30:00 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:30:00 2024]  Increased memeory (KB):16
+[Tue Jun 25 20:30:14 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:30:14 2024]  --------------Data set size: 1024--------------
+[Tue Jun 25 20:30:14 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:30:14 2024]  Increased memeory (KB):32
+[Tue Jun 25 20:30:27 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:30:27 2024]  --------------Data set size: 2048--------------
+[Tue Jun 25 20:30:27 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:30:27 2024]  Increased memeory (KB):40
+[Tue Jun 25 20:30:38 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:30:38 2024]  --------------Data set size: 3072--------------
+[Tue Jun 25 20:30:38 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:30:38 2024]  Increased memeory (KB):48
+[Tue Jun 25 20:30:51 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:30:51 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:30:51 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:30:51 2024]  Increased memeory (KB):64
+[Tue Jun 25 20:31:05 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:31:05 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:31:05 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:31:05 2024]  Increased memeory (KB):72
+[Tue Jun 25 20:31:11 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:31:11 2024]  --------------Data set size: 6144--------------
+[Tue Jun 25 20:31:11 2024]  --------------Linked Array Tree--------------
+[Tue Jun 25 20:31:11 2024]  Increased memeory (KB):76
+[Tue Jun 25 20:33:58 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:33:58 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:33:58 2024]  --------------B+-Tree--------------
+[Tue Jun 25 20:33:58 2024]  Increased memeory (KB):212
+[Tue Jun 25 20:34:08 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:34:08 2024]  --------------Data set size: 4096--------------
+[Tue Jun 25 20:34:08 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:34:08 2024]  Increased memeory (KB):396
+[Tue Jun 25 20:34:17 2024]  --------------Data Intensity Memory Test--------------
+[Tue Jun 25 20:34:17 2024]  --------------Data set size: 5120--------------
+[Tue Jun 25 20:34:17 2024]  --------------Red Black Tree--------------
+[Tue Jun 25 20:34:17 2024]  Increased memeory (KB):396
