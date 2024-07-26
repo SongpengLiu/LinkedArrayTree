@@ -100,7 +100,7 @@ void ArrayRemainderTree<T>::destroy()
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find a radix for the tree
  * @return radix
@@ -156,7 +156,7 @@ void ArrayRemainderTree<T>::printMemory(void *pBuff, unsigned int nLen)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief insert an element to the tree
  * @return void
@@ -216,7 +216,7 @@ void ArrayRemainderTree<T>::insert(unsigned int key, T element)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief search an element in the tree based on the key
  * @return element
@@ -263,7 +263,7 @@ T ArrayRemainderTree<T>::get(unsigned int key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove an element from the tree based on the key
  * @return void
@@ -346,7 +346,7 @@ void ArrayRemainderTree<T>::remove(unsigned int key, unsigned short currentLevel
 
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print search path of an key
  * @return void

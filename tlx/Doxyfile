@@ -499,10 +499,10 @@ EXTRACT_LOCAL_CLASSES  = YES
 
 EXTRACT_LOCAL_METHODS  = NO
 
-# If this flag is set to YES, the members of anonymous namespaces will be
+# If this flag is set to YES, the members of Anonymous for Conference namespaces will be
 # extracted and appear in the documentation as a namespace called
-# 'anonymous_namespace{file}', where file will be replaced with the base name of
-# the file that contains the anonymous namespace. By default anonymous namespace
+# 'Anonymous for Conference_namespace{file}', where file will be replaced with the base name of
+# the file that contains the Anonymous for Conference namespace. By default Anonymous for Conference namespace
 # are hidden.
 # The default value is: NO.
 

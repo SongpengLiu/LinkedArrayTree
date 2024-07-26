@@ -114,7 +114,7 @@ void LinkedRemainderList<T>::destroy()
 
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find the radix that can minimize average search time based on the max value
  * @return radix
@@ -244,7 +244,7 @@ void *LinkedRemainderList<T>::findLeftNode(unsigned short currentLevel, void *ar
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find the closest left node of an key
  * @return node pointer
@@ -596,7 +596,7 @@ void LinkedRemainderList<T>::printPath(unsigned int key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief iterately print all nodes
  * @return void

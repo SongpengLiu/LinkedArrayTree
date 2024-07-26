@@ -70,7 +70,7 @@ RadixLinkedArrayTree<KeyType, ValueType>::RadixLinkedArrayTree(KeyType inputRadi
 // }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print the info of the list
  * @return info
@@ -101,7 +101,7 @@ void RadixLinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigned
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find the left array of the input key
  * @return array pointer
@@ -185,7 +185,7 @@ void *RadixLinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short currentL
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief insert an element to the list
  * @return void
@@ -249,7 +249,7 @@ void RadixLinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const V
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief search the value by key
  * @return pointer of the value
@@ -287,7 +287,7 @@ ValueType* RadixLinkedArrayTree<KeyType, ValueType>::get(KeyType key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove the element from the list based on the key
  * @return void
@@ -306,7 +306,7 @@ void RadixLinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove the element from the list, and then check the aray
  * @return void
@@ -383,7 +383,7 @@ uint64_t RadixLinkedArrayTree<KeyType, ValueType>::size(){
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print search path or an key
  * @return void
@@ -444,7 +444,7 @@ void RadixLinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief iterately print all data
  * @return void

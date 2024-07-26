@@ -105,7 +105,7 @@ void ArrayRemainderList<T>::destroy()
 
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find a radix for the array ramiander list
  * @return radix
@@ -137,7 +137,7 @@ unsigned short ArrayRemainderList<T>::findLevel(unsigned int inputMax, unsigned 
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print the info of the list
  * @return info
@@ -167,7 +167,7 @@ void ArrayRemainderList<T>::printMemory(void *pBuff, unsigned int nLen)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find the left array of the input key
  * @return array pointer
@@ -256,7 +256,7 @@ void *ArrayRemainderList<T>::findLeft(unsigned short currentLevel, void *arrayPo
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief insert an element to the list
  * @return void
@@ -332,7 +332,7 @@ void ArrayRemainderList<T>::insert(unsigned int key, T element)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief search an element from the list by key
  * @return element
@@ -379,7 +379,7 @@ T ArrayRemainderList<T>::get(unsigned int key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove the element from the list based on the key
  * @return void
@@ -406,7 +406,7 @@ void ArrayRemainderList<T>::remove(unsigned int key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove the element from the list, and then check the aray
  * @return void
@@ -482,7 +482,7 @@ void ArrayRemainderList<T>::remove(unsigned int key, unsigned short currentLevel
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print search path or an key
  * @return void
@@ -552,7 +552,7 @@ void ArrayRemainderList<T>::printPath(unsigned int key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief iterately print all data
  * @return void

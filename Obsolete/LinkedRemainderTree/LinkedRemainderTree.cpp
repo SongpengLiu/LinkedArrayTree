@@ -106,7 +106,7 @@ void LinkedRemainderTree<T>::destroy()
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find the radix that can minimize average search time based on the max value
  * @return radix
@@ -435,7 +435,7 @@ void LinkedRemainderTree<T>::remove(unsigned int key, unsigned short currentLeve
 // }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print search path of an key
  * @return void

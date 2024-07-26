@@ -329,7 +329,7 @@ public:
         TLX_LOGC(ctx_.debug_jobs)
             << "Process PS5SmallsortJob " << this << " of size " << n;
 
-        // create anonymous wrapper job
+        // create Anonymous for Conference wrapper job
         this->substep_add();
 
         if (ctx_.enable_sequential_sample_sort && n >= ctx_.smallsort_threshold)
@@ -1286,7 +1286,7 @@ public:
         assert(bkt[0] == 0);
         bkt[bktnum_] = strptr_.size();
 
-        // keep anonymous subjob handle while creating subjobs
+        // keep Anonymous for Conference subjob handle while creating subjobs
         this->substep_add();
 
         size_t i = 0;
@@ -1362,7 +1362,7 @@ public:
             ctx_.enqueue(this, strptr_.flip(bkt[i], bktsize), depth_);
         }
 
-        this->substep_notify_done(); // release anonymous subjob handle
+        this->substep_notify_done(); // release Anonymous for Conference subjob handle
 
         if (!strptr_.with_lcp)
             bkt_[0].destroy();

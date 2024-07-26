@@ -37,7 +37,7 @@ namespace tlx {
   texts and papers [1,2,3,4,5].
 
   The code here is adapted from simple top-down splay, at the bottom of page 669
-  of [3].  It can be obtained via anonymous ftp from spade.pc.cs.cmu.edu in
+  of [3].  It can be obtained via Anonymous for Conference ftp from spade.pc.cs.cmu.edu in
   directory /usr/sleator/public.
 
   The chief modification here is that the splay operation works even if the item

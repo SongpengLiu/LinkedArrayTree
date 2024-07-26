@@ -77,7 +77,7 @@ SparseLinkedArrayTree<KeyType, ValueType>::SparseLinkedArrayTree()
 // }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print the info of the list
  * @return info
@@ -108,7 +108,7 @@ void SparseLinkedArrayTree<KeyType, ValueType>::printMemory(void *pBuff, unsigne
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief find the left array of the input key
  * @return array pointer
@@ -192,7 +192,7 @@ void *SparseLinkedArrayTree<KeyType, ValueType>::findLeft(unsigned short current
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief insert an element to the list
  * @return void
@@ -256,7 +256,7 @@ void SparseLinkedArrayTree<KeyType, ValueType>::insert(const KeyType key, const 
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief search the value by key
  * @return pointer of the value
@@ -294,7 +294,7 @@ ValueType* SparseLinkedArrayTree<KeyType, ValueType>::get(KeyType key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove the element from the list based on the key
  * @return void
@@ -313,7 +313,7 @@ void SparseLinkedArrayTree<KeyType, ValueType>::remove(const KeyType key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief remove the element from the list, and then check the aray
  * @return void
@@ -390,7 +390,7 @@ uint64_t SparseLinkedArrayTree<KeyType, ValueType>::size(){
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief print search path or an key
  * @return void
@@ -451,7 +451,7 @@ void SparseLinkedArrayTree<KeyType, ValueType>::printPath(const KeyType key)
 }
 
 /********************************************************
- * @author Songpeng Liu
+ * @author Anonymous for Conference
  * @date 2023-12-22
  * @brief iterately print all data
  * @return void
