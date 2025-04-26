@@ -1,11 +1,8 @@
 # Licence and Declaration
     MIT Licence
 
-# Algorithm
-To be released
-
-# Comparison
-To be released.
+# Paper Link
+    `https://arxiv.org/abs/2504.00828`
 
 # Open-source Code Reference:
     Red-Black Tree: C++ STL map
